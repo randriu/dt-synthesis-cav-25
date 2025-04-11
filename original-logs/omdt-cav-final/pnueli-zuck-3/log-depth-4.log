@@ -1,0 +1,97 @@
+Solving...
+Starting with fixed depth 4
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 2121631 rows, 276603 columns and 13204372 nonzeros
+Model fingerprint: 0x50b6cf69
+Variable types: 122850 continuous, 153753 integer (153753 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 4e+00]
+Presolve removed 975 rows and 75 columns (presolve time = 5s) ...
+Presolve removed 975 rows and 75 columns (presolve time = 10s) ...
+Presolve removed 975 rows and 75 columns (presolve time = 15s) ...
+Presolve removed 975 rows and 75 columns (presolve time = 21s) ...
+Presolve added 0 rows and 748 columns
+Presolve removed 152 rows and 0 columns
+Presolve time: 21.12s
+Presolved: 2121479 rows, 277351 columns, 12910818 nonzeros
+Variable types: 123673 continuous, 153678 integer (153678 binary)
+Root relaxation presolved: 277351 rows, 2398593 columns, 13187932 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         35s
+    6459      handle free variables                         35s
+   36390   -4.9154111e+30   9.674632e+34   4.915424e+00     40s
+   48444   -1.8871443e+30   1.081980e+35   1.887157e+00     46s
+   56534   -1.7587130e+28   2.977859e+33   1.759960e-02     51s
+   57434   -1.7316685e+27   3.987351e+33   1.744135e-03     55s
+   60876    9.2000005e-01   6.724131e+02   0.000000e+00     60s
+   62832    9.5501450e-01   3.726407e+02   0.000000e+00     66s
+   63482    9.5590047e-01   4.403617e+02   0.000000e+00     72s
+   63842    9.5600051e-01   4.507885e+02   0.000000e+00     75s
+   64302    9.5620759e-01   1.259986e+03   0.000000e+00     82s
+   64582    9.5641225e-01   1.419629e+03   0.000000e+00     87s
+   64862    9.5730134e-01   1.409969e+03   0.000000e+00     92s
+   65142    9.5770401e-01   1.063564e+03   0.000000e+00     97s
+   65422    9.5795310e-01   1.052659e+03   0.000000e+00    102s
+   65702    9.5896196e-01   6.015758e+02   0.000000e+00    107s
+   65982    9.5991725e-01   1.724091e+03   0.000000e+00    112s
+   66262    9.6050600e-01   1.308183e+03   0.000000e+00    117s
+   67860    9.6059601e-01   0.000000e+00   1.254423e+01    122s
+   68282    9.6059582e-01   0.000000e+00   1.109720e+01    125s
+   68359    9.6059601e-01   0.000000e+00   0.000000e+00    127s
+   68359    9.6059601e-01   0.000000e+00   0.000000e+00    127s
+   68359    9.6059601e-01   0.000000e+00   0.000000e+00    128s
+
+Root relaxation: objective 9.605960e-01, 68359 iterations, 100.33 seconds (305.49 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.96060    0 3595          -    0.96060      -     -  290s
+H    0     0                       0.6555704    0.96060  46.5%     -  877s
+     0     0          -    0         0.65557    0.96060  46.5%     - 1200s
+
+Cutting planes:
+  MIR: 41
+  Flow cover: 4
+  Zero half: 123
+
+Explored 1 nodes (97333 simplex iterations) in 1200.12 seconds (8662.61 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 1: 0.65557 
+
+Time limit reached
+Warning: max constraint violation (7.7809e-06) exceeds tolerance
+Warning: max bound violation (7.7623e-06) exceeds tolerance
+Best objective 6.555704167851e-01, best bound 9.605960100000e-01, gap 46.5283%
+Tree policy:
+if p2 <= 15.0:
+    if p0 <= 5.0:
+        return 'process2_cmd_71'
+    else:
+        if p1 <= 3.0:
+            return 'process2_cmd_71'
+        else:
+            return 'process1_cmd_32'
+else:
+    if p2 <= 15.0:
+        return 'process2_cmd_71'
+    else:
+        return 'process0_cmd_2'
+Optimal decision tree (depth=4) value: 0.6555704167851438
+Writing result files...

@@ -1,0 +1,22 @@
+model,dtcontrol nodes,dtcontrol time
+maze-7,280,00:00:00.139
+maze-steps,94,00:00:00.040
+omdt-3d_navigation,6,00:00:00.003
+omdt-blackjack,8,00:00:00.008
+omdt-frozenlake_12x12,67,00:00:00.035
+omdt-frozenlake_4x4,8,00:00:00.003
+omdt-frozenlake_8x8,35,00:00:00.015
+omdt-inventory_management,14,00:00:00.012
+omdt-system_administrator_1,76,00:00:00.029
+omdt-system_administrator_2,41,00:00:00.017
+omdt-system_administrator_tree,12,00:00:00.006
+omdt-tictactoe_vs_random,25,00:00:00.030
+omdt-traffic_intersection,32,00:00:00.017
+qcomp-consensus-3-32,383,00:00:00.620
+qcomp-csma-2-4,40,00:00:00.157
+qcomp-firewire-3,18,00:00:00.129
+qcomp-philosophers-4,6,00:00:00.002
+qcomp-pnueli-zuck-3,4,00:00:00.004
+qcomp-rabin-4,4,00:00:00.003
+qcomp-resource-gathering-5,7,00:00:00.007
+qcomp-wlan-1-2,68,00:00:00.107

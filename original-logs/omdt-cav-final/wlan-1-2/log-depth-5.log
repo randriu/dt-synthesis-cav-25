@@ -1,0 +1,165 @@
+Solving...
+Starting with fixed depth 5
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 3611748 rows, 313606 columns and 27157814 nonzeros
+Model fingerprint: 0xc1f721bc
+Variable types: 106318 continuous, 207288 integer (207288 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 1085 rows and 465 columns (presolve time = 5s) ...
+Presolve removed 1085 rows and 465 columns (presolve time = 10s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 15s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 20s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 25s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 30s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 35s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 40s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 45s) ...
+Presolve removed 1116 rows and 496 columns (presolve time = 50s) ...
+Presolve removed 1065 rows and 445 columns
+Presolve time: 53.74s
+Presolved: 3610683 rows, 313161 columns, 26079400 nonzeros
+Variable types: 106369 continuous, 206792 integer (206792 binary)
+Found heuristic solution: objective 0.0273004
+Root relaxation presolved: 313161 rows, 3923844 columns, 26392561 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0303030e+02   0.000000e+00   2.080004e+02     78s
+   98959    1.0303030e+02   0.000000e+00   1.610229e+07     80s
+   99899    6.9902278e-01   0.000000e+00   6.712107e+06     85s
+  100989   -1.0439418e-01   0.000000e+00   1.086071e+08     90s
+  102599   -1.7799012e-01   0.000000e+00   4.387300e+05     96s
+  104879   -1.8412657e-01   0.000000e+00   4.206932e+04    101s
+  106079   -1.8732439e-01   0.000000e+00   5.850169e+02    106s
+  106578    1.0827098e-01   0.000000e+00   0.000000e+00    110s
+  106578    1.0827098e-01   0.000000e+00   0.000000e+00    111s
+
+Root relaxation: objective 1.082710e-01, 106578 iterations, 47.91 seconds (181.68 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.10827    0 20771    0.02730    0.10827   297%     -  209s
+H    0     0                       0.0316026    0.10827   243%     -  215s
+H    0     0                       0.0316026    0.10827   243%     -  219s
+     0     0    0.10827    0 16031    0.03160    0.10827   243%     -  246s
+     0     0    0.10827    0 16029    0.03160    0.10827   243%     -  297s
+     0     0    0.10827    0 17361    0.03160    0.10827   243%     -  430s
+H    0     0                       0.0316746    0.10827   242%     -  439s
+     0     0    0.10827    0 17363    0.03167    0.10827   242%     -  447s
+     0     0    0.10827    0 14325    0.03167    0.10827   242%     -  637s
+H    0     0                       0.0318928    0.10827   239%     -  646s
+     0     0    0.10827    0 14325    0.03189    0.10827   239%     -  648s
+     0     0    0.10827    0 14285    0.03189    0.10827   239%     -  815s
+H    0     0                       0.0375426    0.10827   188%     -  828s
+     0     0    0.10827    0 14285    0.03754    0.10827   188%     -  829s
+     0     0    0.10827    0 14338    0.03754    0.10827   188%     -  982s
+     0     0    0.10827    0 13819    0.03754    0.10827   188%     -  993s
+     0     0    0.10827    0 15831    0.03754    0.10827   188%     - 1111s
+H    0     0                       0.0382994    0.10827   183%     - 1120s
+     0     0    0.10827    0 14546    0.03830    0.10827   183%     - 1121s
+     0     0    0.10827    0 15947    0.03830    0.10827   183%     - 1200s
+
+Cutting planes:
+  Gomory: 2
+  Implied bound: 7
+  MIR: 132
+  Flow cover: 112
+  Zero half: 2406
+  RLT: 2
+  Relax-and-lift: 1
+
+Explored 1 nodes (270021 simplex iterations) in 1200.18 seconds (7295.36 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 7: 0.0382994 0.0375426 0.0318928 ... 0.0273004
+
+Time limit reached
+Best objective 3.829941550406e-02, best bound 1.082709837481e-01, gap 182.6962%
+Tree policy:
+if s2 <= 2.0:
+    if c1 <= 1.0:
+        if x1 <= 0.0:
+            if x2 <= 0.0:
+                if bc2 <= 1.0:
+                    return 'station2_cmd_52'
+                else:
+                    return 'time'
+            else:
+                if bc2 <= 1.0:
+                    return 'station2_cmd_42'
+                else:
+                    return 'finish1'
+        else:
+            if s1 <= 10.0:
+                if x1 <= 0.0:
+                    return 'station2_cmd_59'
+                else:
+                    return 'station1_cmd_13'
+            else:
+                return 'time'
+    else:
+        if bc2 <= 1.0:
+            if c2 <= 1.0:
+                return 'station2_cmd_54'
+            else:
+                return 'time'
+        else:
+            return 'time'
+else:
+    if x1 <= 9.0:
+        if bc1 <= 0.0:
+            if x2 <= 8.0:
+                if c1 <= 1.0:
+                    return 'station2_cmd_74'
+                else:
+                    return 'time'
+            else:
+                if x1 <= 6.0:
+                    return 'finish2'
+                else:
+                    return 'finish1'
+        else:
+            if s1 <= 4.0:
+                if s2 <= 7.0:
+                    return 'station2_cmd_48'
+                else:
+                    return 'station1_cmd_15'
+            else:
+                return 'station2_cmd_74'
+    else:
+        if bc2 <= 1.0:
+            if c2 <= 1.0:
+                if c1 <= 1.0:
+                    return 'station2_cmd_74'
+                else:
+                    return 'finish1'
+            else:
+                if x2 <= 9.0:
+                    return 'finish2'
+                else:
+                    return 'time'
+        else:
+            if x2 <= 9.0:
+                if bc2 <= 1.0:
+                    return 'time'
+                else:
+                    return 'station1_cmd_24'
+            else:
+                return 'time'
+Optimal decision tree (depth=5) value: 0.03829941550405779
+Writing result files...

@@ -1,0 +1,73 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 3567 rows, 2208 columns and 13928 nonzeros
+Model fingerprint: 0x3941a226
+Variable types: 990 continuous, 1218 integer (1218 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 28 rows and 21 columns
+Presolve time: 0.03s
+Presolved: 3539 rows, 2187 columns, 13798 nonzeros
+Variable types: 990 continuous, 1197 integer (1197 binary)
+
+Root relaxation: objective -1.715947e+01, 1400 iterations, 0.04 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  -17.15947    0  362          -  -17.15947      -     -    0s
+     0     0  -17.15947    0  436          -  -17.15947      -     -    0s
+     0     0  -17.15947    0  436          -  -17.15947      -     -    0s
+     0     0  -17.15947    0  418          -  -17.15947      -     -    0s
+     0     0  -17.15947    0  402          -  -17.15947      -     -    0s
+     0     0  -17.15947    0  442          -  -17.15947      -     -    0s
+     0     0  -17.15947    0  442          -  -17.15947      -     -    0s
+H    0     0                     -99.9283998  -17.15947  82.8%     -    0s
+H    0     0                     -99.9085878  -17.15947  82.8%     -    0s
+     0     2  -17.15947    0  442  -99.90859  -17.15947  82.8%     -    1s
+*   28    28              21     -99.7066806  -17.15947  82.8%   397    1s
+*   29    25              21     -93.7790534  -17.15947  81.7%   395    1s
+*   49    28               8     -70.8856538  -17.16309  75.8%   393    1s
+*  108    22               7     -65.5401284  -18.33894  72.0%   231    2s
+H  136    27                     -65.5399964  -18.75428  71.4%   218    2s
+*  481    44               9     -63.2248515  -36.40248  42.4%   128    3s
+
+Cutting planes:
+  Cover: 4
+  Implied bound: 56
+  MIR: 24
+  Flow cover: 29
+  Inf proof: 2
+  Zero half: 14
+  RLT: 386
+  Relax-and-lift: 1
+  BQP: 309
+
+Explored 528 nodes (69312 simplex iterations) in 4.06 seconds (7.43 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 7: -63.2249 -65.54 -70.8857 ... -99.9284
+No other solutions better than -63.2249
+
+Optimal solution found (tolerance 1.00e-04)
+Warning: max constraint violation (1.2975e-06) exceeds tolerance
+Best objective -6.322485151649e+01, best bound -6.322485151649e+01, gap 0.0000%
+Tree policy:
+if picked2 <= 0.0:
+    return 'u'
+else:
+    return 'd'
+Optimal decision tree (depth=1) value: -63.22485151648766
+Writing result files...

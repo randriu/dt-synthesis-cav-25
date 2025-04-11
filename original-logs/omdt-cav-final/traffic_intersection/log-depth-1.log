@@ -1,0 +1,67 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 4335 rows, 2553 columns and 36117 nonzeros
+Model fingerprint: 0xf472b823
+Variable types: 1083 continuous, 1470 integer (1470 binary)
+Coefficient statistics:
+  Matrix range     [6e-12, 1e+02]
+  Objective range  [2e-01, 2e+01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 308 rows and 307 columns
+Presolve time: 0.08s
+Presolved: 4027 rows, 2246 columns, 29478 nonzeros
+Variable types: 1144 continuous, 1102 integer (1102 binary)
+
+Root relaxation: objective 2.124930e+00, 1790 iterations, 0.09 seconds (0.23 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    2.12493    0  666          -    2.12493      -     -    0s
+     0     0    2.12123    0  797          -    2.12123      -     -    0s
+     0     0    2.11815    0  782          -    2.11815      -     -    0s
+     0     0    2.11766    0  808          -    2.11766      -     -    0s
+     0     0    2.11283    0  525          -    2.11283      -     -    0s
+     0     0    2.11283    0  525          -    2.11283      -     -    0s
+     0     0    2.11236    0  726          -    2.11236      -     -    1s
+     0     0    2.11224    0  728          -    2.11224      -     -    1s
+     0     0    2.11212    0  728          -    2.11212      -     -    1s
+     0     0    2.11212    0  728          -    2.11212      -     -    1s
+H    0     0                    -149.2977744    2.11212   101%     -    1s
+     0     2    2.10898    0  728 -149.29777    2.10898   101%     -    1s
+*   18    12               9    -102.1872145    2.01510   102%   650    2s
+*   23    13               8     -80.2195098    2.00916   103%   582    2s
+    28     8 infeasible    2       -80.21951    1.98986   102%   953    7s
+*   57     5              13     -72.0668351    1.32909   102%   792   10s
+
+Cutting planes:
+  MIR: 247
+  Flow cover: 21
+  Zero half: 61
+  RLT: 291
+
+Explored 98 nodes (70817 simplex iterations) in 13.68 seconds (18.93 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 4: -72.0668 -80.2195 -102.187 -149.298 
+No other solutions better than -72.0668
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -7.206683505791e+01, best bound -7.206683505791e+01, gap 0.0000%
+Tree policy:
+if waiting_time <= 2.0:
+    return '(wait)'
+else:
+    return '(switch_light)'
+Optimal decision tree (depth=1) value: -72.06683505791119
+Writing result files...

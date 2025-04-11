@@ -1,0 +1,222 @@
+Solving...
+Starting with fixed depth 7
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 165375 rows, 21490 columns and 1436773 nonzeros
+Model fingerprint: 0x3fb87dd4
+Variable types: 1152 continuous, 20338 integer (20338 binary)
+Coefficient statistics:
+  Matrix range     [1e-10, 1e+02]
+  Objective range  [4e-01, 7e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 7e+00]
+Presolve removed 2142 rows and 1876 columns
+Presolve time: 1.63s
+Presolved: 163233 rows, 19614 columns, 1419595 nonzeros
+Variable types: 1181 continuous, 18433 integer (18433 binary)
+Root relaxation presolved: 19614 rows, 182847 columns, 1439209 nonzeros
+
+Warning: Markowitz tolerance tightened to 0.03125
+
+Root relaxation: objective 5.577247e+02, 16173 iterations, 0.92 seconds (1.77 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  557.72471    0  418          -  557.72471      -     -    4s
+     0     0  557.72471    0  512          -  557.72471      -     -    6s
+     0     0  557.72471    0  512          -  557.72471      -     -    7s
+     0     0  557.72471    0  274          -  557.72471      -     -    9s
+     0     0  557.72471    0  274          -  557.72471      -     -   10s
+     0     0  557.72471    0  599          -  557.72471      -     -   13s
+     0     0  557.72471    0  599          -  557.72471      -     -   16s
+     0     0  557.72471    0  580          -  557.72471      -     -   19s
+H    0     0                     260.5457807  557.72471   114%     -   19s
+     0     0  557.72471    0  821  260.54578  557.72471   114%     -   22s
+H    0     0                     260.5458281  557.72471   114%     -   23s
+     0     0  557.72471    0  701  260.54583  557.72471   114%     -   23s
+     0     0  557.72471    0   96  260.54583  557.72471   114%     -   25s
+H    0     0                     325.5742659  557.72471  71.3%     -   26s
+     0     0  557.72471    0   99  325.57427  557.72471  71.3%     -   26s
+     0     0  557.72471    0   80  325.57427  557.72471  71.3%     -   28s
+H    0     0                     325.5742662  557.72471  71.3%     -   29s
+     0     0  557.72471    0   80  325.57427  557.72471  71.3%     -   29s
+     0     0  557.72471    0  198  325.57427  557.72471  71.3%     -   31s
+     0     0  557.72471    0   80  325.57427  557.72471  71.3%     -   33s
+     0     0  557.72471    0   80  325.57427  557.72471  71.3%     -   34s
+     0     2  557.72471    0   80  325.57427  557.72471  71.3%     -   45s
+    16    18  557.72471   11  483  325.57427  557.72471  71.3%   123   50s
+    31    33  557.72471   19  525  325.57427  557.72471  71.3%  75.3   55s
+    50    52  557.72471   31  289  325.57427  557.72471  71.3%  86.5   60s
+H   54    54                     325.5744487  557.72471  71.3%  80.6   61s
+    76    78  557.72471   50  150  325.57445  557.72471  71.3%  84.4   65s
+H   81    81                     390.4998136  557.72471  42.8%  81.2   66s
+H  104   104                     406.5692501  557.72471  37.2%  70.7   69s
+   104   106  557.72471   67  600  406.56925  557.72471  37.2%  71.5   70s
+H  130   130                     407.8288570  557.72471  36.8%  69.5   74s
+   130   132  557.50790   83  366  407.82886  557.72471  36.8%  69.5   75s
+   159   161  500.19694  101  171  407.82886  557.72471  36.8%  67.3   80s
+*  185   177             124     466.8779501  557.72471  19.5%  59.9   83s
+H  189   178                     469.3337998  557.72471  18.8%  58.7   84s
+   198   181  557.72471    2  261  469.33380  557.72471  18.8%  56.7   85s
+   226   209  557.72471   19  694  469.33380  557.72471  18.8%  53.5   90s
+H  234   201                     481.4638544  557.72471  15.8%  53.9   92s
+   245   214  557.72471   34  147  481.46385  557.72471  15.8%  53.3   95s
+   266   221  557.72471    5  132  481.46385  557.72471  15.8%  58.1  100s
+   288   243  557.72471   20   70  481.46385  557.72471  15.8%  54.5  105s
+   309   264  557.72471   32   70  481.46385  557.72471  15.8%  53.7  110s
+H  313   265                     488.8152777  557.72471  14.1%  53.2  111s
+   329   283  557.72471   43  340  488.81528  557.72471  14.1%  51.9  115s
+H  339   290                     498.2350551  557.72471  11.9%  64.6  120s
+   356   308  544.32670   64  378  498.23506  557.72471  11.9%  65.8  125s
+H  366   303                     505.5258296  557.72471  10.3%  66.8  127s
+   378   317  557.72471   12   70  505.52583  557.72471  10.3%  64.9  130s
+   392   331  557.72471   17  394  505.52583  557.72471  10.3%  63.3  135s
+   417   356  557.72471   26  493  505.52583  557.72471  10.3%  60.5  140s
+   441   380  557.72471   35  136  505.52583  557.72471  10.3%  58.0  145s
+   465   404  557.72471   43   73  505.52583  557.72471  10.3%  55.8  150s
+   480   419  557.72471   50  202  505.52583  557.72471  10.3%  62.3  155s
+   500   438  557.66507   66  301  505.52583  557.72471  10.3%  65.9  160s
+   511   447  557.72471   51   80  505.52583  557.72471  10.3%  66.2  167s
+H  512   425                     505.5258301  557.72471  10.3%  66.1  173s
+   513   425  557.57345   69  479  505.52583  557.72471  10.3%  65.9  175s
+   514   426  557.72471    9  357  505.52583  557.72471  10.3%  65.8  185s
+   516   427  557.72471   12  315  505.52583  557.72471  10.3%  65.6  193s
+   518   429  557.70368   48   74  505.52583  557.72471  10.3%  65.3  199s
+   519   429  557.72471   28   92  505.52583  557.72471  10.3%  65.2  201s
+   523   432  557.72471   32  150  505.52583  557.72471  10.3%  64.7  206s
+   525   433  556.92503   96   75  505.52583  557.72471  10.3%  64.4  210s
+   528   435  557.72471    9   75  505.52583  557.72471  10.3%  64.1  216s
+   530   437  557.72471   13  330  505.52583  557.72471  10.3%  63.8  223s
+H  530   415                     505.5258311  557.72471  10.3%  63.8  225s
+H  530   394                     505.5258315  557.72471  10.3%  63.8  226s
+H  531   374                     505.5258317  557.72471  10.3%   133  231s
+   550   389  557.72471   23  327  505.52583  557.72471  10.3%   135  235s
+H  557   373                     522.2043360  557.72471  6.80%   135  237s
+   567   381  556.76752   31  305  522.20434  557.72471  6.80%   133  240s
+H  583   371                     526.8016093  557.72471  5.87%   130  242s
+   591   378  557.42111   43  518  526.80161  557.72471  5.87%   128  245s
+H  609   362                     526.8738272  557.72471  5.86%   128  250s
+H  612   348                     534.0617248  557.72471  4.43%   127  251s
+   623   351  556.67984   60  345  534.06172  557.72471  4.43%   126  255s
+   638   357  556.07714   68   68  534.06172  557.72471  4.43%   123  260s
+H  639   274                     557.5485515  557.72471  0.03%   123  260s
+H  666   268                     557.5491114  557.72471  0.03%   119  263s
+   682   267  557.72471   21   68  557.54911  557.72471  0.03%   117  265s
+   711   274  557.72471   36  336  557.54911  557.72471  0.03%   113  270s
+H  713   259                     557.6630152  557.72471  0.01%   113  270s
+H  721   241                     557.7200618  557.72471  0.00%   112  271s
+
+Cutting planes:
+  Gomory: 1
+  Lift-and-project: 4
+  Implied bound: 4
+  MIR: 17
+  Flow cover: 41
+  Zero half: 1
+
+Explored 722 nodes (109911 simplex iterations) in 271.39 seconds (883.05 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 10: 557.72 557.663 557.549 ... 505.526
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.577200618320e+02, best bound 5.577247113345e+02, gap 0.0008%
+Tree policy:
+if computer_3_running <= 0.0:
+    if computer_0_running <= 0.0:
+        return '(reboot_computer_0)'
+    else:
+        if computer_1_running <= 0.0:
+            if computer_6_running <= 1.0:
+                return '(reboot_computer_1)'
+            else:
+                if computer_6_running <= 1.0:
+                    return '(reboot_computer_0)'
+                else:
+                    if computer_6_running <= 1.0:
+                        return '(reboot_computer_0)'
+                    else:
+                        if computer_6_running <= 1.0:
+                            return '(reboot_computer_0)'
+                        else:
+                            return '__random__'
+        else:
+            if computer_0_running <= 0.0:
+                if computer_6_running <= 1.0:
+                    return '(reboot_computer_1)'
+                else:
+                    return '(reboot_computer_0)'
+            else:
+                if computer_6_running <= 1.0:
+                    if computer_2_running <= 0.0:
+                        return '(reboot_computer_2)'
+                    else:
+                        return '(reboot_computer_3)'
+                else:
+                    if computer_6_running <= 1.0:
+                        return '(reboot_computer_1)'
+                    else:
+                        return '(reboot_computer_0)'
+else:
+    if computer_0_running <= 0.0:
+        return '(reboot_computer_0)'
+    else:
+        if computer_1_running <= 0.0:
+            if computer_0_running <= 0.0:
+                return '(reboot_computer_0)'
+            else:
+                if computer_6_running <= 1.0:
+                    if computer_0_running <= 0.0:
+                        return '(reboot_computer_0)'
+                    else:
+                        return '(reboot_computer_1)'
+                else:
+                    return '(reboot_computer_0)'
+        else:
+            if computer_4_running <= 0.0:
+                if computer_0_running <= 0.0:
+                    return '(reboot_computer_0)'
+                else:
+                    if computer_2_running <= 0.0:
+                        if computer_1_running <= 0.0:
+                            return '(reboot_computer_6)'
+                        else:
+                            return '(reboot_computer_2)'
+                    else:
+                        if computer_5_running <= 0.0:
+                            return '(reboot_computer_5)'
+                        else:
+                            return '(reboot_computer_4)'
+            else:
+                if computer_2_running <= 0.0:
+                    if computer_4_running <= 0.0:
+                        if computer_3_running <= 0.0:
+                            return '(reboot_computer_5)'
+                        else:
+                            return '(reboot_computer_1)'
+                    else:
+                        if computer_6_running <= 1.0:
+                            return '(reboot_computer_2)'
+                        else:
+                            return '(reboot_computer_0)'
+                else:
+                    if computer_6_running <= 0.0:
+                        if computer_5_running <= 0.0:
+                            return '(reboot_computer_5)'
+                        else:
+                            return '(reboot_computer_6)'
+                    else:
+                        if computer_5_running <= 0.0:
+                            return '(reboot_computer_5)'
+                        else:
+                            return '(reboot_computer_0)'
+Optimal decision tree (depth=7) value: 557.7200618319864
+Writing result files...

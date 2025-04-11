@@ -1,0 +1,97 @@
+digraph Tree {
+	graph [bb="0,0,624.5,269"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if p1 <= 0.000",
+		pos="373,251",
+		width=1.6944];
+	1	[height=0.5,
+		label="if p2 <= 0.000",
+		pos="303,164",
+		width=1.6944];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="355.5,207.5",
+		pos="e,317.14,182.18 358.83,232.8 348.78,220.59 335.11,203.99 323.82,190.28"];
+	8	[height=0.5,
+		label="if p4 <= 8.000",
+		pos="443,164",
+		width=1.6944];
+	0 -> 8	[fontcolor=gray,
+		label=no,
+		lp="422,207.5",
+		pos="e,428.86,182.18 387.17,232.8 397.22,220.59 410.89,203.99 422.18,190.28"];
+	2	[height=0.5,
+		label="if p4 <= 0.000",
+		pos="169,91",
+		width=1.6944];
+	1 -> 2	[fontcolor=gray,
+		pos="e,201.3,109.11 270.9,145.99 252.72,136.36 229.78,124.21 210.28,113.87"];
+	5	[height=0.5,
+		label="if p4 <= 8.000",
+		pos="309,91",
+		width=1.6944];
+	1 -> 5	[fontcolor=gray,
+		pos="e,307.56,109.03 304.45,145.81 305.13,137.79 305.95,128.05 306.71,119.07"];
+	3	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=__random__,
+		pos="49,18",
+		width=1.3611];
+	2 -> 3	[fontcolor=gray,
+		pos="e,77.924,36.114 140.26,72.994 124.2,63.491 103.99,51.536 86.677,41.292"];
+	4	[color="#029e73",
+		fillcolor="#029e73",
+		fontcolor=white,
+		height=0.5,
+		label=phil4_cmd_56,
+		pos="173,18",
+		width=1.5694];
+	2 -> 4	[fontcolor=gray,
+		pos="e,172.04,36.029 169.97,72.813 170.42,64.789 170.97,55.047 171.47,46.069"];
+	6	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=phil2_cmd_20,
+		pos="306,18",
+		width=1.5694];
+	5 -> 6	[fontcolor=gray,
+		pos="e,306.72,36.029 308.27,72.813 307.93,64.789 307.52,55.047 307.14,46.069"];
+	7	[color="#029e73",
+		fillcolor="#029e73",
+		fontcolor=white,
+		height=0.5,
+		label=phil4_cmd_66,
+		pos="437,18",
+		width=1.5694];
+	5 -> 7	[fontcolor=gray,
+		pos="e,406.15,36.114 339.66,72.994 356.95,63.404 378.74,51.317 397.32,41.011"];
+	9	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=phil1_cmd_2,
+		pos="441,91",
+		width=1.4444];
+	8 -> 9	[fontcolor=gray,
+		pos="e,441.48,109.03 442.52,145.81 442.29,137.79 442.02,128.05 441.76,119.07"];
+	10	[color="#029e73",
+		fillcolor="#029e73",
+		fontcolor=white,
+		height=0.5,
+		label=phil4_cmd_66,
+		pos="568,91",
+		width=1.5694];
+	8 -> 10	[fontcolor=gray,
+		pos="e,537.87,109.11 472.94,145.99 489.67,136.49 510.72,124.54 528.75,114.29"];
+}

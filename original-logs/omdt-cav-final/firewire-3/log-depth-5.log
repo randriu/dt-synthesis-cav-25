@@ -1,0 +1,142 @@
+Solving...
+Starting with fixed depth 5
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 2026593 rows, 253836 columns and 27151572 nonzeros
+Model fingerprint: 0x77c61bd9
+Variable types: 57316 continuous, 196520 integer (196520 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [3e-01, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 930 rows and 372 columns (presolve time = 5s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 11s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 15s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 20s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 25s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 30s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 35s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 40s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 45s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 50s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 55s) ...
+Presolve removed 930 rows and 372 columns (presolve time = 60s) ...
+Presolve removed 930 rows and 372 columns
+Presolve time: 60.84s
+Presolved: 2025663 rows, 253464 columns, 19272775 nonzeros
+Variable types: 57316 continuous, 196148 integer (196148 binary)
+Found heuristic solution: objective -78.0796798
+Root relaxation presolved: 253464 rows, 2279127 columns, 19526239 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         77s
+   99291      handle free variables                         81s
+  136051   -4.4874197e+29   2.876496e+34   4.487420e-01     87s
+  136271   -4.1093342e+29   3.468981e+35   4.109334e-01     90s
+  136711   -4.0697857e+29   6.232919e+34   4.070611e-01     97s
+  136991   -4.0438273e+29   2.374432e+34   4.044935e-01    100s
+  137871   -1.6825445e+29   3.977272e+34   1.684007e-01    107s
+  138481   -1.0295993e+29   2.295809e+33   1.031062e-01    112s
+  139331   -1.0154486e+29   4.748686e+33   1.016911e-01    115s
+  140321   -9.7620177e+28   3.024034e+33   9.776644e-02    123s
+  141751   -7.0036289e+01   0.000000e+00   0.000000e+00    127s
+  142491   -7.0044947e+01   0.000000e+00   3.347922e+01    130s
+  143331   -7.0044947e+01   0.000000e+00   5.535204e+00    137s
+  143581   -7.0044947e+01   0.000000e+00   3.228716e+00    141s
+  144071   -7.0044947e+01   0.000000e+00   1.673623e+01    148s
+  144331   -7.0044948e+01   0.000000e+00   1.620874e+00    152s
+  144571   -7.0044948e+01   0.000000e+00   1.226466e+01    155s
+  144926   -7.0044947e+01   0.000000e+00   0.000000e+00    160s
+  144926   -7.0044947e+01   0.000000e+00   0.000000e+00    161s
+
+Root relaxation: objective -7.004495e+01, 144926 iterations, 93.35 seconds (265.40 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  -70.04495    0 4768  -78.07968  -70.04495  10.3%     -  327s
+H    0     0                     -77.6072765  -70.04495  9.74%     -  339s
+     0     0  -70.04495    0 4322  -77.60728  -70.04495  9.74%     -  486s
+     0     0  -70.04495    0 4322  -77.60728  -70.04495  9.74%     -  515s
+     0     0  -70.04495    0 4322  -77.60728  -70.04495  9.74%     -  740s
+H    0     0                     -76.9809686  -70.04495  9.01%     -  752s
+     0     0  -70.04495    0 4321  -76.98097  -70.04495  9.01%     -  754s
+     0     0  -70.04495    0 4619  -76.98097  -70.04495  9.01%     -  981s
+     0     0  -70.04495    0 4315  -76.98097  -70.04495  9.01%     -  992s
+     0     0  -70.04495    0 4188  -76.98097  -70.04495  9.01%     - 1179s
+H    0     0                     -76.3312132  -70.04495  8.24%     - 1184s
+H    0     0                     -76.2145853  -70.04495  8.10%     - 1189s
+
+Cutting planes:
+  Implied bound: 19
+  MIR: 3
+  Flow cover: 36
+  Zero half: 4
+
+Explored 1 nodes (170400 simplex iterations) in 1200.21 seconds (6934.27 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 5: -76.2146 -76.3312 -76.981 ... -78.0797
+
+Time limit reached
+Best objective -7.621458530853e+01, best bound -7.004494709790e+01, gap 8.0951%
+Tree policy:
+if x1 <= 166.0:
+    if w12 <= 5.0:
+        if s2 <= 8.0:
+            if x2 <= 162.0:
+                if s2 <= 6.0:
+                    return 'rec_idle12'
+                else:
+                    return 'rec_ack21'
+            else:
+                return 'rec_idle12'
+        else:
+            return 'time'
+    else:
+        if w12 <= 5.0:
+            if x1 <= 162.0:
+                return 'rec_idle12'
+            else:
+                if s2 <= 8.0:
+                    return 'time'
+                else:
+                    return 'snd_idle12'
+        else:
+            return 'time'
+else:
+    if x2 <= 166.0:
+        if s2 <= 8.0:
+            return 'time'
+        else:
+            if s2 <= 8.0:
+                return 'time'
+            else:
+                if s2 <= 8.0:
+                    return 'snd_idle12'
+                else:
+                    return 'time'
+    else:
+        if s2 <= 8.0:
+            if x2 <= 166.0:
+                return 'snd_req12'
+            else:
+                return 'time'
+        else:
+            if s2 <= 8.0:
+                return 'snd_idle12'
+            else:
+                return 'time'
+Optimal decision tree (depth=5) value: -76.21458530853319
+Writing result files...

@@ -1,0 +1,207 @@
+Solving...
+Starting with fixed depth 7
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 7922145 rows, 684876 columns and 123723412 nonzeros
+Model fingerprint: 0x17a19372
+Variable types: 57316 continuous, 627560 integer (627560 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [3e-01, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 7e+00]
+Presolve removed 254 rows and 1524 columns (presolve time = 6s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 11s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 15s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 21s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 28s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 31s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 35s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 40s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 45s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 53s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 56s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 61s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 65s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 70s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 75s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 80s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 85s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 90s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 95s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 100s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 105s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 110s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 115s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 121s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 127s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 130s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 135s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 140s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 145s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 151s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 156s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 161s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 165s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 170s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 179s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 181s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 187s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 190s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 195s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 200s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 205s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 211s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 217s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 221s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 225s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 230s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 235s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 243s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 245s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 250s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 255s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 260s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 265s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 270s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 275s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 280s) ...
+Presolve removed 3810 rows and 1524 columns (presolve time = 286s) ...
+Presolve removed 3810 rows and 1524 columns
+Presolve time: 289.13s
+Presolved: 7918335 rows, 683352 columns, 91502887 nonzeros
+Variable types: 57316 continuous, 626036 integer (626036 binary)
+Found heuristic solution: objective -78.2581615
+Root relaxation presolved: 683352 rows, 8601687 columns, 92186239 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   0.000000e+00   3.291300e+04    378s
+   38598    0.0000000e+00   0.000000e+00   9.900000e-01    380s
+  220713   -6.9969711e+01   0.000000e+00   8.163499e+00    385s
+  366405   -6.9969711e+01   0.000000e+00   8.163499e+00    390s
+  475674   -6.9969711e+01   0.000000e+00   8.163499e+00    395s
+  528102   -7.0044947e+01   0.000000e+00   0.000000e+00    400s
+  528102   -7.0044947e+01   0.000000e+00   0.000000e+00    403s
+
+Root relaxation: objective -7.004495e+01, 528102 iterations, 69.90 seconds (217.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  -70.04495    0 4554  -78.25816  -70.04495  10.5%     -  494s
+H    0     0                     -78.2579913  -70.04495  10.5%     -  526s
+H    0     0                     -75.5956593  -70.04495  7.34%     -  535s
+     0     0  -70.04495    0 4172  -75.59566  -70.04495  7.34%     -  625s
+H    0     0                     -75.5955247  -70.04495  7.34%     -  674s
+     0     0  -70.04495    0 4812  -75.59552  -70.04495  7.34%     -  711s
+     0     0  -70.04495    0 5962  -75.59552  -70.04495  7.34%     -  951s
+H    0     0                     -75.3432030  -70.04495  7.03%     -  979s
+     0     0  -70.04495    0 5575  -75.34320  -70.04495  7.03%     - 1030s
+     0     0  -70.04495    0 6728  -75.34320  -70.04495  7.03%     - 1200s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 1
+  MIR: 25
+  Flow cover: 32
+  Zero half: 3
+
+Explored 1 nodes (548063 simplex iterations) in 1200.53 seconds (4881.10 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 5: -75.3432 -75.5955 -75.5957 ... -78.2582
+
+Time limit reached
+Best objective -7.534320302123e+01, best bound -7.004494709789e+01, gap 7.0322%
+Tree policy:
+if s2 <= 7.0:
+    if x2 <= 160.0:
+        if x1 <= 164.0:
+            if s1 <= 6.0:
+                if x2 <= 155.0:
+                    if x1 <= 158.0:
+                        if s2 <= 6.0:
+                            return 'time'
+                        else:
+                            return 'snd_ack21'
+                    else:
+                        if x1 <= 160.0:
+                            return 'snd_ack12'
+                        else:
+                            return 'time'
+                else:
+                    if x2 <= 159.0:
+                        return 'time'
+                    else:
+                        if x1 <= 160.0:
+                            return 'time'
+                        else:
+                            return 'snd_idle21'
+            else:
+                return 'rec_ack12'
+        else:
+            if x1 <= 164.0:
+                if x1 <= 164.0:
+                    return 'rec_ack12'
+                else:
+                    return 'snd_idle12'
+            else:
+                if x1 <= 164.0:
+                    return 'rec_ack12'
+                else:
+                    if x1 <= 165.0:
+                        return 'rec_req21'
+                    else:
+                        return 'snd_ack12'
+    else:
+        if x2 <= 164.0:
+            if x2 <= 162.0:
+                if x1 <= 160.0:
+                    return 'snd_idle12'
+                else:
+                    return 'time'
+            else:
+                if y2 <= 0.0:
+                    return 'snd_req21'
+                else:
+                    return 'snd_idle12'
+        else:
+            if x2 <= 164.0:
+                return 'time'
+            else:
+                if x2 <= 165.0:
+                    if x1 <= 163.0:
+                        return 'snd_ack21'
+                    else:
+                        return 'rec_idle21'
+                else:
+                    return 'time'
+else:
+    if s2 <= 8.0:
+        return 'snd_idle12'
+    else:
+        if s2 <= 8.0:
+            return 'snd_idle12'
+        else:
+            if s2 <= 8.0:
+                return 'snd_idle12'
+            else:
+                if s2 <= 8.0:
+                    return 'snd_idle21'
+                else:
+                    if s2 <= 8.0:
+                        return 'time'
+                    else:
+                        return 'snd_idle12'
+Optimal decision tree (depth=7) value: -75.34320302123325
+Writing result files...

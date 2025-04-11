@@ -1,0 +1,67 @@
+digraph Tree {
+	graph [bb="0,0,588,196"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if q4 <= 0.000",
+		pos="296.5,178",
+		width=1.6944];
+	1	[height=0.5,
+		label="if q10 <= 0.000",
+		pos="219.5,91",
+		width=1.8194];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="276,134.5",
+		pos="e,235.06,109.18 280.92,159.8 269.75,147.47 254.54,130.68 242.05,116.89"];
+	4	[height=0.5,
+		label="if q10 <= 0.000",
+		pos="373.5,91",
+		width=1.8194];
+	0 -> 4	[fontcolor=gray,
+		label=no,
+		lp="349.5,134.5",
+		pos="e,357.94,109.18 312.08,159.8 323.25,147.47 338.46,130.68 350.95,116.89"];
+	2	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=process1_cmd_0,
+		pos="65.5,18",
+		width=1.8194];
+	1 -> 2	[fontcolor=gray,
+		pos="e,102.62,36.114 182.61,72.994 161.34,63.186 134.4,50.766 111.72,40.311"];
+	3	[color="#56b4e9",
+		fillcolor="#56b4e9",
+		fontcolor=white,
+		height=0.5,
+		label=process10_cmd_9,
+		pos="219.5,18",
+		width=1.9444];
+	1 -> 3	[fontcolor=gray,
+		pos="e,219.5,36.029 219.5,72.813 219.5,64.789 219.5,55.047 219.5,46.069"];
+	5	[color="#ece133",
+		fillcolor="#ece133",
+		fontcolor=white,
+		height=0.5,
+		label=process9_cmd_8,
+		pos="373.5,18",
+		width=1.8194];
+	4 -> 5	[fontcolor=gray,
+		pos="e,373.5,36.029 373.5,72.813 373.5,64.789 373.5,55.047 373.5,46.069"];
+	6	[color="#d55e00",
+		fillcolor="#d55e00",
+		fontcolor=white,
+		height=0.5,
+		label=process4_cmd_3,
+		pos="522.5,18",
+		width=1.8194];
+	4 -> 6	[fontcolor=gray,
+		pos="e,486.59,36.114 409.19,72.994 429.68,63.23 455.6,50.876 477.48,40.451"];
+}

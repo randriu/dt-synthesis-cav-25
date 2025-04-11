@@ -1,0 +1,132 @@
+Solving...
+Starting with fixed depth 3
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 1551813 rows, 361485 columns and 8307983 nonzeros
+Model fingerprint: 0x8478acc2
+Variable types: 169229 continuous, 192256 integer (192256 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 3e+00]
+Presolve removed 784 rows and 70 columns (presolve time = 5s) ...
+Presolve removed 784 rows and 70 columns (presolve time = 10s) ...
+Presolve added 0 rows and 630 columns
+Presolve removed 84 rows and 0 columns
+Presolve time: 14.34s
+Presolved: 1551729 rows, 362115 columns, 8178108 nonzeros
+Variable types: 169929 continuous, 192186 integer (192186 binary)
+Root relaxation presolved: 362115 rows, 1913656 columns, 8540035 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         32s
+   29150   -3.3458933e+31   1.120332e+35   3.345905e+01     35s
+   29990   -3.3457907e+31   1.666969e+35   3.345810e+01     40s
+   31127   -1.3284868e+31   3.102701e+35   1.328507e+01     45s
+   32775   -6.6930340e+30   1.719090e+35   6.693249e+00     50s
+   34983   -9.5505422e+29   6.889832e+34   9.553114e-01     56s
+   35563   -4.4464612e+29   5.361942e+34   4.449033e-01     61s
+   35963   -3.3440365e+29   2.207717e+34   3.346609e-01     65s
+   37033   -2.4439294e+29   6.240747e+33   2.446502e-01     71s
+   37933   -1.8842525e+27   6.498833e+32   2.141469e-03     76s
+   38812    2.7728028e+26   2.041565e+32   3.774840e-04     81s
+   39352    5.3302480e-01   2.576630e+04   0.000000e+00     86s
+   39902    5.5139762e-01   2.362376e+04   0.000000e+00     91s
+   40372    7.9841742e-01   3.540936e+04   0.000000e+00     95s
+   40962    1.1001721e+00   1.301320e+06   0.000000e+00    101s
+   41352    1.1474760e+00   4.788060e+05   0.000000e+00    105s
+   41852    1.2033438e+00   1.338375e+06   0.000000e+00    111s
+   42352    2.5928149e+00   1.989915e+06   0.000000e+00    116s
+   42832    1.9881706e+01   1.484085e+06   0.000000e+00    121s
+   43352    2.0347168e+01   1.386960e+07   0.000000e+00    125s
+   43902    4.8096891e+01   1.262131e+07   0.000000e+00    131s
+   44392    4.9563958e+01   8.425985e+06   0.000000e+00    136s
+   44862    4.9859834e+01   4.759475e+05   0.000000e+00    141s
+   45342    5.0136787e+01   1.235025e+05   0.000000e+00    146s
+   45852    5.0402679e+01   9.907761e+04   0.000000e+00    151s
+   46252    5.0622672e+01   2.679786e+06   0.000000e+00    155s
+   46962    5.0805996e+01   4.399168e+05   0.000000e+00    160s
+   47482    5.1521511e+01   3.826388e+07   0.000000e+00    166s
+   47822    9.0899685e+01   2.666461e+09   0.000000e+00    170s
+   48352    9.3639132e+01   2.672795e+07   0.000000e+00    177s
+   48662    9.3679755e+01   9.160312e+06   0.000000e+00    182s
+   48942    9.3719922e+01   1.777697e+07   0.000000e+00    186s
+   49232    9.3797459e+01   2.335974e+06   0.000000e+00    191s
+   49522    9.4447975e+01   2.852060e+07   0.000000e+00    195s
+   49772    9.4791217e+01   1.665389e+05   0.000000e+00    200s
+   50212    9.4853483e+01   5.526104e+06   0.000000e+00    208s
+   50532    9.4857074e+01   3.845265e+04   0.000000e+00    212s
+   50792    9.4860459e+01   4.191081e+04   0.000000e+00    216s
+   51122    9.4863761e+01   1.088469e+04   0.000000e+00    221s
+   51432    9.5114029e+01   8.372438e+03   0.000000e+00    225s
+   51872    9.5167246e+01   1.897095e+03   0.000000e+00    232s
+   52152    9.5177996e+01   4.084282e+03   0.000000e+00    237s
+   52432    9.5181483e+01   1.135918e+03   0.000000e+00    242s
+   52692    9.5184849e+01   5.775743e+03   0.000000e+00    246s
+   52942    9.5188245e+01   5.579716e+03   0.000000e+00    251s
+   53182    9.5193094e+01   2.932206e+02   0.000000e+00    256s
+   53442    9.5199648e+01   1.223075e+02   0.000000e+00    260s
+   53712    9.5208499e+01   8.802080e+01   0.000000e+00    265s
+   54073    9.5163565e+01   0.000000e+00   1.585240e-01    271s
+   54184    9.5163565e+01   0.000000e+00   0.000000e+00    272s
+   54184    9.5163565e+01   0.000000e+00   0.000000e+00    272s
+   54184    9.5163565e+01   0.000000e+00   0.000000e+00    272s
+
+Root relaxation: objective 9.516357e+01, 54184 iterations, 245.94 seconds (658.44 work units)
+Total elapsed time = 543.58s
+Total elapsed time = 576.99s
+Total elapsed time = 604.56s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   95.16357    0 6092          -   95.16357      -     -  609s
+H    0     0                      88.0385563   95.16357  8.09%     -  651s
+     0     0   94.86580    0 9323   88.03856   94.86580  7.75%     - 1160s
+H    0     0                      88.6055710   94.86580  7.07%     - 1165s
+     0     0   94.86580    0 9317   88.60557   94.86580  7.07%     - 1182s
+
+Cutting planes:
+  Implied bound: 28
+  MIR: 182
+  Flow cover: 27
+  RLT: 9
+  Relax-and-lift: 1
+
+Explored 1 nodes (108287 simplex iterations) in 1200.13 seconds (5849.89 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 2: 88.6056 88.0386 
+
+Time limit reached
+Best objective 8.860557102099e+01, best bound 9.486579510798e+01, gap 7.0653%
+Tree policy:
+if p1 <= 0.0:
+    if p2 <= 0.0:
+        if p4 <= 0.0:
+            return '__random__'
+        else:
+            return 'phil4_cmd_56'
+    else:
+        if p4 <= 8.0:
+            return 'phil2_cmd_20'
+        else:
+            return 'phil4_cmd_66'
+else:
+    if p4 <= 8.0:
+        return 'phil1_cmd_2'
+    else:
+        return 'phil4_cmd_66'
+Optimal decision tree (depth=3) value: 88.60557102098613
+Writing result files...

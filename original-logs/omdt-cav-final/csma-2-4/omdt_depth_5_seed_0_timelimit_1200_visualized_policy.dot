@@ -1,0 +1,97 @@
+digraph Tree {
+	graph [bb="0,0,518.5,415"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if cd2 <= 4.000",
+		pos="91,397",
+		width=1.7917];
+	1	[color="#ca9161",
+		fillcolor="#ca9161",
+		fontcolor=white,
+		height=0.5,
+		label=station2_cmd_36,
+		pos="67,310",
+		width=1.8611];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="93.5,353.5",
+		pos="e,71.85,328.18 86.143,378.8 82.825,367.05 78.361,351.24 74.579,337.84"];
+	2	[height=0.5,
+		label="if cd2 <= 4.000",
+		pos="217,310",
+		width=1.7917];
+	0 -> 2	[fontcolor=gray,
+		label=no,
+		lp="171,353.5",
+		pos="e,191.54,328.18 116.5,378.8 135.71,365.84 162.24,347.94 183.22,333.79"];
+	3	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=send1,
+		pos="183,237",
+		width=0.81944];
+	2 -> 3	[fontcolor=gray,
+		pos="e,191.15,255.03 208.77,291.81 204.8,283.53 199.96,273.41 195.54,264.19"];
+	4	[height=0.5,
+		label="if cd2 <= 4.000",
+		pos="295,237",
+		width=1.7917];
+	2 -> 4	[fontcolor=gray,
+		pos="e,276.29,255.03 235.88,291.81 245.75,282.83 257.98,271.69 268.76,261.89"];
+	5	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=send1,
+		pos="261,164",
+		width=0.81944];
+	4 -> 5	[fontcolor=gray,
+		pos="e,269.15,182.03 286.77,218.81 282.8,210.53 277.96,200.41 273.54,191.19"];
+	6	[height=0.5,
+		label="if cd2 <= 4.000",
+		pos="373,164",
+		width=1.7917];
+	4 -> 6	[fontcolor=gray,
+		pos="e,354.29,182.03 313.88,218.81 323.75,209.83 335.98,198.69 346.76,188.89"];
+	7	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=send1,
+		pos="339,91",
+		width=0.81944];
+	6 -> 7	[fontcolor=gray,
+		pos="e,347.15,109.03 364.77,145.81 360.8,137.53 355.96,127.41 351.54,118.19"];
+	8	[height=0.5,
+		label="if cd2 <= 4.000",
+		pos="451,91",
+		width=1.7917];
+	6 -> 8	[fontcolor=gray,
+		pos="e,432.29,109.03 391.88,145.81 401.75,136.83 413.98,125.69 424.76,115.89"];
+	9	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=send1,
+		pos="412,18",
+		width=0.81944];
+	8 -> 9	[fontcolor=gray,
+		pos="e,421.35,36.029 441.56,72.813 436.96,64.441 431.33,54.197 426.23,44.903"];
+	10	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label=send2,
+		pos="489,18",
+		width=0.81944];
+	8 -> 10	[fontcolor=gray,
+		pos="e,479.89,36.029 460.2,72.813 464.68,64.441 470.16,54.197 475.14,44.903"];
+}

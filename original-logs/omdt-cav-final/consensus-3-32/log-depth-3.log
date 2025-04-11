@@ -1,0 +1,111 @@
+Solving...
+Starting with fixed depth 3
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 831750 rows, 217203 columns and 8376007 nonzeros
+Model fingerprint: 0xd9309bc6
+Variable types: 86254 continuous, 130949 integer (130949 binary)
+Coefficient statistics:
+  Matrix range     [1e-04, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+04]
+  RHS range        [1e+00, 3e+00]
+Presolve removed 105 rows and 42 columns (presolve time = 5s) ...
+Presolve removed 105 rows and 42 columns (presolve time = 10s) ...
+Presolve removed 105 rows and 42 columns (presolve time = 15s) ...
+Presolve removed 105 rows and 42 columns
+Presolve time: 16.00s
+Presolved: 831645 rows, 217161 columns, 7956889 nonzeros
+Variable types: 86254 continuous, 130907 integer (130907 binary)
+Found heuristic solution: objective 0.0933933
+Root relaxation presolved: 217161 rows, 1048806 columns, 8174050 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         27s
+   31034   -1.5169607e+33   1.944541e+35   1.516961e+03     30s
+   31982    9.4394054e-02   0.000000e+00   0.000000e+00     31s
+   31982    9.4394054e-02   0.000000e+00   0.000000e+00     31s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+
+Restart crossover...
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00     32s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   31983    0.0000000e+00   0.000000e+00   7.828890e+05     32s
+   56297    0.0000000e+00   0.000000e+00   3.971400e+05     36s
+   64217    0.0000000e+00   0.000000e+00   2.733050e+05     40s
+   75187    0.0000000e+00   0.000000e+00   9.644600e+04     45s
+   79127    0.0000000e+00   0.000000e+00   3.284900e+04     50s
+   81537    0.0000000e+00   0.000000e+00   8.355554e+00     56s
+   85880    8.2535815e-02   1.761767e-01   0.000000e+00     60s
+   87170    9.2815133e-02   7.025455e-01   0.000000e+00     65s
+   89043    9.4394073e-02   0.000000e+00   4.336536e+04     70s
+   89669    9.4394073e-02   0.000000e+00   0.000000e+00     74s
+   89669    9.4394073e-02   0.000000e+00   0.000000e+00     75s
+   89669    9.4394073e-02   0.000000e+00   0.000000e+00     75s
+
+Root relaxation: objective 9.439407e-02, 89669 iterations, 53.41 seconds (433.52 work units)
+Total elapsed time = 418.49s
+Total elapsed time = 422.16s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.09439    0 6204    0.09339    0.09439  1.07%     -  547s
+H    0     0                       0.0936150    0.09439  0.83%     -  549s
+     0     0    0.09439    0 8115    0.09362    0.09439  0.83%     -  653s
+     0     0    0.09439    0 8115    0.09362    0.09439  0.83%     -  932s
+     0     0    0.09439    0 13743    0.09362    0.09439  0.83%     - 1174s
+H    0     0                       0.0936252    0.09439  0.82%     - 1182s
+     0     0    0.09439    0 13423    0.09363    0.09439  0.82%     - 1200s
+
+Cutting planes:
+  Implied bound: 6
+  MIR: 390
+  Flow cover: 3
+  Relax-and-lift: 1
+
+Explored 1 nodes (160429 simplex iterations) in 1200.05 seconds (3718.00 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 3: 0.0936252 0.093615 0.0933933 
+
+Time limit reached
+Best objective 9.362519329933e-02, best bound 9.439405825856e-02, gap 0.8212%
+Tree policy:
+if counter <= 194.0:
+    if counter <= 193.0:
+        return 'process2_cmd_8'
+    else:
+        if coin2 <= 0.0:
+            return 'process2_cmd_8'
+        else:
+            return '__random__'
+else:
+    if counter <= 194.0:
+        return '__random__'
+    else:
+        if counter <= 195.0:
+            return 'process1_cmd_1'
+        else:
+            return '__random__'
+Optimal decision tree (depth=3) value: 0.09362519329933254
+Writing result files...

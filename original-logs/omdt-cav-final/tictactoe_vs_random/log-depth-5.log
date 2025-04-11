@@ -1,0 +1,86 @@
+Solving...
+Starting with fixed depth 5
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 879975 rows, 126455 columns and 8367263 nonzeros
+Model fingerprint: 0xf6c2e6cd
+Variable types: 24240 continuous, 102215 integer (102215 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [2e-01, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 341 rows and 1674 columns (presolve time = 5s) ...
+Presolve removed 341 rows and 1674 columns (presolve time = 10s) ...
+Presolve removed 341 rows and 1674 columns
+Presolve time: 12.38s
+Presolved: 879634 rows, 124781 columns, 6410051 nonzeros
+Variable types: 24240 continuous, 100541 integer (100541 binary)
+Found heuristic solution: objective -0.9900000
+Found heuristic solution: objective -0.8149296
+Root relaxation presolved: 124781 rows, 1004415 columns, 6534832 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         20s
+   75288      handle free variables                         20s
+  100968   -5.9074548e-01   2.241872e+04   0.000000e+00     25s
+  110377    1.1667111e+00   1.680502e+04   0.000000e+00     30s
+  112981    1.3885134e+00   3.912681e+03   0.000000e+00     36s
+  114381    1.5170516e+00   8.974183e+03   0.000000e+00     41s
+  115481    1.6022757e+00   7.389021e+02   0.000000e+00     46s
+  116489    9.7341286e-01   0.000000e+00   0.000000e+00     49s
+  116489    9.7341286e-01   0.000000e+00   0.000000e+00     49s
+
+Root relaxation: objective 9.734129e-01, 116489 iterations, 33.17 seconds (110.29 work units)
+Total elapsed time = 117.40s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.97341    0 2600   -0.81493    0.97341   219%     -  120s
+     0     0    0.97341    0 2598   -0.81493    0.97341   219%     -  133s
+     0     0    0.97341    0 2600   -0.81493    0.97341   219%     -  290s
+     0     0    0.97341    0 3012   -0.81493    0.97341   219%     -  388s
+     0     0    0.97341    0 2945   -0.81493    0.97341   219%     -  464s
+     0     0    0.97341    0 2939   -0.81493    0.97341   219%     -  585s
+     0     0    0.97341    0 2778   -0.81493    0.97341   219%     -  671s
+     0     0    0.97341    0 2782   -0.81493    0.97341   219%     -  674s
+     0     0    0.97341    0 2738   -0.81493    0.97341   219%     -  771s
+     0     0    0.97341    0 3352   -0.81493    0.97341   219%     -  786s
+     0     0    0.97341    0 2178   -0.81493    0.97341   219%     -  930s
+     0     0    0.97341    0 1874   -0.81493    0.97341   219%     -  936s
+     0     0    0.97341    0 1753   -0.81493    0.97341   219%     - 1040s
+     0     0    0.97341    0 1909   -0.81493    0.97341   219%     - 1171s
+     0     0    0.97341    0 1909   -0.81493    0.97341   219%     - 1200s
+
+Cutting planes:
+  Implied bound: 136
+  MIR: 1416
+  Flow cover: 98
+  Zero half: 141
+  Relax-and-lift: 26
+
+Explored 1 nodes (218480 simplex iterations) in 1200.06 seconds (5638.57 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 2: -0.81493 -0.99 
+
+Time limit reached
+Best objective -8.149295734751e-01, best bound 9.734128595697e-01, gap 219.4475%
+Tree policy:
+if bottom_right_circle <= 1.0:
+    return '__random__'
+else:
+    return '(top_left)'
+Optimal decision tree (depth=5) value: -0.8149295734750887
+Writing result files...

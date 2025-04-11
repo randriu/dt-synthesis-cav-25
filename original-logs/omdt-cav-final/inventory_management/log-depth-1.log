@@ -1,0 +1,91 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 30909 rows, 20806 columns and 610173 nonzeros
+Model fingerprint: 0xf815ca2f
+Variable types: 10201 continuous, 10605 integer (10605 binary)
+Coefficient statistics:
+  Matrix range     [1e-13, 1e+02]
+  Objective range  [1e-07, 2e+01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+00]
+Presolve added 0 rows and 8 columns
+Presolve removed 92 rows and 0 columns
+Presolve time: 0.57s
+Presolved: 30817 rows, 20814 columns, 591236 nonzeros
+Variable types: 10212 continuous, 10602 integer (10602 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    9572    2.7885589e+03   6.683441e+02   0.000000e+00      5s
+Warning: Markowitz tolerance tightened to 0.03125
+   18437    2.0256568e+03   1.601286e+04   0.000000e+00     10s
+   25100    9.6789763e+02   0.000000e+00   0.000000e+00     14s
+   25100    9.6789763e+02   0.000000e+00   0.000000e+00     14s
+
+Root relaxation: objective 9.678976e+02, 25100 iterations, 11.02 seconds (49.41 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  967.89763    0  128          -  967.89763      -     -   13s
+     0     0  967.89763    0  419          -  967.89763      -     -   22s
+     0     0  967.89763    0  406          -  967.89763      -     -   36s
+     0     0  967.89763    0  402          -  967.89763      -     -   42s
+     0     0  967.89763    0  404          -  967.89763      -     -   50s
+     0     0  967.89763    0  404          -  967.89763      -     -   51s
+H    0     0                      26.4273068  967.89763  3562%     -   58s
+H    0     0                     948.0981345  967.89763  2.09%     -   58s
+     0     2  967.89763    0  404  948.09813  967.89763  2.09%     -   59s
+     1     3  967.89763    1  333  948.09813  967.89763  2.09%  2467   60s
+     5     7  967.35517    4 1111  948.09813  967.52509  2.05%  1779   65s
+*   11    10              10     952.1616020  967.52509  1.61%  1480   71s
+    14     8  967.43042    1 1121  952.16160  967.52509  1.61%  2066   77s
+    16     6     cutoff    2       952.16160  967.35517  1.60%  2414   81s
+    17     5     cutoff    5       952.16160  967.25633  1.59%  3034   86s
+    18     4     cutoff    7       952.16160  964.12930  1.26%  3447   90s
+    22     6     cutoff    7       952.16160  964.12929  1.26%  3471   96s
+    26     7     cutoff    8       952.16160  964.12929  1.26%  3623  100s
+    33     6     cutoff   12       952.16160  964.12929  1.26%  3076  105s
+*   36     5              16     955.3382442  964.12929  0.92%  2845  105s
+    44     7  958.52956   10  675  955.33824  964.10341  0.92%  2486  111s
+    47     7  958.20427   13  582  955.33824  964.10341  0.92%  2402  115s
+    52     7  957.62552   18  582  955.33824  964.10341  0.92%  2277  120s
+H   54     6                     955.3471857  964.10341  0.92%  2199  121s
+    61     7  957.56839   27  582  955.34719  964.10341  0.92%  1980  125s
+    66     7  957.56839   32  581  955.34719  964.10341  0.92%  1885  131s
+    73     6 infeasible    7       955.34719  963.83379  0.89%  1929  135s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 4
+  MIR: 1
+  Flow cover: 21
+  Zero half: 1
+  RLT: 1021
+  BQP: 4113
+
+Explored 88 nodes (185825 simplex iterations) in 139.54 seconds (620.58 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 4: 955.347 952.162 948.098 26.4273 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.553471856645e+02, best bound 9.553471856645e+02, gap 0.0000%
+Tree policy:
+if inventory <= 1.0:
+    return '(Buy_12)'
+else:
+    return '(Buy_8)'
+Optimal decision tree (depth=1) value: 955.3471856645263
+Writing result files...

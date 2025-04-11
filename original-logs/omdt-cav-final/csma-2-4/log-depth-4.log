@@ -1,0 +1,131 @@
+Solving...
+Starting with fixed depth 4
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 2435485 rows, 392093 columns and 17939433 nonzeros
+Model fingerprint: 0x4f2c2e0e
+Variable types: 135303 continuous, 256790 integer (256790 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 4e+00]
+Presolve removed 540 rows and 210 columns (presolve time = 5s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 10s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 15s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 20s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 25s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 30s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 35s) ...
+Presolve removed 540 rows and 210 columns (presolve time = 41s) ...
+Presolve removed 537 rows and 207 columns
+Presolve time: 40.55s
+Presolved: 2434948 rows, 391886 columns, 17219582 nonzeros
+Variable types: 135306 continuous, 256580 integer (256580 binary)
+Root relaxation presolved: 391886 rows, 2826834 columns, 17611468 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         61s
+  133961    3.9191033e+01   0.000000e+00   0.000000e+00     64s
+  133961    3.9191033e+01   0.000000e+00   0.000000e+00     65s
+  133961    3.9191033e+01   0.000000e+00   0.000000e+00     66s
+
+Root relaxation: objective 3.919103e+01, 133961 iterations, 14.88 seconds (26.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   39.19103    0 7844          -   39.19103      -     -   96s
+H    0     0                       0.3821207   39.19103      -     -  107s
+H    0     0                       0.3821208   39.19103      -     -  112s
+     0     0   39.19103    0 22778    0.38212   39.19103      -     -  154s
+H    0     0                      38.5171387   39.19103  1.75%     -  165s
+     0     0   39.19103    0 7867   38.51714   39.19103  1.75%     -  239s
+     0     0   39.19103    0  325   38.51714   39.19103  1.75%     -  271s
+H    0     0                      38.5430140   39.19103  1.68%     -  278s
+     0     0   39.19103    0  325   38.54301   39.19103  1.68%     -  279s
+     0     0   39.19103    0  343   38.54301   39.19103  1.68%     -  313s
+H    0     0                      38.7129542   39.19103  1.23%     -  323s
+     0     0   39.19103    0  354   38.71295   39.19103  1.23%     -  354s
+     0     0   39.19103    0 16593   38.71295   39.19103  1.23%     -  404s
+H    0     0                      38.8281200   39.19103  0.93%     -  412s
+     0     0   39.19103    0 16613   38.82812   39.19103  0.93%     -  504s
+     0     0   39.19103    0 16561   38.82812   39.19103  0.93%     -  637s
+     0     0   39.19103    0 16561   38.82812   39.19103  0.93%     -  682s
+H    0     0                      38.8288139   39.19103  0.93%     -  702s
+     0     2   39.19103    0 16561   38.82881   39.19103  0.93%     -  827s
+     1     3   39.19103    1 15087   38.82881   39.19103  0.93% 57256  841s
+     2     4   39.19103    2 19319   38.82881   39.19103  0.93% 28877  850s
+     3     5   39.19103    3 5139   38.82881   39.19103  0.93% 19256  858s
+     4     6   39.19103    4 7172   38.82881   39.19103  0.93% 14447  862s
+     5     7   39.19103    5 5479   38.82881   39.19103  0.93% 11562  871s
+     7     9   39.19103    7  634   38.82881   39.19103  0.93%  8261  875s
+    11    13   39.19103   11 1370   38.82881   39.19103  0.93%  5258  883s
+    12    14   39.19103   12 1364   38.82881   39.19103  0.93%  4928  886s
+    13    15   39.10237   13 9489   38.82881   39.19103  0.93%  4921  895s
+    14    16   39.19103   13  941   38.82881   39.19103  0.93%  4629  900s
+    18    20   39.19103   17 6716   38.82881   39.19103  0.93%  3694  910s
+    20    22   39.19103   18 6696   38.82881   39.19103  0.93%  3325  918s
+    22    24   39.19103   19 5952   38.82881   39.19103  0.93%  3083  928s
+    24    26   39.19103   21 14143   38.82881   39.19103  0.93%  4087  991s
+    26    28   39.19103   22 5952   38.82881   39.19103  0.93%  3781 1005s
+H   27    27                      39.0095765   39.19103  0.47%  3641 1057s
+    29    31   39.19103   25 9556   39.00958   39.19103  0.47%  4411 1128s
+    30    32   39.19103   25 11062   39.00958   39.19103  0.47%  4913 1194s
+
+Cutting planes:
+  Gomory: 4
+  MIR: 28
+  Flow cover: 11
+  Zero half: 2
+  RLT: 1
+  Relax-and-lift: 1
+
+Explored 31 nodes (757325 simplex iterations) in 1200.46 seconds (3468.79 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 8: 39.0096 38.8288 38.8281 ... 0.382121
+
+Time limit reached
+Best objective 3.900957653032e+01, best bound 3.919103308391e+01, gap 0.4652%
+Tree policy:
+if x1 <= 25.0:
+    if b <= 1.0:
+        if x1 <= 0.0:
+            if cd1 <= 1.0:
+                return 'send1'
+            else:
+                return 'time'
+        else:
+            return 'time'
+    else:
+        if b <= 1.0:
+            return 'time'
+        else:
+            if b <= 1.0:
+                return 'busy2'
+            else:
+                return 'cd'
+else:
+    if cd2 <= 4.0:
+        return 'end1'
+    else:
+        if cd2 <= 4.0:
+            return 'time'
+        else:
+            if cd2 <= 4.0:
+                return '__random__'
+            else:
+                return 'station1_cmd_21'
+Optimal decision tree (depth=4) value: 39.00957653031921
+Writing result files...

@@ -1,0 +1,189 @@
+Solving...
+Starting with fixed depth 6
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 9312157 rows, 780797 columns and 87759081 nonzeros
+Model fingerprint: 0xd094baa1
+Variable types: 135303 continuous, 645494 integer (645494 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 2268 rows and 819 columns (presolve time = 6s) ...
+Presolve removed 2268 rows and 819 columns (presolve time = 10s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 18s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 20s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 27s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 31s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 37s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 41s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 45s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 50s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 55s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 60s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 65s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 70s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 75s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 80s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 87s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 90s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 95s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 101s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 105s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 110s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 115s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 120s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 127s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 130s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 135s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 140s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 145s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 150s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 155s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 160s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 165s) ...
+Presolve removed 2268 rows and 882 columns (presolve time = 173s) ...
+Presolve removed 2265 rows and 879 columns
+Presolve time: 172.69s
+Presolved: 9309892 rows, 779918 columns, 84853554 nonzeros
+Variable types: 135306 continuous, 644612 integer (644612 binary)
+Found heuristic solution: objective 0.3821206
+Found heuristic solution: objective 0.3821206
+Root relaxation presolved: 779918 rows, 10089810 columns, 85633472 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.2020202e+02   0.000000e+00   2.402020e+02    270s
+   13318    2.2020202e+02   0.000000e+00   4.992515e+04    271s
+  173134    2.2020202e+02   0.000000e+00   4.992515e+04    275s
+  332950    2.2020202e+02   0.000000e+00   4.992515e+04    280s
+  432569    3.9191033e+01   0.000000e+00   0.000000e+00    287s
+  432569    3.9191033e+01   0.000000e+00   0.000000e+00    289s
+
+Root relaxation: objective 3.919103e+01, 432569 iterations, 63.45 seconds (188.91 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   39.19103    0 21716    0.38212   39.19103      -     -  438s
+H    0     0                      38.2120631   39.19103  2.56%     -  456s
+H    0     0                      38.2120656   39.19103  2.56%     -  461s
+H    0     0                      38.2120742   39.19103  2.56%     -  469s
+     0     0   39.19103    0 15238   38.21207   39.19103  2.56%     -  592s
+H    0     0                      38.2122840   39.19103  2.56%     -  900s
+     0     0   39.19103    0 15254   38.21228   39.19103  2.56%     - 1117s
+H    0     0                      38.8281200   39.19103  0.93%     - 1150s
+
+Cutting planes:
+  Gomory: 4
+  Implied bound: 1
+  MIR: 17
+  Flow cover: 61
+  Zero half: 13
+  Relax-and-lift: 1
+
+Explored 1 nodes (502734 simplex iterations) in 1200.90 seconds (3411.55 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 7: 38.8281 38.2123 38.2121 ... 0.382121
+
+Time limit reached
+Best objective 3.882811995686e+01, best bound 3.919103308390e+01, gap 0.9347%
+Tree policy:
+if b <= 1.0:
+    if y2 <= 0.0:
+        if s1 <= 0.0:
+            if b <= 0.0:
+                if cd2 <= 4.0:
+                    return 'send1'
+                else:
+                    return 'send2'
+            else:
+                return 'station2_cmd_34'
+        else:
+            if x2 <= 29.0:
+                if cd2 <= 4.0:
+                    return 'time'
+                else:
+                    return 'station1_cmd_21'
+            else:
+                if bc1 <= 13.0:
+                    return 'end1'
+                else:
+                    return 'station1_cmd_20'
+    else:
+        if y2 <= 0.0:
+            if cd2 <= 4.0:
+                return 'station1_cmd_18'
+            else:
+                if cd2 <= 4.0:
+                    return 'time'
+                else:
+                    if cd2 <= 4.0:
+                        return 'send1'
+                    else:
+                        return '__random__'
+        else:
+            if cd2 <= 4.0:
+                return 'send1'
+            else:
+                if cd2 <= 4.0:
+                    return '__random__'
+                else:
+                    if cd2 <= 4.0:
+                        return 'time'
+                    else:
+                        return 'send1'
+else:
+    if y2 <= 0.0:
+        if cd2 <= 4.0:
+            if b <= 1.0:
+                return 'send1'
+            else:
+                return 'cd'
+        else:
+            if cd2 <= 4.0:
+                return 'time'
+            else:
+                if cd2 <= 4.0:
+                    return 'send2'
+                else:
+                    if cd2 <= 4.0:
+                        return 'send1'
+                    else:
+                        return 'send2'
+    else:
+        if y2 <= 0.0:
+            if cd2 <= 4.0:
+                return 'send1'
+            else:
+                if cd2 <= 4.0:
+                    return 'end2'
+                else:
+                    return 'send1'
+        else:
+            if y2 <= 0.0:
+                if cd2 <= 4.0:
+                    return 'station2_cmd_33'
+                else:
+                    return 'send1'
+            else:
+                if cd2 <= 4.0:
+                    return 'send2'
+                else:
+                    if cd2 <= 4.0:
+                        return 'time'
+                    else:
+                        return 'send1'
+Optimal decision tree (depth=6) value: 38.82811995686014
+Writing result files...

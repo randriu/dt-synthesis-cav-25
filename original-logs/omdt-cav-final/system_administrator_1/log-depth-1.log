@@ -1,0 +1,67 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 8451 rows, 5412 columns and 161166 nonzeros
+Model fingerprint: 0xb9bc82c5
+Variable types: 2560 continuous, 2852 integer (2852 binary)
+Coefficient statistics:
+  Matrix range     [4e-12, 1e+02]
+  Objective range  [4e-01, 8e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 4 rows and 1 columns
+Presolve time: 0.21s
+Presolved: 8447 rows, 5411 columns, 157997 nonzeros
+Variable types: 2586 continuous, 2825 integer (2825 binary)
+Warning: Markowitz tolerance tightened to 0.03125
+
+Root relaxation: objective 2.239701e+02, 9058 iterations, 1.41 seconds (4.60 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  223.97010    0  486          -  223.97010      -     -    3s
+     0     0  223.97010    0  520          -  223.97010      -     -    5s
+     0     0  223.97010    0  558          -  223.97010      -     -    6s
+     0     0  223.97010    0  547          -  223.97010      -     -    6s
+     0     0  223.97010    0  548          -  223.97010      -     -    6s
+     0     0  223.97010    0  536          -  223.97010      -     -    6s
+     0     0  223.97010    0  506          -  223.97010      -     -    7s
+     0     0  223.97010    0  567          -  223.97010      -     -    7s
+     0     0  223.97010    0  522          -  223.97010      -     -    7s
+     0     0  223.97010    0  522          -  223.97010      -     -    8s
+     0     2  223.97010    0  522          -  223.97010      -     -   11s
+*   16    14              11     200.5701874  223.97010  11.7%  1052   14s
+*   23    13               7     203.4167466  223.97010  10.1%   927   15s
+    55    16  213.87934    5  903  203.41675  223.97010  10.1%   736   22s
+    71    15  215.79223    6 2048  203.41675  223.88314  10.1%   791   25s
+    83     9     cutoff    6       203.41675  222.16607  9.22%   858   30s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 21
+  MIR: 4
+  Flow cover: 41
+  Zero half: 26
+  RLT: 240
+  BQP: 75
+
+Explored 114 nodes (118926 simplex iterations) in 34.85 seconds (103.29 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 2: 203.417 200.57 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.034167465614e+02, best bound 2.034167465614e+02, gap 0.0000%
+Tree policy:
+return '(reboot_computer_0)'
+Optimal decision tree (depth=1) value: 203.41674656143255
+Writing result files...

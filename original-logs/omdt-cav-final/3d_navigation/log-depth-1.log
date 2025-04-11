@@ -1,0 +1,105 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 3003 rows, 1904 columns and 11710 nonzeros
+Model fingerprint: 0xc8f9c8e3
+Variable types: 875 continuous, 1029 integer (1029 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 1e+02]
+  Objective range  [7e-03, 2e-01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 22 rows and 17 columns
+Presolve time: 0.03s
+Presolved: 2981 rows, 1887 columns, 11511 nonzeros
+Variable types: 872 continuous, 1015 integer (1015 binary)
+Found heuristic solution: objective -0.0000000
+
+Root relaxation: objective 3.518546e-01, 746 iterations, 0.02 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.35185    0  150   -0.00000    0.35185      -     -    0s
+     0     0    0.35174    0  330   -0.00000    0.35174      -     -    0s
+     0     0    0.34628    0  213   -0.00000    0.34628      -     -    0s
+     0     0    0.34628    0  215   -0.00000    0.34628      -     -    0s
+     0     0    0.34426    0  204   -0.00000    0.34426      -     -    0s
+     0     0    0.34324    0  207   -0.00000    0.34324      -     -    0s
+     0     0    0.34222    0  176   -0.00000    0.34222      -     -    1s
+     0     0    0.33430    0  245   -0.00000    0.33430      -     -    1s
+     0     0    0.32860    0  312   -0.00000    0.32860      -     -    1s
+     0     0    0.32860    0  330   -0.00000    0.32860      -     -    1s
+     0     0    0.32575    0  372   -0.00000    0.32575      -     -    1s
+     0     0    0.32575    0  369   -0.00000    0.32575      -     -    1s
+     0     0    0.32565    0  375   -0.00000    0.32565      -     -    1s
+     0     0    0.32432    0  375   -0.00000    0.32432      -     -    1s
+     0     0    0.32427    0  392   -0.00000    0.32427      -     -    1s
+     0     0    0.32361    0  379   -0.00000    0.32361      -     -    1s
+     0     0    0.32353    0  415   -0.00000    0.32353      -     -    1s
+     0     0    0.32315    0  416   -0.00000    0.32315      -     -    1s
+     0     0    0.32299    0  442   -0.00000    0.32299      -     -    1s
+     0     0    0.32272    0  433   -0.00000    0.32272      -     -    1s
+     0     0    0.32215    0  386   -0.00000    0.32215      -     -    1s
+     0     0    0.32215    0  385   -0.00000    0.32215      -     -    1s
+     0     0    0.32117    0  427   -0.00000    0.32117      -     -    1s
+     0     0    0.32091    0  393   -0.00000    0.32091      -     -    1s
+     0     0    0.32087    0  399   -0.00000    0.32087      -     -    1s
+     0     0    0.32028    0  432   -0.00000    0.32028      -     -    1s
+     0     0    0.31998    0  455   -0.00000    0.31998      -     -    1s
+     0     0    0.31997    0  440   -0.00000    0.31997      -     -    1s
+     0     0    0.31986    0  488   -0.00000    0.31986      -     -    1s
+     0     0    0.31985    0  491   -0.00000    0.31985      -     -    1s
+     0     0    0.31974    0  462   -0.00000    0.31974      -     -    1s
+     0     0    0.31952    0  488   -0.00000    0.31952      -     -    2s
+     0     0    0.31950    0  483   -0.00000    0.31950      -     -    2s
+     0     0    0.31949    0  476   -0.00000    0.31949      -     -    2s
+     0     0    0.31949    0  487   -0.00000    0.31949      -     -    2s
+     0     0    0.31949    0  486   -0.00000    0.31949      -     -    2s
+     0     0    0.31949    0  482   -0.00000    0.31949      -     -    2s
+     0     0    0.31949    0  331   -0.00000    0.31949      -     -    2s
+     0     2    0.31829    0  320   -0.00000    0.31829      -     -    2s
+*   24    12               6       0.0000000    0.17677      -   163    2s
+*   34    11               7       0.0000002    0.15146      -   133    2s
+*   53    12              12       0.0000005    0.10545      -   158    2s
+*   89    20              10       0.0000015    0.10545      -   157    2s
+*  121    16               9       0.0000019    0.07197      -   171    3s
+*  132    14              11       0.0000023    0.05290      -   179    3s
+*  218    24              10       0.0000032    0.01653      -   157    3s
+*  219    23               8       0.0000051    0.01653      -   157    3s
+*  297    13               5       0.0000055    0.00032  5592%   145    4s
+*  301    13               9       0.0000060    0.00016  2613%   145    4s
+
+Cutting planes:
+  Implied bound: 41
+  MIR: 28
+  Flow cover: 24
+  Inf proof: 2
+  Zero half: 89
+  RLT: 143
+  Relax-and-lift: 8
+  BQP: 86
+
+Explored 319 nodes (51313 simplex iterations) in 4.35 seconds (5.64 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 10: 6.02546e-06 5.54821e-06 5.10568e-06 ... 7.41055e-10
+No other solutions better than 6.02546e-06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.025459502563e-06, best bound 6.025459502563e-06, gap 0.0000%
+Tree policy:
+if z <= 3.0:
+    return '__random__'
+else:
+    return '(up)'
+Optimal decision tree (depth=1) value: 6.025459502563179e-06
+Writing result files...

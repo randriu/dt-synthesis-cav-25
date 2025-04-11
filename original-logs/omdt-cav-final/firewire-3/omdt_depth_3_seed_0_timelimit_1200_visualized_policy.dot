@@ -1,0 +1,97 @@
+digraph Tree {
+	graph [bb="0,0,560,269"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if s2 <= 0.000",
+		pos="340,251",
+		width=1.6667];
+	1	[height=0.5,
+		label="if w12 <= 0.000",
+		pos="265,164",
+		width=1.8472];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="319.5,207.5",
+		pos="e,280.15,182.18 324.82,232.8 313.95,220.47 299.13,203.68 286.96,189.89"];
+	8	[height=0.5,
+		label="if w21 <= 1.000",
+		pos="416,164",
+		width=1.8472];
+	0 -> 8	[fontcolor=gray,
+		label=no,
+		lp="392,207.5",
+		pos="e,400.64,182.18 355.38,232.8 366.4,220.47 381.42,203.68 393.75,189.89"];
+	2	[height=0.5,
+		label="if s1 <= 2.000",
+		pos="138,91",
+		width=1.6667];
+	1 -> 2	[fontcolor=gray,
+		pos="e,168.61,109.11 234.58,145.99 217.43,136.4 195.81,124.32 177.37,114.01"];
+	5	[height=0.5,
+		label="if w21 <= 5.000",
+		pos="283,91",
+		width=1.8472];
+	1 -> 5	[fontcolor=gray,
+		pos="e,278.68,109.03 269.36,145.81 271.41,137.7 273.91,127.84 276.21,118.78"];
+	3	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=snd_idle12,
+		pos="46,18",
+		width=1.2778];
+	2 -> 3	[fontcolor=gray,
+		pos="e,68.066,36.029 115.73,72.813 103.86,63.656 89.097,52.26 76.212,42.316"];
+	4	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label=snd_idle21,
+		pos="156,18",
+		width=1.2778];
+	2 -> 4	[fontcolor=gray,
+		pos="e,151.68,36.029 142.36,72.813 144.41,64.702 146.91,54.836 149.21,45.777"];
+	6	[color="#ca9161",
+		fillcolor="#ca9161",
+		fontcolor=white,
+		height=0.5,
+		label=rec_idle12,
+		pos="273,18",
+		width=1.2083];
+	5 -> 6	[fontcolor=gray,
+		pos="e,275.4,36.029 280.58,72.813 279.45,64.789 278.08,55.047 276.81,46.069"];
+	7	[color="#d55e00",
+		fillcolor="#d55e00",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="362,18",
+		width=0.75];
+	5 -> 7	[fontcolor=gray,
+		pos="e,343.05,36.029 302.12,72.813 312.12,63.83 324.51,52.693 335.42,42.886"];
+	9	[color="#949494",
+		fillcolor="#949494",
+		fontcolor=white,
+		height=0.5,
+		label=rec_req12,
+		pos="413,91",
+		width=1.1806];
+	8 -> 9	[fontcolor=gray,
+		pos="e,413.72,109.03 415.27,145.81 414.93,137.79 414.52,128.05 414.14,119.07"];
+	10	[color="#cc78bc",
+		fillcolor="#cc78bc",
+		fontcolor=white,
+		height=0.5,
+		label=rec_ack21,
+		pos="517,91",
+		width=1.1944];
+	8 -> 10	[fontcolor=gray,
+		pos="e,492.66,109.11 440.19,145.99 453.34,136.75 469.78,125.19 484.08,115.14"];
+}

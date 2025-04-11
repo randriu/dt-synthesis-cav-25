@@ -1,0 +1,258 @@
+Solving...
+Starting with fixed depth 7
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 1578441 rows, 284555 columns and 15753388 nonzeros
+Model fingerprint: 0xf6263a27
+Variable types: 10195 continuous, 274360 integer (274360 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 7e+00]
+Presolve removed 0 rows and 1143 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 1143 columns (presolve time = 10s) ...
+Presolve removed 0 rows and 1143 columns (presolve time = 15s) ...
+Presolve removed 0 rows and 1143 columns (presolve time = 20s) ...
+Presolve removed 0 rows and 1143 columns (presolve time = 25s) ...
+Presolve removed 0 rows and 1143 columns (presolve time = 31s) ...
+Presolve removed 0 rows and 1143 columns
+Presolve time: 30.52s
+Presolved: 1578441 rows, 283412 columns, 15243550 nonzeros
+Variable types: 10195 continuous, 273217 integer (273217 binary)
+Found heuristic solution: objective 1.2183060
+Found heuristic solution: objective 1.2183060
+Root relaxation presolved: 283412 rows, 1861853 columns, 15526962 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0600000e+04   0.000000e+00   2.077416e+04     51s
+  253738    7.9029116e+03   0.000000e+00   4.152637e+07     56s
+  256108    3.5999962e+03   0.000000e+00   1.829105e+07     61s
+  257848    2.9297587e+03   0.000000e+00   1.435397e+07     66s
+  259218    2.5760411e+03   0.000000e+00   2.763981e+08     71s
+  260528    2.2824645e+03   0.000000e+00   1.782000e+07     76s
+  261748    1.9140297e+03   0.000000e+00   2.163669e+07     81s
+  262578    1.7290745e+03   0.000000e+00   1.429854e+08     85s
+  263728    1.2543945e+03   0.000000e+00   2.546260e+07     91s
+  264868    9.9922398e+02   0.000000e+00   1.359399e+07     97s
+  265668    8.8091915e+02   0.000000e+00   4.037048e+08    101s
+  266848    7.0368955e+02   0.000000e+00   3.660384e+07    107s
+  267558    6.1141131e+02   0.000000e+00   1.178325e+07    111s
+  268688    5.5461997e+02   0.000000e+00   6.799268e+07    117s
+  269388    5.1799915e+02   0.000000e+00   1.067435e+07    121s
+  270098    5.0065359e+02   0.000000e+00   4.096169e+07    125s
+  271128    4.6387919e+02   0.000000e+00   5.388972e+08    132s
+  271798    2.6885637e+02   0.000000e+00   2.738876e+07    136s
+  272468    6.4362370e+01   0.000000e+00   9.603273e+06    140s
+  273588    3.8598569e+01   0.000000e+00   6.996757e+06    147s
+  274298    1.9540225e+01   0.000000e+00   4.759845e+06    151s
+  275398    6.3478331e+00   0.000000e+00   1.583074e+06    156s
+  276078    4.8758289e+00   0.000000e+00   2.421104e+07    160s
+  276958    4.8267514e+00   0.000000e+00   4.181022e+06    166s
+  277558    4.7908547e+00   0.000000e+00   1.210758e+09    170s
+  278438    4.7487805e+00   0.000000e+00   4.628663e+06    176s
+  279008    4.7301975e+00   0.000000e+00   1.067073e+07    180s
+  279828    4.7053466e+00   0.000000e+00   8.336966e+06    186s
+  280668    4.6727887e+00   0.000000e+00   5.826065e+06    192s
+  281268    4.6621345e+00   0.000000e+00   4.829737e+06    196s
+  282118    4.6472349e+00   0.000000e+00   1.531416e+06    202s
+  282678    4.6197737e+00   0.000000e+00   3.344015e+06    206s
+  283438    4.6099366e+00   0.000000e+00   9.483047e+06    211s
+  284018    4.5672980e+00   0.000000e+00   1.539154e+06    215s
+  284828    4.5500066e+00   0.000000e+00   6.794228e+06    221s
+  285528    4.5395026e+00   0.000000e+00   1.769254e+06    226s
+  286428    4.5194027e+00   0.000000e+00   3.219726e+06    232s
+  286968    4.5119460e+00   0.000000e+00   7.845606e+05    235s
+  287828    4.4980457e+00   0.000000e+00   2.294826e+06    241s
+  288628    4.4866404e+00   0.000000e+00   1.084306e+06    246s
+  289508    4.4756877e+00   0.000000e+00   2.377369e+06    252s
+  290228    4.4655340e+00   0.000000e+00   3.429771e+05    255s
+  291238    4.4491443e+00   0.000000e+00   5.541819e+06    260s
+  292228    4.4324292e+00   0.000000e+00   3.592971e+06    265s
+  293488    4.4134707e+00   0.000000e+00   4.888234e+04    270s
+  295608    4.3857629e+00   0.000000e+00   3.784617e+03    275s
+  297188    4.3833202e+00   0.000000e+00   1.318950e+03    281s
+  298029    5.1795790e+00   0.000000e+00   0.000000e+00    284s
+  298229    5.1794339e+00   1.513910e-04   1.720156e+10    287s
+  298491    5.1795793e+00   0.000000e+00   0.000000e+00    290s
+Extra simplex iterations from dual to original model: 462
+
+Root relaxation: objective 5.179579e+00, 298491 iterations, 246.68 seconds (899.86 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    5.17958    0 11801    1.21831    5.17958   325%     -  908s
+H    0     0                       1.2183079    5.17958   325%     -  913s
+     0     0    5.17958    0 16221    1.21831    5.17958   325%     -  937s
+H    0     0                       1.2484800    5.17958   315%     -  941s
+H    0     0                       1.2484800    5.17958   315%     -  943s
+     0     0    5.17958    0 25007    1.24848    5.17958   315%     - 1200s
+
+Cutting planes:
+  Gomory: 15
+  Implied bound: 25
+  MIR: 546
+  Flow cover: 126
+  Zero half: 757
+  Relax-and-lift: 2
+
+Explored 1 nodes (323162 simplex iterations) in 1200.11 seconds (7386.85 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 5: 1.24848 1.24848 1.21831 ... 1.21831
+
+Time limit reached
+Best objective 1.248480028195e+00, best bound 5.179579264244e+00, gap 314.8708%
+Tree policy:
+if y <= 6.0:
+    if picked5 <= 0.0:
+        if picked3 <= 0.0:
+            if picked2 <= 0.0:
+                if y <= 0.0:
+                    if picked6 <= 0.0:
+                        return 'r'
+                    else:
+                        return '__random__'
+                else:
+                    if picked6 <= 0.0:
+                        return 'r'
+                    else:
+                        return '__random__'
+            else:
+                if y <= 4.0:
+                    if picked6 <= 0.0:
+                        return 'l'
+                    else:
+                        return '__random__'
+                else:
+                    if x <= 8.0:
+                        if picked0 <= 0.0:
+                            return 'u'
+                        else:
+                            return '__random__'
+                    else:
+                        if picked6 <= 0.0:
+                            return '__random__'
+                        else:
+                            return 'r'
+        else:
+            if picked0 <= 0.0:
+                if y <= 2.0:
+                    return '__random__'
+                else:
+                    return 'l'
+            else:
+                if x <= 4.0:
+                    if y <= 5.0:
+                        if x <= 2.0:
+                            return 'l'
+                        else:
+                            return 'u'
+                    else:
+                        return 'u'
+                else:
+                    if picked0 <= 0.0:
+                        return 'u'
+                    else:
+                        return 'r'
+    else:
+        if picked3 <= 0.0:
+            if picked5 <= 0.0:
+                if picked2 <= 0.0:
+                    if y <= 5.0:
+                        return 'l'
+                    else:
+                        return '__random__'
+                else:
+                    if y <= 1.0:
+                        return '__random__'
+                    else:
+                        return 'd'
+            else:
+                if x <= 12.0:
+                    if picked5 <= 0.0:
+                        return 'l'
+                    else:
+                        return '__random__'
+                else:
+                    if y <= 3.0:
+                        return 'u'
+                    else:
+                        return 'd'
+        else:
+            if x <= 7.0:
+                if y <= 3.0:
+                    if picked2 <= 0.0:
+                        return '__random__'
+                    else:
+                        return 'd'
+                else:
+                    if picked1 <= 0.0:
+                        if picked5 <= 0.0:
+                            return '__random__'
+                        else:
+                            return 'u'
+                    else:
+                        return 'd'
+            else:
+                if y <= 2.0:
+                    if picked3 <= 0.0:
+                        return 'r'
+                    else:
+                        if picked6 <= 0.0:
+                            return '__random__'
+                        else:
+                            return 'l'
+                else:
+                    if picked6 <= 0.0:
+                        if picked3 <= 0.0:
+                            return 'r'
+                        else:
+                            return '__random__'
+                    else:
+                        return 'u'
+else:
+    if picked6 <= 0.0:
+        if picked1 <= 0.0:
+            return '__random__'
+        else:
+            if x <= 9.0:
+                if picked0 <= 0.0:
+                    return 'd'
+                else:
+                    return 'l'
+            else:
+                return '__random__'
+    else:
+        if x <= 10.0:
+            if x <= 2.0:
+                if y <= 6.0:
+                    return 'r'
+                else:
+                    return '__random__'
+            else:
+                return '__random__'
+        else:
+            if picked6 <= 0.0:
+                if picked3 <= 0.0:
+                    return 'r'
+                else:
+                    return 'l'
+            else:
+                if y <= 6.0:
+                    return 'u'
+                else:
+                    return '__random__'
+Optimal decision tree (depth=7) value: 1.2484800281952466
+Writing result files...

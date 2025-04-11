@@ -1,0 +1,114 @@
+Solving...
+Starting with fixed depth 4
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 1663 rows, 600 columns and 9296 nonzeros
+Model fingerprint: 0x85c83955
+Variable types: 80 continuous, 520 integer (520 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [2e-01, 3e-01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 4e+00]
+Presolve removed 126 rows and 80 columns
+Presolve time: 0.02s
+Presolved: 1537 rows, 520 columns, 8661 nonzeros
+Variable types: 80 continuous, 440 integer (440 binary)
+Found heuristic solution: objective 0.0123561
+Found heuristic solution: objective 0.0154914
+
+Root relaxation: objective 5.420259e-01, 201 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.54203    0   49    0.01549    0.54203  3399%     -    0s
+     0     0    0.54203    0   49    0.01549    0.54203  3399%     -    0s
+H    0     0                       0.0380729    0.54203  1324%     -    0s
+     0     0    0.54203    0   49    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   51    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   56    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   48    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   47    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   44    0.03807    0.54203  1324%     -    0s
+H    0     0                       0.0380730    0.54203  1324%     -    0s
+     0     0    0.54203    0   54    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   34    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   43    0.03807    0.54203  1324%     -    0s
+     0     0    0.54203    0   27    0.03807    0.54203  1324%     -    0s
+H    0     0                       0.2558316    0.54203   112%     -    0s
+     0     0    0.54203    0   35    0.25583    0.54203   112%     -    0s
+     0     0    0.54203    0   35    0.25583    0.54203   112%     -    0s
+     0     2    0.54203    0   35    0.25583    0.54203   112%     -    0s
+*   52    40              25       0.3135821    0.54203  72.8%  11.8    0s
+H   54    38                       0.3135822    0.54203  72.8%  11.3    0s
+H   81    59                       0.3135822    0.54203  72.8%  10.6    0s
+H  243   182                       0.3135824    0.54203  72.8%  10.3    0s
+*  254   172              26       0.4446950    0.54203  21.9%  10.2    0s
+H  270   171                       0.5201248    0.54203  4.21%  10.5    0s
+H  584   238                       0.5201249    0.54203  4.21%  11.1    0s
+H  654   254                       0.5201250    0.54203  4.21%  10.7    0s
+*  658     3              20       0.5420259    0.54203  0.00%  10.9    0s
+
+Cutting planes:
+  Lift-and-project: 2
+  Cover: 5
+  Implied bound: 5
+  MIR: 14
+  Flow cover: 6
+  Inf proof: 2
+  Zero half: 9
+  Relax-and-lift: 1
+
+Explored 659 nodes (9312 simplex iterations) in 0.61 seconds (0.80 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 10: 0.542026 0.520125 0.520125 ... 0.255832
+No other solutions better than 0.542026
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.420259305407e-01, best bound 5.420259305407e-01, gap 0.0000%
+Tree policy:
+if X <= 1.0:
+    if Y <= 2.0:
+        if Y <= 1.0:
+            if X <= 0.0:
+                return '(Left)'
+            else:
+                return '(Up)'
+        else:
+            if X <= 0.0:
+                return '(Up)'
+            else:
+                return '(Down)'
+    else:
+        if Y <= 2.0:
+            return '(Left)'
+        else:
+            if Y <= 3.0:
+                return '(Right)'
+            else:
+                return '(Left)'
+else:
+    if Y <= 1.0:
+        if Y <= 0.0:
+            return '(Up)'
+        else:
+            return '(Right)'
+    else:
+        if X <= 1.0:
+            return '(Down)'
+        else:
+            if Y <= 2.0:
+                return '(Left)'
+            else:
+                return '(Down)'
+Optimal decision tree (depth=4) value: 0.5420259305406874
+Writing result files...

@@ -1,0 +1,91 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 277248 rows, 178905 columns and 1648689 nonzeros
+Model fingerprint: 0xdd484c67
+Variable types: 86254 continuous, 92651 integer (92651 binary)
+Coefficient statistics:
+  Matrix range     [1e-04, 1e+04]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+04]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 15 rows and 6 columns
+Presolve time: 4.18s
+Presolved: 277233 rows, 178899 columns, 1588835 nonzeros
+Variable types: 86254 continuous, 92645 integer (92645 binary)
+Found heuristic solution: objective 0.0934598
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.9203920e+02   3.055526e+04   0.000000e+00      7s
+    7841    9.4292419e-02   1.798608e+00   0.000000e+00     10s
+    8952    9.4394073e-02   0.000000e+00   0.000000e+00     11s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+    1426 DPushes remaining with DInf 0.0000000e+00                11s
+       0 DPushes remaining with DInf 0.0000000e+00                11s
+
+   15508 PPushes remaining with PInf 0.0000000e+00                11s
+       0 PPushes remaining with PInf 0.0000000e+00                12s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.2124702e-13     12s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   25503    9.4394073e-02   0.000000e+00   0.000000e+00     12s
+
+Root relaxation: objective 9.439407e-02, 25503 iterations, 5.39 seconds (19.52 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.09439    0 20370    0.09346    0.09439  1.00%     -   38s
+H    0     0                       0.0934630    0.09439  1.00%     -   38s
+     0     0    0.09439    0 12390    0.09346    0.09439  1.00%     -   69s
+     0     0    0.09439    0 10987    0.09346    0.09439  1.00%     -  147s
+     0     0    0.09439    0 10988    0.09346    0.09439  1.00%     -  153s
+     0     0    0.09439    0 11011    0.09346    0.09439  1.00%     -  218s
+     0     0    0.09439    0 11015    0.09346    0.09439  1.00%     -  263s
+     0     0    0.09439    0 11025    0.09346    0.09439  1.00%     -  538s
+     0     0    0.09439    0 10540    0.09346    0.09439  1.00%     -  602s
+     0     0    0.09439    0 10600    0.09346    0.09439  1.00%     -  713s
+     0     0    0.09439    0 10522    0.09346    0.09439  1.00%     -  775s
+     0     0    0.09439    0 10506    0.09346    0.09439  1.00%     - 1200s
+
+Cutting planes:
+  Gomory: 6
+  Implied bound: 28
+  MIR: 47
+  Flow cover: 180
+  Zero half: 284
+  RLT: 2648
+  BQP: 72
+
+Explored 1 nodes (191290 simplex iterations) in 1200.02 seconds (1527.52 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 2: 0.093463 0.0934598 
+
+Time limit reached
+Best objective 9.346298277107e-02, best bound 9.439407263401e-02, gap 0.9962%
+Tree policy:
+if coin2 <= 1.0:
+    return 'done'
+else:
+    return '__random__'
+Optimal decision tree (depth=1) value: 0.09346298277106507
+Writing result files...

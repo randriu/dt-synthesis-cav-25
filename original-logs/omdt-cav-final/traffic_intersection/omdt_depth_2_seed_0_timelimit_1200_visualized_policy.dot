@@ -1,0 +1,67 @@
+digraph Tree {
+	graph [bb="0,0,387,196"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if green_side <= 0.000",
+		pos="193.5,178",
+		width=2.4861];
+	1	[height=0.5,
+		label="if cars_left <= 1.000",
+		pos="104.5,91",
+		width=2.2361];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="167,134.5",
+		pos="e,122.48,109.18 175.49,159.8 162.34,147.24 144.34,130.05 129.76,116.12"];
+	4	[height=0.5,
+		label="if cars_left <= 0.000",
+		pos="283.5,91",
+		width=2.2361];
+	0 -> 4	[fontcolor=gray,
+		label=no,
+		lp="253.5,134.5",
+		pos="e,265.31,109.18 211.71,159.8 225.01,147.24 243.21,130.05 257.96,116.12"];
+	2	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label="(switch_light)",
+		pos="54.5,18",
+		width=1.5139];
+	1 -> 2	[fontcolor=gray,
+		pos="e,66.492,36.029 92.396,72.813 86.378,64.266 78.986,53.769 72.333,44.323"];
+	3	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label="(wait)",
+		pos="155.5,18",
+		width=0.77778];
+	1 -> 3	[fontcolor=gray,
+		pos="e,143.27,36.029 116.85,72.813 122.98,64.266 130.52,53.769 137.31,44.323"];
+	5	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label="(wait)",
+		pos="231.5,18",
+		width=0.77778];
+	4 -> 5	[fontcolor=gray,
+		pos="e,243.97,36.029 270.91,72.813 264.65,64.266 256.96,53.769 250.05,44.323"];
+	6	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label="(switch_light)",
+		pos="332.5,18",
+		width=1.5139];
+	4 -> 6	[fontcolor=gray,
+		pos="e,320.75,36.029 295.36,72.813 301.26,64.266 308.5,53.769 315.02,44.323"];
+}

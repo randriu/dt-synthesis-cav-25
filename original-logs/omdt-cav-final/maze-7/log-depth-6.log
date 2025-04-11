@@ -1,0 +1,158 @@
+Solving...
+Starting with fixed depth 6
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 795337 rows, 151435 columns and 7240172 nonzeros
+Model fingerprint: 0x8a0da7dd
+Variable types: 10195 continuous, 141240 integer (141240 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 0 rows and 567 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 567 columns (presolve time = 10s) ...
+Presolve removed 0 rows and 567 columns (presolve time = 15s) ...
+Presolve removed 0 rows and 567 columns
+Presolve time: 15.95s
+Presolved: 795337 rows, 150868 columns, 6985644 nonzeros
+Variable types: 10195 continuous, 140673 integer (140673 binary)
+Found heuristic solution: objective 1.2183060
+Root relaxation presolved: 150868 rows, 946205 columns, 7136512 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0600000e+04   0.000000e+00   2.077416e+04     26s
+  129959    3.9678593e+03   0.000000e+00   1.470084e+07     30s
+  133389    2.7345240e+03   0.000000e+00   1.391226e+07     36s
+  135559    2.1895858e+03   0.000000e+00   8.400013e+07     40s
+  137539    1.7041593e+03   0.000000e+00   1.052789e+07     45s
+  139509    1.2256008e+03   0.000000e+00   3.103924e+07     51s
+  140949    9.1419312e+02   0.000000e+00   1.360528e+08     55s
+  142639    6.3797534e+02   0.000000e+00   4.631948e+07     60s
+  144309    5.0759750e+02   0.000000e+00   4.469343e+06     66s
+  145659    4.3020457e+02   0.000000e+00   6.121797e+06     70s
+  147399    8.9983825e+01   0.000000e+00   4.094121e+06     76s
+  148849    4.7541100e+01   0.000000e+00   1.672513e+06     80s
+  150279    4.7028237e+00   0.000000e+00   3.405177e+06     86s
+  151699    4.5937293e+00   0.000000e+00   2.146508e+06     91s
+  153139    4.4953998e+00   0.000000e+00   5.000158e+05     96s
+  154529    4.4368366e+00   0.000000e+00   1.085136e+06    100s
+  155949    4.4055690e+00   0.000000e+00   2.223496e+06    105s
+  158369    4.3459539e+00   0.000000e+00   7.251583e+05    111s
+  160829    4.3323475e+00   0.000000e+00   1.151183e+04    115s
+  162861    5.1795790e+00   0.000000e+00   0.000000e+00    120s
+  164134    5.1795792e+00   0.000000e+00   0.000000e+00    125s
+Extra simplex iterations from dual to original model: 1273
+
+Root relaxation: objective 5.179579e+00, 164134 iterations, 103.23 seconds (353.88 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    5.17958    0 17624    1.21831    5.17958   325%     -  389s
+H    0     0                       1.4491509    5.17958   257%     -  390s
+     0     0    5.17958    0 25072    1.44915    5.17958   257%     -  411s
+H    0     0                       1.4566466    5.17958   256%     -  415s
+     0     0    5.17958    0 31721    1.45665    5.17958   256%     -  714s
+     0     0    5.17958    0 32056    1.45665    5.17958   256%     -  723s
+     0     0    5.17958    0 29282    1.45665    5.17958   256%     - 1018s
+H    0     0                       1.4566473    5.17958   256%     - 1020s
+     0     0    5.17958    0 29165    1.45665    5.17958   256%     - 1024s
+     0     0    5.17958    0 34524    1.45665    5.17958   256%     - 1200s
+
+Cutting planes:
+  Gomory: 3
+  Implied bound: 19
+  MIR: 987
+  StrongCG: 9
+  Flow cover: 145
+  Zero half: 478
+  Relax-and-lift: 2
+
+Explored 1 nodes (219170 simplex iterations) in 1200.13 seconds (6884.74 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 4: 1.45665 1.45665 1.44915 1.21831 
+
+Time limit reached
+Best objective 1.456647305716e+00, best bound 5.179579205594e+00, gap 255.5822%
+Tree policy:
+if y <= 6.0:
+    if x <= 6.0:
+        if y <= 0.0:
+            if picked0 <= 0.0:
+                return 'r'
+            else:
+                return '__random__'
+        else:
+            if y <= 4.0:
+                if x <= 0.0:
+                    return 'l'
+                else:
+                    return '__random__'
+            else:
+                return 'r'
+    else:
+        if x <= 10.0:
+            if picked4 <= 0.0:
+                return 'r'
+            else:
+                if y <= 0.0:
+                    return 'd'
+                else:
+                    return 'r'
+        else:
+            return '__random__'
+else:
+    if picked4 <= 0.0:
+        if y <= 2.0:
+            if picked1 <= 0.0:
+                return '__random__'
+            else:
+                if y <= 1.0:
+                    return 'd'
+                else:
+                    return '__random__'
+        else:
+            if y <= 4.0:
+                if x <= 5.0:
+                    return 'r'
+                else:
+                    return '__random__'
+            else:
+                if y <= 4.0:
+                    return 'u'
+                else:
+                    return '__random__'
+    else:
+        if x <= 7.0:
+            if x <= 3.0:
+                return '__random__'
+            else:
+                if picked6 <= 0.0:
+                    return '__random__'
+                else:
+                    return 'u'
+        else:
+            if picked2 <= 0.0:
+                if y <= 1.0:
+                    return 'd'
+                else:
+                    return '__random__'
+            else:
+                if y <= 6.0:
+                    return 'r'
+                else:
+                    return 'l'
+Optimal decision tree (depth=6) value: 1.4566473057155407
+Writing result files...

@@ -1,0 +1,37 @@
+digraph Tree {
+	graph [bb="0,0,196.5,123"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if center_cross <= 0.000",
+		pos="95.5,105",
+		width=2.6528];
+	1	[color="#cc78bc",
+		fillcolor="#cc78bc",
+		fontcolor=white,
+		height=0.5,
+		label="(center)",
+		pos="44.5,18",
+		width=0.98611];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="86,61.5",
+		pos="e,54.805,36.175 85.179,86.799 77.99,74.817 68.27,58.617 60.134,45.057"];
+	2	[color="#56b4e9",
+		fillcolor="#56b4e9",
+		fontcolor=white,
+		height=0.5,
+		label=__random__,
+		pos="147.5,18",
+		width=1.3611];
+	0 -> 2	[fontcolor=gray,
+		label=no,
+		lp="133.5,61.5",
+		pos="e,136.99,36.175 106.02,86.799 113.35,74.817 123.26,58.617 131.56,45.057"];
+}

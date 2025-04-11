@@ -1,0 +1,143 @@
+Solving...
+Starting with fixed depth 6
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 798847 rows, 89067 columns and 6260733 nonzeros
+Model fingerprint: 0x45766154
+Variable types: 11264 continuous, 77803 integer (77803 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 1448 rows and 1386 columns (presolve time = 5s) ...
+Presolve removed 1449 rows and 1386 columns (presolve time = 10s) ...
+Presolve removed 1449 rows and 1386 columns
+Presolve time: 11.20s
+Presolved: 797398 rows, 87681 columns, 6252477 nonzeros
+Variable types: 11264 continuous, 76417 integer (76417 binary)
+Root relaxation presolved: 87681 rows, 885079 columns, 6340158 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         18s
+   14112    6.5418701e+01   4.499872e+05   0.000000e+00     20s
+   15279    6.5539237e+01   0.000000e+00   0.000000e+00     23s
+   15279    6.5539237e+01   0.000000e+00   0.000000e+00     23s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+      10 DPushes remaining with DInf 0.0000000e+00                23s
+       0 DPushes remaining with DInf 0.0000000e+00                23s
+
+    1745 PPushes remaining with PInf 0.0000000e+00                23s
+       0 PPushes remaining with PInf 0.0000000e+00                23s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.2575420e-14     23s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   17037    6.5539237e+01   0.000000e+00   0.000000e+00     23s
+   17037    6.5539237e+01   0.000000e+00   0.000000e+00     23s
+   17037    6.5539237e+01   0.000000e+00   0.000000e+00     24s
+
+Root relaxation: objective 6.553924e+01, 17037 iterations, 9.82 seconds (23.34 work units)
+Total elapsed time = 37.19s
+Total elapsed time = 48.26s
+Total elapsed time = 61.54s
+Total elapsed time = 71.61s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   65.53924    0  579          -   65.53924      -     -   73s
+H    0     0                      65.0102940   65.53924  0.81%     -   79s
+     0     0   65.53924    0  581   65.01029   65.53924  0.81%     -   88s
+     0     0   65.53924    0 2701   65.01029   65.53924  0.81%     -  165s
+     0     0   65.53924    0  527   65.01029   65.53924  0.81%     -  183s
+     0     0   65.53924    0  529   65.01029   65.53924  0.81%     -  253s
+     0     0   65.53924    0  521   65.01029   65.53924  0.81%     -  260s
+H    0     0                      65.0121502   65.53924  0.81%     -  262s
+     0     0   65.53924    0  522   65.01215   65.53924  0.81%     -  278s
+     0     0   65.53924    0  524   65.01215   65.53924  0.81%     -  282s
+     0     0   65.53924    0  576   65.01215   65.53924  0.81%     -  311s
+H    0     0                      65.0154274   65.53924  0.81%     -  315s
+     0     0   65.53924    0  528   65.01543   65.53924  0.81%     -  317s
+     0     0   65.53924    0  518   65.01543   65.53924  0.81%     -  333s
+     0     0   65.53924    0  518   65.01543   65.53924  0.81%     -  353s
+     0     2   65.53924    0  518   65.01543   65.53924  0.81%     -  844s
+     1     3   65.53924    1 2825   65.01543   65.53924  0.81%  3942  846s
+     4     6   65.53924    2 1540   65.01543   65.53924  0.81%  1004  850s
+    11    13   65.53924    6 1028   65.01543   65.53924  0.81%   381  855s
+    17    19   65.53924    9 1542   65.01543   65.53924  0.81%   252  860s
+    18    20   65.53924   10  527   65.01543   65.53924  0.81%   476  877s
+    20    22   65.53924   12 1549   65.01543   65.53924  0.81%   439  880s
+    26    28   65.53924   15 2050   65.01543   65.53924  0.81%   356  886s
+H   27    27                      65.0154353   65.53924  0.81%   343  896s
+    30    32   65.53924   18 1037   65.01544   65.53924  0.81%   312  900s
+    32    34   65.53924   20 3202   65.01544   65.53924  0.81%   410  916s
+    33    35   65.53924   20  527   65.01544   65.53924  0.81%   460  921s
+    36    38   65.53924   22 1050   65.01544   65.53924  0.81%   431  925s
+    40    42   65.53924   25 1823   65.01544   65.53924  0.81%   405  930s
+    46    48   65.53924   29 3377   65.01544   65.53924  0.81%   364  935s
+    48    50   65.53924   30  592   65.01544   65.53924  0.81%   393  942s
+    49    51   65.53924   31 3005   65.01544   65.53924  0.81%   392  945s
+    52    54   65.53924   33 2818   65.01544   65.53924  0.81%   376  956s
+H   54    54                      65.0155280   65.53924  0.81%   363  969s
+    54    56   65.53924   35 2814   65.01553   65.53924  0.81%   371  971s
+    56    58   65.53924   36 3788   65.01553   65.53924  0.81%   376  977s
+    58    60   65.53924   37 4318   65.01553   65.53924  0.81%   372  981s
+    60    62   65.53924   39 3548   65.01553   65.53924  0.81%   360  985s
+    62    64   65.53924   40 1610   65.01553   65.53924  0.81%   474 1008s
+    63    65   65.53924   41 2390   65.01553   65.53924  0.81%   470 1010s
+    66    68   65.53924   43 1350   65.01553   65.53924  0.81%   454 1015s
+    68    70   65.53924   44 1360   65.01553   65.53924  0.81%   453 1020s
+
+Cutting planes:
+  Implied bound: 1
+  MIR: 1
+  Flow cover: 14
+  Zero half: 24
+
+Explored 69 nodes (85789 simplex iterations) in 1200.12 seconds (4525.31 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 5: 65.0155 65.0154 65.0154 ... 65.0103
+
+Time limit reached
+Best objective 6.501552804006e+01, best bound 6.553923710920e+01, gap 0.8055%
+Tree policy:
+if num_tokens_var <= 0.0:
+    if q4 <= 0.0:
+        return 'process1_cmd_0'
+    else:
+        if q5 <= 0.0:
+            return 'process9_cmd_8'
+        else:
+            if q4 <= 0.0:
+                return 'process10_cmd_9'
+            else:
+                return 'process1_cmd_0'
+else:
+    if num_tokens_var <= 0.0:
+        if q4 <= 0.0:
+            return 'process1_cmd_0'
+        else:
+            return 'process2_cmd_1'
+    else:
+        return 'process1_cmd_0'
+Optimal decision tree (depth=6) value: 65.01552804005814
+Writing result files...

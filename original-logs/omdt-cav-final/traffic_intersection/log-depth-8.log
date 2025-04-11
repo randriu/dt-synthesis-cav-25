@@ -1,0 +1,278 @@
+Solving...
+Starting with fixed depth 8
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 371619 rows, 100089 columns and 3676875 nonzeros
+Model fingerprint: 0x5ef51581
+Variable types: 1083 continuous, 99006 integer (99006 binary)
+Coefficient statistics:
+  Matrix range     [6e-12, 1e+02]
+  Objective range  [2e-01, 2e+01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 8e+00]
+Presolve removed 1275 rows and 1530 columns (presolve time = 5s) ...
+Presolve removed 1276 rows and 1531 columns (presolve time = 10s) ...
+Presolve removed 1212 rows and 1467 columns
+Presolve time: 11.58s
+Presolved: 370407 rows, 98622 columns, 3657260 nonzeros
+Variable types: 1147 continuous, 97475 integer (97475 binary)
+Found heuristic solution: objective -146.4430699
+Root relaxation presolved: 98622 rows, 469020 columns, 3755873 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    6.5368511e+03   0.000000e+00   5.415501e+04     16s
+    5645    2.1500348e+00   0.000000e+00   1.163766e+06     20s
+    9305    2.0243377e+00   0.000000e+00   7.757662e+05     25s
+   13125    1.9642551e+00   0.000000e+00   6.492124e+05     30s
+   17305    1.9059052e+00   0.000000e+00   1.743665e+05     35s
+   22915    1.8418472e+00   0.000000e+00   1.134026e+05     40s
+   24314    2.1245699e+00   0.000000e+00   0.000000e+00     41s
+   24314    2.1245699e+00   0.000000e+00   0.000000e+00     41s
+   24320    2.1245699e+00   0.000000e+00   0.000000e+00     41s
+Extra simplex iterations from dual to original model: 6
+
+Root relaxation: objective 2.124570e+00, 24320 iterations, 27.91 seconds (115.06 work units)
+Total elapsed time = 73.04s
+Total elapsed time = 82.26s
+Total elapsed time = 99.79s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    2.12457    0  853 -146.44307    2.12457   101%     -  107s
+     0     0    2.12457    0 3814 -146.44307    2.12457   101%     -  113s
+     0     0    2.12457    0  789 -146.44307    2.12457   101%     -  160s
+     0     0    2.12457    0  789 -146.44307    2.12457   101%     -  164s
+     0     0    2.12457    0  504 -146.44307    2.12457   101%     -  200s
+     0     0    2.12457    0 1141 -146.44307    2.12457   101%     -  202s
+     0     0    2.12457    0  852 -146.44307    2.12457   101%     -  254s
+     0     0    2.12457    0  854 -146.44307    2.12457   101%     -  257s
+     0     0    2.12457    0  663 -146.44307    2.12457   101%     -  278s
+     0     0    2.12457    0  653 -146.44307    2.12457   101%     -  281s
+     0     0    2.12457    0  716 -146.44307    2.12457   101%     -  316s
+     0     0    2.12457    0 1285 -146.44307    2.12457   101%     -  320s
+     0     0    2.12457    0  559 -146.44307    2.12457   101%     -  345s
+     0     0    2.12457    0  559 -146.44307    2.12457   101%     -  359s
+H    0     0                    -145.5573509    2.12457   101%     -  375s
+H    0     0                    -138.2386122    2.12457   102%     -  376s
+     0     2    2.12457    0  559 -138.23861    2.12457   102%     -  399s
+     1     3    2.12457    1 1889 -138.23861    2.12457   102%  2867  401s
+     3     5    2.12457    2 3127 -138.23861    2.12457   102%  1041  421s
+     9    11    2.12457    5 2293 -138.23861    2.12457   102%   393  425s
+    15    17    2.12457   10  566 -138.23861    2.12457   102%   629  444s
+    16    18    2.12457   11 2059 -138.23861    2.12457   102%   596  445s
+    23    25    2.12457   14 2901 -138.23861    2.12457   102%   468  450s
+H   26    26                    -137.8008928    2.12457   102%   423  452s
+    31    33    2.12457   20  609 -137.80089    2.12457   102%   526  469s
+    32    34    2.12457   21 1203 -137.80089    2.12457   102%   514  470s
+    38    40    2.12457   24 1833 -137.80089    2.12457   102%   458  475s
+    46    48    2.12457   28 2522 -137.80089    2.12457   102%   391  480s
+    49    51    2.12457   30  627 -137.80089    2.12457   102%   482  496s
+    57    59    2.12457   36 2215 -137.80089    2.12457   102%   422  500s
+    64    66    2.12457   40  711 -137.80089    2.12457   102%   519  527s
+    67    69    2.12457   42 1618 -137.80089    2.12457   102%   504  530s
+    73    75    2.12457   46 2066 -137.80089    2.12457   102%   468  535s
+    76    78    2.12227   49 3165 -137.80089    2.12457   102%   454  540s
+    85    87    2.10651   55 3104 -137.80089    2.12457   102%   411  545s
+    96    96    2.04670   63 2702 -137.80089    2.12457   102%   367  550s
+   104   104    2.03425   69 3033 -137.80089    2.12457   102%   344  555s
+   115   114    2.03174   77 2398 -137.80089    2.12457   102%   312  560s
+   126   121    2.03144   85 1842 -137.80089    2.12457   102%   288  565s
+   138   131    1.76391   94 1999 -137.80089    2.12457   102%   266  570s
+   146   139    1.76391   99 2477 -137.80089    2.12457   102%   256  575s
+   154   147    1.76391  105 1886 -137.80089    2.12457   102%   247  580s
+   159   152    1.76391  108 2746 -137.80089    2.12457   102%   244  585s
+   166   159    1.76391  114 2080 -137.80089    2.12457   102%   238  590s
+   172   165    1.76391  118 1635 -137.80089    2.12457   102%   233  595s
+   178   171    1.76391  122 1653 -137.80089    2.12457   102%   233  600s
+   180   173    1.76391  123 1229 -137.80089    2.12457   102%   231  605s
+   183   176    1.63876  125 1166 -137.80089    2.12457   102%   229  610s
+   189   182    1.50771  129  765 -137.80089    2.12457   102%   223  615s
+   195   188    1.47786  132  422 -137.80089    2.12457   102%   219  620s
+   202   195    1.50199  136  649 -137.80089    2.12457   102%   222  625s
+   209   202  -15.36950  140   98 -137.80089    2.12457   102%   219  630s
+*  212   182             142       1.4200467    2.12457  49.6%   217  631s
+*  213   180             142       1.4703888    2.12457  44.5%   216  631s
+H  216   179                       1.4704499    2.12457  44.5%   213  640s
+   231   194    2.05660   14 3296    1.47045    2.12457  44.5%   201  645s
+   243   206    2.05121   23 4543    1.47045    2.12457  44.5%   193  656s
+   254   217    2.05121   30 4778    1.47045    2.12457  44.5%   185  660s
+   267   230    2.05121   36 4854    1.47045    2.12457  44.5%   177  665s
+   270   233    2.05121   39 4952    1.47045    2.12457  44.5%   175  671s
+   285   248    2.05121   48 4520    1.47045    2.12457  44.5%   166  675s
+   297   260    2.04235   58 3907    1.47045    2.12457  44.5%   160  682s
+   303   264    2.04986   63 3897    1.47045    2.12457  44.5%   156  685s
+   322   280    2.04986   82 3857    1.47045    2.12457  44.5%   147  690s
+   332   290    2.04839   92 3843    1.47045    2.12457  44.5%   143  695s
+   344   302    2.04822  101 2443    1.47045    2.12457  44.5%   138  700s
+   351   309    2.04822  106 4219    1.47045    2.12457  44.5%   136  705s
+   360   318    2.04822  112 3390    1.47045    2.12457  44.5%   134  710s
+   373   330    2.04622  121 2965    1.47045    2.12457  44.5%   130  715s
+   384   341    2.04622  128 5147    1.47045    2.12457  44.5%   127  720s
+   401   358    2.04622  141 3442    1.47045    2.12457  44.5%   123  725s
+H  405   360                       1.4704504    2.12457  44.5%   122  727s
+   408   365    2.04622  145 3897    1.47045    2.12457  44.5%   122  730s
+   413   368    2.04613  149 5067    1.47045    2.12457  44.5%   122  735s
+   419   374    2.04475  154 4727    1.47045    2.12457  44.5%   123  740s
+   428   383    2.04475  161 4217    1.47045    2.12457  44.5%   121  745s
+H  433   384                       1.4704504    2.12457  44.5%   120  748s
+   436   389    2.04460  167 4362    1.47045    2.12457  44.5%   119  750s
+H  442   364                       1.7273010    2.12457  23.0%   118  753s
+   448   372    2.04442  174 4026    1.72730    2.12457  23.0%   116  755s
+   458   381    2.04442  181 3600    1.72730    2.12457  23.0%   114  760s
+H  460   321                       1.8199145    2.12457  16.7%   114  762s
+   468   330    2.04235  190 3565    1.81991    2.12457  16.7%   112  765s
+   485   330    1.95628  193 3538    1.81991    2.12457  16.7%   109  770s
+H  487   328                       1.8199226    2.12457  16.7%   109  772s
+   492   331    2.05660    6 2160    1.81992    2.12457  16.7%   108  775s
+   505   340    2.05072   19 1578    1.81992    2.12457  16.7%   105  782s
+H  510   335                       1.9135864    2.12457  11.0%   104  785s
+   511   335    2.12457   29  559    1.91359    2.12457  11.0%   104  811s
+
+Explored 512 nodes (237409 simplex iterations) in 1200.03 seconds (5434.65 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 10: 1.91359 1.81992 1.81991 ... -137.801
+
+Time limit reached
+Best objective 1.913586406561e+00, best bound 2.124569883338e+00, gap 11.0256%
+Tree policy:
+if cars_right <= 0.0:
+    if waiting_time <= 1.0:
+        if waiting_time <= 0.0:
+            if green_side <= 0.0:
+                if cars_right <= 0.0:
+                    return '(wait)'
+                else:
+                    return '(switch_light)'
+            else:
+                return '(switch_light)'
+        else:
+            if waiting_time <= 0.0:
+                return '(switch_light)'
+            else:
+                if waiting_time <= 0.0:
+                    return '(switch_light)'
+                else:
+                    if waiting_time <= 0.0:
+                        return '(switch_light)'
+                    else:
+                        return '(wait)'
+    else:
+        if waiting_time <= 1.0:
+            return '(wait)'
+        else:
+            if waiting_time <= 1.0:
+                if waiting_time <= 4.0:
+                    if cars_left <= 2.0:
+                        return '__random__'
+                    else:
+                        return '(wait)'
+                else:
+                    return '(switch_light)'
+            else:
+                if green_side <= 0.0:
+                    if waiting_time <= 2.0:
+                        return '(wait)'
+                    else:
+                        return '(switch_light)'
+                else:
+                    if cars_left <= 0.0:
+                        return '(wait)'
+                    else:
+                        return '(switch_light)'
+else:
+    if cars_left <= 0.0:
+        if waiting_time <= 0.0:
+            return '(switch_light)'
+        else:
+            if waiting_time <= 5.0:
+                if green_side <= 0.0:
+                    if waiting_time <= 0.0:
+                        return '(switch_light)'
+                    else:
+                        if cars_right <= 0.0:
+                            return '(wait)'
+                        else:
+                            return '(switch_light)'
+                else:
+                    if waiting_time <= 0.0:
+                        return '(switch_light)'
+                    else:
+                        return '(wait)'
+            else:
+                if green_side <= 0.0:
+                    if waiting_time <= 5.0:
+                        return '(wait)'
+                    else:
+                        if waiting_time <= 5.0:
+                            return '__random__'
+                        else:
+                            return '(switch_light)'
+                else:
+                    return '(switch_light)'
+    else:
+        if waiting_time <= 2.0:
+            if waiting_time <= 0.0:
+                if cars_left <= 0.0:
+                    return '(switch_light)'
+                else:
+                    if cars_left <= 4.0:
+                        if cars_left <= 1.0:
+                            return '(switch_light)'
+                        else:
+                            return '__random__'
+                    else:
+                        return '(switch_light)'
+            else:
+                if waiting_time <= 0.0:
+                    if cars_right <= 0.0:
+                        return '(wait)'
+                    else:
+                        return '__random__'
+                else:
+                    if cars_left <= 1.0:
+                        return '(switch_light)'
+                    else:
+                        if green_side <= 0.0:
+                            return '(wait)'
+                        else:
+                            return '(switch_light)'
+        else:
+            if waiting_time <= 5.0:
+                if cars_right <= 2.0:
+                    if waiting_time <= 2.0:
+                        return '(switch_light)'
+                    else:
+                        if waiting_time <= 2.0:
+                            return '(wait)'
+                        else:
+                            return '(switch_light)'
+                else:
+                    if cars_right <= 2.0:
+                        return '(wait)'
+                    else:
+                        return '(switch_light)'
+            else:
+                if waiting_time <= 5.0:
+                    if cars_right <= 2.0:
+                        return '(switch_light)'
+                    else:
+                        return '(wait)'
+                else:
+                    if waiting_time <= 5.0:
+                        return '__random__'
+                    else:
+                        return '(switch_light)'
+Optimal decision tree (depth=8) value: 1.9135864065607509
+Writing result files...

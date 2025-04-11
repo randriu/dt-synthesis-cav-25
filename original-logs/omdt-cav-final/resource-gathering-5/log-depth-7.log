@@ -1,0 +1,100 @@
+Solving...
+Starting with fixed depth 7
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 2548263 rows, 455454 columns and 24531842 nonzeros
+Model fingerprint: 0x809b3a65
+Variable types: 16460 continuous, 438994 integer (438994 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 7e+00]
+Presolve removed 762 rows and 1143 columns (presolve time = 5s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 10s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 15s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 20s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 26s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 30s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 35s) ...
+Presolve removed 762 rows and 1143 columns (presolve time = 40s) ...
+Presolve removed 762 rows and 1143 columns
+Presolve time: 43.66s
+Presolved: 2547501 rows, 454311 columns, 24106992 nonzeros
+Variable types: 16460 continuous, 437851 integer (437851 binary)
+Found heuristic solution: objective -99.9999995
+Root relaxation presolved: 454311 rows, 3001812 columns, 24561303 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   0.000000e+00   2.646500e+04     71s
+  240203   -4.2542035e+01   0.000000e+00   7.976040e+01     75s
+  425295   -4.7710548e+01   0.000000e+00   0.000000e+00     79s
+  425295   -4.7710548e+01   0.000000e+00   0.000000e+00     80s
+
+Root relaxation: objective -4.771055e+01, 425295 iterations, 22.69 seconds (67.84 work units)
+Total elapsed time = 107.29s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  -47.71055    0 4519 -100.00000  -47.71055  52.3%     -  149s
+     0     0  -47.71055    0 3334 -100.00000  -47.71055  52.3%     -  201s
+     0     0  -47.71055    0 3303 -100.00000  -47.71055  52.3%     -  336s
+     0     0  -47.71055    0 7312 -100.00000  -47.71055  52.3%     -  406s
+     0     0  -47.71055    0 12231 -100.00000  -47.71055  52.3%     -  493s
+     0     0  -47.71055    0 16945 -100.00000  -47.71055  52.3%     -  579s
+     0     0  -47.71055    0 16944 -100.00000  -47.71055  52.3%     -  597s
+     0     0  -47.71055    0 18840 -100.00000  -47.71055  52.3%     -  674s
+     0     0  -47.71055    0 18835 -100.00000  -47.71055  52.3%     -  744s
+     0     0  -47.71055    0 14688 -100.00000  -47.71055  52.3%     -  815s
+     0     0  -47.71055    0 14688 -100.00000  -47.71055  52.3%     -  862s
+H    0     0                     -99.9111716  -47.71055  52.2%     -  998s
+     0     2  -47.71055    0 14688  -99.91117  -47.71055  52.2%     - 1200s
+
+Cutting planes:
+  MIR: 21
+  Flow cover: 2
+  Zero half: 34
+
+Explored 1 nodes (453613 simplex iterations) in 1200.21 seconds (4710.82 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 2: -99.9112 -100 
+
+Time limit reached
+Best objective -9.991117157688e+01, best bound -4.771054798326e+01, gap 52.2470%
+Tree policy:
+if required_gold <= 0.0:
+    if y <= 2.0:
+        if required_gem <= 5.0:
+            if required_gem <= 1.0:
+                return 'left'
+            else:
+                return 'right'
+        else:
+            return 'right'
+    else:
+        if required_gem <= 5.0:
+            return 'left'
+        else:
+            return 'right'
+else:
+    if required_gem <= 5.0:
+        if x <= 2.0:
+            return 'right'
+        else:
+            return '__random__'
+    else:
+        return 'right'
+Optimal decision tree (depth=7) value: -99.91117157687793
+Writing result files...

@@ -1,0 +1,67 @@
+digraph Tree {
+	graph [bb="0,0,369,269"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if bc2 <= 1.000",
+		pos="279,251",
+		width=1.7917];
+	1	[height=0.5,
+		label="if backoff1 <= 5.000",
+		pos="215,164",
+		width=2.2639];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="263.5,207.5",
+		pos="e,227.93,182.18 266.05,232.8 256.85,220.59 244.36,203.99 234.03,190.28"];
+	6	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="342,164",
+		width=0.75];
+	0 -> 6	[fontcolor=gray,
+		label=no,
+		lp="324,207.5",
+		pos="e,329.27,182.18 291.75,232.8 300.8,220.59 313.1,203.99 323.26,190.28"];
+	2	[height=0.5,
+		label="if s2 <= 2.000",
+		pos="143,91",
+		width=1.6667];
+	1 -> 2	[fontcolor=gray,
+		pos="e,160.27,109.03 197.57,145.81 188.55,136.92 177.39,125.91 167.51,116.17"];
+	5	[color="#d55e00",
+		fillcolor="#d55e00",
+		fontcolor=white,
+		height=0.5,
+		label=station2_cmd_74,
+		pos="288,91",
+		width=1.8611];
+	1 -> 5	[fontcolor=gray,
+		pos="e,270.49,109.03 232.67,145.81 241.82,136.92 253.14,125.91 263.15,116.17"];
+	3	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=station2_cmd_42,
+		pos="67,18",
+		width=1.8611];
+	2 -> 3	[fontcolor=gray,
+		pos="e,85.228,36.029 124.6,72.813 114.99,63.83 103.07,52.693 92.568,42.886"];
+	4	[color="#d55e00",
+		fillcolor="#d55e00",
+		fontcolor=white,
+		height=0.5,
+		label=station2_cmd_74,
+		pos="219,18",
+		width=1.8611];
+	2 -> 4	[fontcolor=gray,
+		pos="e,200.77,36.029 161.4,72.813 171.01,63.83 182.93,52.693 193.43,42.886"];
+}

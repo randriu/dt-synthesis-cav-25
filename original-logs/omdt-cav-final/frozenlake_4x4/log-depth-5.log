@@ -1,0 +1,100 @@
+Solving...
+Starting with fixed depth 5
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 3231 rows, 1064 columns and 20768 nonzeros
+Model fingerprint: 0xc816641d
+Variable types: 80 continuous, 984 integer (984 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [2e-01, 3e-01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 5e+00]
+Presolve removed 254 rows and 160 columns
+Presolve time: 0.03s
+Presolved: 2977 rows, 904 columns, 19333 nonzeros
+Variable types: 80 continuous, 824 integer (824 binary)
+Found heuristic solution: objective 0.0123561
+Found heuristic solution: objective 0.0154914
+
+Root relaxation: objective 5.420259e-01, 176 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.54203    0   47    0.01549    0.54203  3399%     -    0s
+     0     0    0.54203    0   48    0.01549    0.54203  3399%     -    0s
+H    0     0                       0.0155098    0.54203  3395%     -    0s
+     0     0    0.54203    0   47    0.01551    0.54203  3395%     -    0s
+H    0     0                       0.0931534    0.54203   482%     -    0s
+     0     0    0.54203    0   47    0.09315    0.54203   482%     -    0s
+     0     0    0.54203    0   46    0.09315    0.54203   482%     -    0s
+     0     0    0.54203    0   44    0.09315    0.54203   482%     -    0s
+     0     0    0.54203    0   48    0.09315    0.54203   482%     -    0s
+     0     0    0.54203    0   46    0.09315    0.54203   482%     -    0s
+     0     0    0.54203    0   43    0.09315    0.54203   482%     -    0s
+     0     0    0.54203    0   43    0.09315    0.54203   482%     -    0s
+     0     2    0.54203    0   43    0.09315    0.54203   482%     -    0s
+*   66     2              42       0.5420259    0.54203  0.00%  19.0    0s
+
+Cutting planes:
+  Gomory: 1
+  Lift-and-project: 2
+  Implied bound: 2
+  MIR: 9
+  Flow cover: 2
+  Zero half: 4
+  Relax-and-lift: 1
+
+Explored 67 nodes (3099 simplex iterations) in 0.36 seconds (0.55 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 5: 0.542026 0.0931534 0.0155098 ... 0.0123561
+No other solutions better than 0.542026
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.420259305407e-01, best bound 5.420259305407e-01, gap 0.0000%
+Tree policy:
+if X <= 0.0:
+    if Y <= 1.0:
+        return '(Left)'
+    else:
+        if Y <= 2.0:
+            if Y <= 1.0:
+                return '(Up)'
+            else:
+                if Y <= 1.0:
+                    return '__random__'
+                else:
+                    return '(Up)'
+        else:
+            return '(Left)'
+else:
+    if Y <= 2.0:
+        if Y <= 0.0:
+            return '(Up)'
+        else:
+            if X <= 1.0:
+                return '(Down)'
+            else:
+                return '(Left)'
+    else:
+        if Y <= 2.0:
+            return '(Left)'
+        else:
+            if Y <= 2.0:
+                return '(Left)'
+            else:
+                if X <= 1.0:
+                    return '(Right)'
+                else:
+                    return '(Down)'
+Optimal decision tree (depth=5) value: 0.5420259305406873
+Writing result files...

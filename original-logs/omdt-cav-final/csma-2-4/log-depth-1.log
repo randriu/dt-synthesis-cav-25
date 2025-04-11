@@ -1,0 +1,97 @@
+Solving...
+Starting with fixed depth 1
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 429789 rows, 278721 columns and 1814863 nonzeros
+Model fingerprint: 0xfa98d0f5
+Variable types: 135303 continuous, 143418 integer (143418 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 36 rows and 14 columns (presolve time = 5s) ...
+Presolve removed 33 rows and 11 columns
+Presolve time: 5.08s
+Presolved: 429756 rows, 278710 columns, 1763384 nonzeros
+Variable types: 135306 continuous, 143404 integer (143404 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.1434343e+03   1.734834e+05   0.000000e+00      9s
+   12866    1.0101010e+02   6.051407e+00   0.000000e+00     10s
+   17116    3.9232632e+01   1.414349e+00   0.000000e+00     15s
+   19792    3.9191031e+01   1.138410e+00   0.000000e+00     20s
+   21872    3.9191031e+01   1.592060e+00   0.000000e+00     25s
+   23452    3.9191031e+01   1.056388e+00   0.000000e+00     30s
+   25162    3.9191031e+01   5.429616e-01   0.000000e+00     35s
+   26842    3.9191031e+01   5.744775e-01   0.000000e+00     40s
+   28212    3.9191031e+01   7.608621e-01   0.000000e+00     45s
+   29622    3.9191031e+01   2.014340e-01   0.000000e+00     50s
+   31132    3.9191031e+01   3.340844e-01   0.000000e+00     55s
+   32442    3.9191031e+01   2.685675e-01   0.000000e+00     60s
+   33562    3.9191031e+01   2.719692e-01   0.000000e+00     65s
+   34642    3.9191031e+01   1.888550e-01   0.000000e+00     70s
+   35872    3.9191031e+01   2.217987e-01   0.000000e+00     75s
+   36962    3.9191031e+01   5.760453e-02   0.000000e+00     80s
+   38092    3.9191031e+01   5.883880e-03   0.000000e+00     85s
+   39032    3.9191031e+01   4.054184e-02   0.000000e+00     90s
+   40042    3.9191031e+01   1.771821e-01   0.000000e+00     95s
+   41002    3.9191031e+01   2.382688e-01   0.000000e+00    100s
+   41902    3.9191031e+01   2.286391e-01   0.000000e+00    106s
+   42852    3.9191031e+01   4.644788e-03   0.000000e+00    111s
+   43782    3.9191031e+01   2.322242e-01   0.000000e+00    115s
+   43953    3.9191033e+01   0.000000e+00   0.000000e+00    117s
+
+Root relaxation: objective 3.919103e+01, 43953 iterations, 108.48 seconds (358.39 work units)
+Total elapsed time = 120.91s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   39.19103    0  305          -   39.19103      -     -  122s
+H    0     0                      38.5193895   39.19103  1.74%     -  123s
+     0     0   39.19103    0 8066   38.51939   39.19103  1.74%     -  225s
+     0     0   39.19103    0 6528   38.51939   39.19103  1.74%     -  226s
+H    0     0                      38.5193903   39.19103  1.74%     -  228s
+     0     0   39.19103    0 6672   38.51939   39.19103  1.74%     -  314s
+     0     0   39.19103    0 6645   38.51939   39.19103  1.74%     -  318s
+     0     0   39.19103    0 6503   38.51939   39.19103  1.74%     -  387s
+H    0     0                      38.8281201   39.19103  0.93%     -  391s
+     0     0   39.19103    0 6502   38.82812   39.19103  0.93%     -  392s
+     0     0   39.19103    0 6502   38.82812   39.19103  0.93%     -  510s
+     0     0   39.19103    0 6502   38.82812   39.19103  0.93%     -  665s
+H    0     0                      38.8291758   39.19103  0.93%     -  673s
+     0     2   39.19103    0 6492   38.82918   39.19103  0.93%     -  682s
+     2     4   39.19103    1 25900   38.82918   39.19103  0.93% 53201  816s
+
+Cutting planes:
+  Gomory: 2
+  Implied bound: 3
+  Clique: 4553
+  MIR: 6
+  RLT: 143
+  BQP: 1465
+
+Explored 3 nodes (203702 simplex iterations) in 1200.02 seconds (2878.22 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 3: 38.8292 38.5194 38.5194 
+
+Time limit reached
+Best objective 3.882917578810e+01, best bound 3.919103308380e+01, gap 0.9319%
+Tree policy:
+if b <= 1.0:
+    return 'send1'
+else:
+    return 'cd'
+Optimal decision tree (depth=1) value: 38.82917578809692
+Writing result files...

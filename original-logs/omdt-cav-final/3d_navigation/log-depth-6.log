@@ -1,0 +1,182 @@
+Solving...
+Starting with fixed depth 6
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 65127 rows, 11018 columns and 510074 nonzeros
+Model fingerprint: 0x707240cb
+Variable types: 875 continuous, 10143 integer (10143 binary)
+Coefficient statistics:
+  Matrix range     [2e-03, 1e+02]
+  Objective range  [7e-03, 2e-01]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 693 rows and 441 columns
+Presolve time: 0.59s
+Presolved: 64434 rows, 10577 columns, 505119 nonzeros
+Variable types: 875 continuous, 9702 integer (9702 binary)
+Found heuristic solution: objective 0.0000012
+Root relaxation presolved: 10577 rows, 75011 columns, 515696 nonzeros
+
+
+Root relaxation: objective 3.518546e-01, 8031 iterations, 0.54 seconds (1.52 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.35185    0   96    0.00000    0.35185      -     -    3s
+     0     0    0.35185    0  562    0.00000    0.35185      -     -    4s
+     0     0    0.35185    0  562    0.00000    0.35185      -     -    4s
+     0     0    0.35185    0   96    0.00000    0.35185      -     -    5s
+     0     0    0.35185    0  445    0.00000    0.35185      -     -    7s
+     0     0    0.35185    0  678    0.00000    0.35185      -     -    7s
+     0     0    0.35185    0  397    0.00000    0.35185      -     -    8s
+     0     0    0.35185    0  783    0.00000    0.35185      -     -    9s
+     0     0    0.35185    0  300    0.00000    0.35185      -     -   11s
+     0     0    0.35185    0  324    0.00000    0.35185      -     -   13s
+     0     0    0.35185    0  323    0.00000    0.35185      -     -   14s
+H    0     0                       0.0000467    0.35185      -     -   14s
+H    0     0                       0.0000467    0.35185      -     -   16s
+     0     2    0.35185    0  316    0.00005    0.35185      -     -   17s
+H   27    27                       0.0000467    0.35185      -  51.6   18s
+H   52    52                       0.0002415    0.35185      -  33.1   19s
+    57    59    0.35185   38  222    0.00024    0.35185      -  32.2   20s
+H   78    72                       0.0002416    0.35185      -  35.6   21s
+H   81    75                       0.0002970    0.35185      -  34.5   22s
+H  108    99                       0.0134649    0.35185  2513%  29.7   23s
+*  123    93              82       0.0267356    0.35185  1216%  26.7   23s
+H  133    94                       0.0267357    0.35185  1216%  25.4   23s
+H  162   114                       0.0267357    0.35185  1216%  25.2   24s
+   183   130    0.11106   70  296    0.02674    0.35185  1216%  25.3   25s
+H  216   151                       0.0267357    0.35185  1216%  23.2   25s
+H  243   170                       0.0267358    0.35185  1216%  22.0   26s
+*  246   147             116       0.0427385    0.35185   723%  22.0   27s
+H  267   154                       0.0427385    0.35185   723%  21.5   27s
+H  270   157                       0.0427385    0.35185   723%  21.5   27s
+H  293   174                       0.0427386    0.35185   723%  22.5   27s
+H  345   221                       0.0427387    0.35185   723%  20.6   29s
+   410   253    0.11106   64  537    0.04274    0.35185   723%  19.2   30s
+H  459   276                       0.0427391    0.35185   723%  18.7   31s
+   513   312    0.11106   58  347    0.04274    0.35185   723%  18.7   37s
+   515   314    0.22790   53  214    0.04274    0.35185   723%  18.7   40s
+   518   316    0.14421   70  104    0.04274    0.35185   723%  18.6   45s
+   524   320    0.14421   70  165    0.04274    0.35185   723%  18.3   50s
+   530   324    0.35185    2  604    0.04274    0.35185   723%  18.1   55s
+   533   326    0.34040   45  109    0.04274    0.35185   723%  18.0   61s
+   553   341    0.35185   22  380    0.04274    0.35185   723%  75.0   66s
+   575   356    0.35185   33  263    0.04274    0.35185   723%  79.5   70s
+   613   381    0.35185   52  147    0.04274    0.35185   723%  82.9   75s
+   653   408    0.35185   72  111    0.04274    0.35185   723%  88.6   80s
+*  678   265              85       0.3518546    0.35185  0.00%  87.9   82s
+
+Cutting planes:
+  Gomory: 1
+  Lift-and-project: 1
+  Implied bound: 2
+  MIR: 7
+  Flow cover: 88
+  Zero half: 2
+  Relax-and-lift: 2
+
+Explored 679 nodes (82547 simplex iterations) in 82.05 seconds (364.93 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 10: 0.351855 0.0427391 0.0427387 ... 0.0267357
+No other solutions better than 0.351855
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.518546075462e-01, best bound 3.518546075462e-01, gap 0.0000%
+Tree policy:
+if y <= 2.0:
+    if x <= 2.0:
+        if z <= 0.0:
+            if x <= 1.0:
+                if y <= 0.0:
+                    return '(right)'
+                else:
+                    return '(forward)'
+            else:
+                return '(forward)'
+        else:
+            if z <= 4.0:
+                return '(right)'
+            else:
+                return '__random__'
+    else:
+        if x <= 2.0:
+            if z <= 4.0:
+                return '(forward)'
+            else:
+                return '__random__'
+        else:
+            if x <= 3.0:
+                if x <= 2.0:
+                    return '(up)'
+                else:
+                    if z <= 2.0:
+                        return '(forward)'
+                    else:
+                        return '(up)'
+            else:
+                if x <= 3.0:
+                    return '__random__'
+                else:
+                    if z <= 4.0:
+                        return '(backward)'
+                    else:
+                        return '__random__'
+else:
+    if x <= 2.0:
+        if x <= 1.0:
+            if y <= 2.0:
+                return '(up)'
+            else:
+                if z <= 4.0:
+                    return '(up)'
+                else:
+                    return '__random__'
+        else:
+            if y <= 2.0:
+                if z <= 4.0:
+                    return '(backward)'
+                else:
+                    return '(forward)'
+            else:
+                if z <= 4.0:
+                    return '(backward)'
+                else:
+                    return '__random__'
+    else:
+        if y <= 3.0:
+            if y <= 2.0:
+                if x <= 1.0:
+                    return '(forward)'
+                else:
+                    return '(down)'
+            else:
+                return '(up)'
+        else:
+            if y <= 3.0:
+                if x <= 2.0:
+                    return '(down)'
+                else:
+                    if z <= 0.0:
+                        return '__random__'
+                    else:
+                        return '(left)'
+            else:
+                if z <= 4.0:
+                    if z <= 3.0:
+                        return '(forward)'
+                    else:
+                        return '(right)'
+                else:
+                    return '__random__'
+Optimal decision tree (depth=6) value: 0.3518546075461676
+Writing result files...

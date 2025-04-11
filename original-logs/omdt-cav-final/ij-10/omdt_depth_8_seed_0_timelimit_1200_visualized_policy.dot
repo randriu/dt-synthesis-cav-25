@@ -1,0 +1,97 @@
+digraph Tree {
+	graph [bb="0,0,606.5,269"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if num_tokens_var <= 0.000",
+		pos="291.5,251",
+		width=3.0139];
+	1	[height=0.5,
+		label="if q5 <= 0.000",
+		pos="197.5,164",
+		width=1.6944];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="263,207.5",
+		pos="e,216.49,182.18 272.48,232.8 258.59,220.24 239.58,203.05 224.17,189.12"];
+	6	[height=0.5,
+		label="if num_tokens_var <= 0.000",
+		pos="385.5,164",
+		width=3.0139];
+	0 -> 6	[fontcolor=gray,
+		label=no,
+		lp="353.5,207.5",
+		pos="e,366.51,182.18 310.52,232.8 324.41,220.24 343.42,203.05 358.83,189.12"];
+	2	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=process1_cmd_0,
+		pos="67.5,91",
+		width=1.8194];
+	1 -> 2	[fontcolor=gray,
+		pos="e,98.835,109.11 166.36,145.99 148.8,136.4 126.67,124.32 107.8,114.01"];
+	3	[height=0.5,
+		label="if q2 <= 0.000",
+		pos="212.5,91",
+		width=1.6944];
+	1 -> 3	[fontcolor=gray,
+		pos="e,208.9,109.03 201.13,145.81 202.83,137.79 204.88,128.05 206.78,119.07"];
+	4	[color="#029e73",
+		fillcolor="#029e73",
+		fontcolor=white,
+		height=0.5,
+		label=process3_cmd_2,
+		pos="65.5,18",
+		width=1.8194];
+	3 -> 4	[fontcolor=gray,
+		pos="e,100.93,36.114 177.29,72.994 157.16,63.273 131.73,50.987 110.2,40.59"];
+	5	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label=process2_cmd_1,
+		pos="214.5,18",
+		width=1.8194];
+	3 -> 5	[fontcolor=gray,
+		pos="e,214.02,36.029 212.98,72.813 213.21,64.789 213.48,55.047 213.74,46.069"];
+	7	[height=0.5,
+		label="if q6 <= 0.000",
+		pos="383.5,91",
+		width=1.6944];
+	6 -> 7	[fontcolor=gray,
+		pos="e,383.98,109.03 385.02,145.81 384.79,137.79 384.52,128.05 384.26,119.07"];
+	10	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=process1_cmd_0,
+		pos="528.5,91",
+		width=1.8194];
+	6 -> 10	[fontcolor=gray,
+		pos="e,494.03,109.11 419.75,145.99 439.33,136.27 464.08,123.99 485.02,113.59"];
+	8	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label=process2_cmd_1,
+		pos="382.5,18",
+		width=1.8194];
+	7 -> 8	[fontcolor=gray,
+		pos="e,382.74,36.029 383.26,72.813 383.14,64.789 383.01,55.047 382.88,46.069"];
+	9	[color="#56b4e9",
+		fillcolor="#56b4e9",
+		fontcolor=white,
+		height=0.5,
+		label=process10_cmd_9,
+		pos="536.5,18",
+		width=1.9444];
+	7 -> 9	[fontcolor=gray,
+		pos="e,499.62,36.114 420.15,72.994 441.19,63.23 467.81,50.876 490.28,40.451"];
+}

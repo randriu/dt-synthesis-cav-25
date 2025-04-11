@@ -1,0 +1,18 @@
+digraph Tree {
+	graph [bb="0,0,54,36"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="27,18",
+		width=0.75];
+}

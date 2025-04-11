@@ -1,0 +1,97 @@
+digraph Tree {
+	graph [bb="0,0,432,269"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if b <= 1.000",
+		pos="211.5,251",
+		width=1.5694];
+	1	[height=0.5,
+		label="if y2 <= 0.000",
+		pos="144.5,164",
+		width=1.6806];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="195,207.5",
+		pos="e,158.04,182.18 197.94,232.8 188.32,220.59 175.23,203.99 164.42,190.28"];
+	6	[height=0.5,
+		label="if b <= 1.000",
+		pos="279.5,164",
+		width=1.5694];
+	0 -> 6	[fontcolor=gray,
+		label=no,
+		lp="259.5,207.5",
+		pos="e,265.76,182.18 225.26,232.8 235.03,220.59 248.31,203.99 259.28,190.28"];
+	2	[height=0.5,
+		label="if x1 <= 29.000",
+		pos="66.5,91",
+		width=1.8056];
+	1 -> 2	[fontcolor=gray,
+		pos="e,85.208,109.03 125.62,145.81 115.75,136.83 103.52,125.69 92.741,115.89"];
+	5	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="176.5,91",
+		width=0.75];
+	1 -> 5	[fontcolor=gray,
+		pos="e,168.83,109.03 152.25,145.81 155.98,137.53 160.54,127.41 164.69,118.19"];
+	3	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=send1,
+		pos="29.5,18",
+		width=0.81944];
+	2 -> 3	[fontcolor=gray,
+		pos="e,38.374,36.029 57.543,72.813 53.18,64.441 47.842,54.197 42.999,44.903"];
+	4	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="104.5,18",
+		width=0.75];
+	2 -> 4	[fontcolor=gray,
+		pos="e,95.386,36.029 75.699,72.813 80.18,64.441 85.662,54.197 90.637,44.903"];
+	7	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="257.5,91",
+		width=0.75];
+	6 -> 7	[fontcolor=gray,
+		pos="e,262.78,109.03 274.17,145.81 271.66,137.7 268.6,127.84 265.8,118.78"];
+	8	[height=0.5,
+		label="if cd2 <= 4.000",
+		pos="367.5,91",
+		width=1.7917];
+	6 -> 8	[fontcolor=gray,
+		pos="e,346.39,109.03 300.8,145.81 312.15,136.66 326.28,125.26 338.6,115.32"];
+	9	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=send1,
+		pos="329.5,18",
+		width=0.81944];
+	8 -> 9	[fontcolor=gray,
+		pos="e,338.61,36.029 358.3,72.813 353.82,64.441 348.34,54.197 343.36,44.903"];
+	10	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=time,
+		pos="404.5,18",
+		width=0.75];
+	8 -> 10	[fontcolor=gray,
+		pos="e,395.63,36.029 376.46,72.813 380.82,64.441 386.16,54.197 391,44.903"];
+}

@@ -1,0 +1,131 @@
+Solving...
+Starting with fixed depth 3
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 19203 rows, 7261 columns and 162153 nonzeros
+Model fingerprint: 0x960ab2bc
+Variable types: 1599 continuous, 5662 integer (5662 binary)
+Coefficient statistics:
+  Matrix range     [5e-04, 1e+02]
+  Objective range  [1e+00, 2e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 3e+00]
+Presolve removed 36 rows and 43 columns
+Presolve time: 0.37s
+Presolved: 19167 rows, 7218 columns, 126130 nonzeros
+Variable types: 1599 continuous, 5619 integer (5619 binary)
+
+Root relaxation: objective -2.173209e+00, 5422 iterations, 0.42 seconds (1.15 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   -2.17321    0  719          -   -2.17321      -     -    1s
+H    0     0                      -4.1221081   -2.17321  47.3%     -    1s
+H    0     0                      -4.1221081   -2.17321  47.3%     -    1s
+     0     0   -2.17321    0  702   -4.12211   -2.17321  47.3%     -    1s
+     0     0   -2.17321    0  700   -4.12211   -2.17321  47.3%     -    1s
+     0     0   -2.17321    0  592   -4.12211   -2.17321  47.3%     -    2s
+     0     0   -2.17321    0  581   -4.12211   -2.17321  47.3%     -    2s
+     0     0   -2.17321    0  630   -4.12211   -2.17321  47.3%     -    3s
+     0     0   -2.17321    0  869   -4.12211   -2.17321  47.3%     -    4s
+     0     0   -2.17321    0  591   -4.12211   -2.17321  47.3%     -    4s
+     0     0   -2.17321    0  691   -4.12211   -2.17321  47.3%     -    5s
+     0     0   -2.17321    0  296   -4.12211   -2.17321  47.3%     -    6s
+     0     0   -2.17321    0  228   -4.12211   -2.17321  47.3%     -    6s
+     0     0   -2.17321    0  594   -4.12211   -2.17321  47.3%     -    6s
+     0     0   -2.17321    0  594   -4.12211   -2.17321  47.3%     -    7s
+H    0     0                      -2.9407593   -2.17321  26.1%     -    7s
+     0     2   -2.17321    0  594   -2.94076   -2.17321  26.1%     -    8s
+    24    18   -2.47114    8 1022   -2.94076   -2.17321  26.1%   347   10s
+*   41    25              20      -2.3954303   -2.17321  9.28%   235   10s
+*  124    44              28      -2.3526163   -2.17321  7.63%   217   13s
+H  163    64                      -2.3526146   -2.17321  7.63%   258   14s
+   178    72   -2.17321    6 1933   -2.35261   -2.17321  7.63%   248   15s
+   286   123   -2.29757   19  890   -2.35261   -2.17321  7.63%   274   20s
+H  327   131                      -2.3526140   -2.17321  7.63%   299   22s
+   401   143   -2.17396   15 1103   -2.35261   -2.17321  7.63%   312   25s
+*  408   117              20      -2.2485859   -2.17321  3.35%   310   25s
+*  409    99              20      -2.2052715   -2.17321  1.45%   309   25s
+   509   114 infeasible    9        -2.20527   -2.17321  1.45%   301   30s
+   704   138   -2.17321    5  684   -2.20527   -2.17321  1.45%   263   35s
+   830   187   -2.20322   29 1581   -2.20527   -2.17321  1.45%   263   40s
+   941   226     cutoff   22        -2.20527   -2.17321  1.45%   268   45s
+  1029   249   -2.17321   13  594   -2.20527   -2.17321  1.45%   266   51s
+  1032   251   -2.19289   15  702   -2.20527   -2.17321  1.45%   266   55s
+  1038   255   -2.19289   15  294   -2.20527   -2.17321  1.45%   264   61s
+H 1041   243                      -2.2052714   -2.17321  1.45%   263   64s
+  1044   245   -2.18797    7  358   -2.20527   -2.17321  1.45%   262   66s
+  1047   247   -2.17321   14  917   -2.20527   -2.17321  1.45%   262   70s
+  1064   252   -2.17606   21 1750   -2.20527   -2.17321  1.45%   310   75s
+  1122   239   -2.17686   25  225   -2.20527   -2.17321  1.45%   304   80s
+  1173   252   -2.19520   46  788   -2.20527   -2.17321  1.45%   296   85s
+H 1181   235                      -2.2052699   -2.17321  1.45%   294   86s
+H 1233   205                      -2.2052699   -2.17321  1.45%   290   87s
+  1280   211   -2.17883   25 1120   -2.20527   -2.17321  1.45%   286   90s
+H 1285   193                      -2.2052697   -2.17321  1.45%   285   90s
+  1362   191   -2.17321   23  953   -2.20527   -2.17321  1.45%   275   95s
+  1459   195   -2.20291   42 1419   -2.20527   -2.17321  1.45%   267  100s
+  1549   199   -2.18939   31 1499   -2.20527   -2.17321  1.45%   261  105s
+H 1597   149                      -2.1925533   -2.17321  0.88%   258  106s
+H 1599   101                      -2.1859343   -2.17321  0.58%   257  107s
+H 1619    97                      -2.1859339   -2.17321  0.58%   256  107s
+  1664   113   -2.17321   34  488   -2.18593   -2.17321  0.58%   254  110s
+  1764   124   -2.17321   33  750   -2.18593   -2.17321  0.58%   248  115s
+  1869   147 infeasible   41        -2.18593   -2.17321  0.58%   241  120s
+  1969   145 infeasible   32        -2.18593   -2.17321  0.58%   236  125s
+H 2029   145                      -2.1859331   -2.17321  0.58%   234  129s
+  2032   145     cutoff   36        -2.18593   -2.17321  0.58%   234  130s
+  2110   153   -2.17321   36  877   -2.18593   -2.17321  0.58%   232  135s
+H 2226   158                      -2.1794848   -2.17321  0.29%   228  139s
+  2261   162   -2.17321   26 1360   -2.17948   -2.17321  0.29%   226  140s
+H 2266   148                      -2.1745250   -2.17321  0.06%   226  140s
+H 2289     0                      -2.1732086   -2.17321  0.00%   225  143s
+
+Cutting planes:
+  Lift-and-project: 32
+  Implied bound: 1
+  MIR: 161
+  Flow cover: 71
+  Zero half: 31
+
+Explored 2290 nodes (540859 simplex iterations) in 143.56 seconds (324.58 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 10: -2.17321 -2.17453 -2.17948 ... -2.20527
+No other solutions better than -2.17321
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective -2.173208593160e+00, best bound -2.173208593160e+00, gap 0.0000%
+Tree policy:
+if dealer_total <= 9.0:
+    if dealer_total <= 6.0:
+        if player_total <= 11.0:
+            return '(Draw)'
+        else:
+            return '(Skip)'
+    else:
+        if player_total <= 14.0:
+            return '(Draw)'
+        else:
+            return '(Skip)'
+else:
+    if dealer_total <= 10.0:
+        if player_total <= 13.0:
+            return '(Draw)'
+        else:
+            return '(Skip)'
+    else:
+        if player_total <= 11.0:
+            return '(Draw)'
+        else:
+            return '(Skip)'
+Optimal decision tree (depth=3) value: -2.1732085931596337
+Writing result files...

@@ -1,0 +1,97 @@
+digraph Tree {
+	graph [bb="0,0,603.5,342"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if draw4 <= 1.000",
+		pos="452.5,324",
+		width=2.0417];
+	1	[height=0.5,
+		label="if draw3 <= 0.000",
+		pos="371.5,237",
+		width=2.0417];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="430,280.5",
+		pos="e,387.87,255.18 436.11,305.8 424.25,293.36 408.06,276.36 394.85,262.5"];
+	10	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=process4_cmd_18,
+		pos="533.5,237",
+		width=1.9444];
+	0 -> 10	[fontcolor=gray,
+		label=no,
+		lp="507.5,280.5",
+		pos="e,517.13,255.18 468.89,305.8 480.75,293.36 496.94,276.36 510.15,262.5"];
+	2	[height=0.5,
+		label="if b1 <= 3.000",
+		pos="297.5,164",
+		width=1.6944];
+	1 -> 2	[fontcolor=gray,
+		pos="e,315.25,182.03 353.59,218.81 344.32,209.92 332.84,198.91 322.69,189.17"];
+	9	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=process4_cmd_18,
+		pos="446.5,164",
+		width=1.9444];
+	1 -> 9	[fontcolor=gray,
+		pos="e,428.51,182.03 389.66,218.81 399.05,209.92 410.68,198.91 420.97,189.17"];
+	3	[height=0.5,
+		label="if b <= 0.000",
+		pos="219.5,91",
+		width=1.5694];
+	2 -> 3	[fontcolor=gray,
+		pos="e,238.21,109.03 278.62,145.81 268.75,136.83 256.52,125.69 245.74,115.89"];
+	6	[height=0.5,
+		label="if b2 <= 5.000",
+		pos="377.5,91",
+		width=1.6944];
+	2 -> 6	[fontcolor=gray,
+		pos="e,358.31,109.03 316.87,145.81 326.99,136.83 339.54,125.69 350.59,115.89"];
+	4	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label=process1_cmd_0,
+		pos="65.5,18",
+		width=1.8194];
+	3 -> 4	[fontcolor=gray,
+		pos="e,102.62,36.114 182.61,72.994 161.34,63.186 134.4,50.766 111.72,40.311"];
+	5	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label=process3_cmd_11,
+		pos="219.5,18",
+		width=1.9444];
+	3 -> 5	[fontcolor=gray,
+		pos="e,219.5,36.029 219.5,72.813 219.5,64.789 219.5,55.047 219.5,46.069"];
+	7	[color="#fbafe4",
+		fillcolor="#fbafe4",
+		fontcolor=white,
+		height=0.5,
+		label=process4_cmd_18,
+		pos="377.5,18",
+		width=1.9444];
+	6 -> 7	[fontcolor=gray,
+		pos="e,377.5,36.029 377.5,72.813 377.5,64.789 377.5,55.047 377.5,46.069"];
+	8	[color="#cc78bc",
+		fillcolor="#cc78bc",
+		fontcolor=white,
+		height=0.5,
+		label=__random__,
+		pos="514.5,18",
+		width=1.3611];
+	6 -> 8	[fontcolor=gray,
+		pos="e,481.48,36.114 410.31,72.994 428.99,63.317 452.57,51.097 472.57,40.73"];
+}

@@ -1,0 +1,67 @@
+digraph Tree {
+	graph [bb="0,0,406,196"];
+	node [color=gray,
+		fillcolor=white,
+		fontname=helvetica,
+		label="\N",
+		shape=box,
+		style="filled, rounded"
+	];
+	edge [fontname=helvetica];
+	0	[height=0.5,
+		label="if dealer_total <= 6.000",
+		pos="203,178",
+		width=2.5694];
+	1	[height=0.5,
+		label="if player_total <= 11.000",
+		pos="97,91",
+		width=2.6944];
+	0 -> 1	[fontcolor=gray,
+		label=yes,
+		lp="169.5,134.5",
+		pos="e,118.42,109.18 181.55,159.8 165.74,147.13 144.06,129.73 126.6,115.74"];
+	4	[height=0.5,
+		label="if player_total <= 13.000",
+		pos="309,91",
+		width=2.6944];
+	0 -> 4	[fontcolor=gray,
+		label=no,
+		lp="272,134.5",
+		pos="e,287.58,109.18 224.45,159.8 240.26,147.13 261.94,129.73 279.4,115.74"];
+	2	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label="(Draw)",
+		pos="72,18",
+		width=0.875];
+	1 -> 2	[fontcolor=gray,
+		pos="e,77.996,36.029 90.948,72.813 88.062,64.615 84.543,54.623 81.326,45.485"];
+	3	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label="(Skip)",
+		pos="150,18",
+		width=0.79167];
+	1 -> 3	[fontcolor=gray,
+		pos="e,137.29,36.029 109.83,72.813 116.21,64.266 124.05,53.769 131.1,44.323"];
+	5	[color="#de8f05",
+		fillcolor="#de8f05",
+		fontcolor=white,
+		height=0.5,
+		label="(Draw)",
+		pos="256,18",
+		width=0.875];
+	4 -> 5	[fontcolor=gray,
+		pos="e,268.71,36.029 296.17,72.813 289.79,64.266 281.95,53.769 274.9,44.323"];
+	6	[color="#0173b2",
+		fillcolor="#0173b2",
+		fontcolor=white,
+		height=0.5,
+		label="(Skip)",
+		pos="334,18",
+		width=0.79167];
+	4 -> 6	[fontcolor=gray,
+		pos="e,328,36.029 315.05,72.813 317.94,64.615 321.46,54.623 324.67,45.485"];
+}

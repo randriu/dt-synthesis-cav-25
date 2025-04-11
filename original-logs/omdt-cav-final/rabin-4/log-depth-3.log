@@ -1,0 +1,163 @@
+Solving...
+Starting with fixed depth 3
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-20
+Set parameter Threads to value 1
+Set parameter TimeLimit to value 1200
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: AMD EPYC 9124 16-Core Processor, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 64 logical processors, using up to 1 threads
+
+Optimize a model with 1659057 rows, 420493 columns and 9673462 nonzeros
+Model fingerprint: 0x5d2e930e
+Variable types: 174097 continuous, 246396 integer (246396 binary)
+Coefficient statistics:
+  Matrix range     [1e-02, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+02]
+  RHS range        [1e+00, 3e+00]
+Presolve removed 133 rows and 175 columns (presolve time = 5s) ...
+Presolve removed 133 rows and 175 columns (presolve time = 10s) ...
+Presolve removed 133 rows and 175 columns (presolve time = 15s) ...
+Presolve removed 133 rows and 175 columns (presolve time = 20s) ...
+Presolve added 305 rows and 263 columns
+Presolve time: 24.79s
+Presolved: 1659362 rows, 420756 columns, 9454350 nonzeros
+Variable types: 174535 continuous, 246221 integer (246221 binary)
+Root relaxation presolved: 420756 rows, 2080118 columns, 9875106 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                         43s
+   93130    1.7557597e+17   9.093780e+03   0.000000e+00     45s
+   96590    1.3716873e+15   7.252714e+02   0.000000e+00     51s
+   97020    1.3716873e+15   8.388380e+01   0.000000e+00     55s
+   97650    1.3716873e+15   7.919946e+02   0.000000e+00     61s
+   97990    1.3716873e+15   2.432313e+01   0.000000e+00     65s
+   98360    1.3716873e+15   1.035038e+01   0.000000e+00     70s
+   98720    1.3716873e+15   1.136368e+02   0.000000e+00     76s
+   99080    1.3716873e+15   5.181562e+01   0.000000e+00     83s
+   99260    1.3716873e+15   3.180985e+01   0.000000e+00     86s
+   99620    1.3716873e+15   4.255034e+01   0.000000e+00     92s
+   99800    1.3716873e+15   7.215707e+01   0.000000e+00     96s
+  100120    1.3716873e+15   9.688882e+01   0.000000e+00    101s
+  100410    1.3716873e+15   2.969921e+01   0.000000e+00    105s
+  100770    1.3716873e+15   2.045969e+02   0.000000e+00    112s
+  101060    1.3716873e+15   6.243887e+01   0.000000e+00    117s
+  101240    1.3716873e+15   1.425025e+02   0.000000e+00    120s
+  101600    1.3716873e+15   2.584473e+02   0.000000e+00    127s
+  101960    1.3716873e+15   2.034647e+02   0.000000e+00    133s
+  102140    1.3716873e+15   1.797803e+02   0.000000e+00    136s
+  102500    1.3716873e+15   1.177504e+02   0.000000e+00    143s
+  102680    1.3716873e+15   1.127088e+02   0.000000e+00    146s
+  103050    1.3716873e+15   2.410084e+01   0.000000e+00    153s
+  103230    1.3716873e+15   5.492677e+01   0.000000e+00    156s
+  103590    1.3716873e+15   8.627669e+01   0.000000e+00    164s
+  103770    1.3716873e+15   4.035830e+01   0.000000e+00    167s
+  103950    1.3716873e+15   6.418356e+01   0.000000e+00    171s
+  104310    1.3716873e+15   1.369045e+02   0.000000e+00    178s
+  104490    1.3716873e+15   7.037247e+01   0.000000e+00    181s
+  104850    1.3716873e+15   6.903847e+02   0.000000e+00    188s
+  105030    1.3716873e+15   3.418115e+01   0.000000e+00    192s
+  105210    1.3716873e+15   1.884957e+02   0.000000e+00    195s
+  105570    1.3716873e+15   4.010487e+02   0.000000e+00    202s
+  105750    1.3716873e+15   2.769959e+02   0.000000e+00    205s
+  106070    1.3716873e+15   1.737584e+02   0.000000e+00    211s
+  106430    1.3716873e+15   1.535091e+02   0.000000e+00    217s
+  106610    1.3716873e+15   1.149123e+02   0.000000e+00    221s
+  106970    1.3716873e+15   1.826357e+02   0.000000e+00    228s
+  107150    1.3716873e+15   3.680822e+00   0.000000e+00    231s
+  107510    1.3716873e+15   2.643684e+02   0.000000e+00    238s
+  107720    1.3716873e+15   7.490116e+02   0.000000e+00    241s
+  108080    1.3716873e+15   2.812890e+02   0.000000e+00    248s
+  108260    1.3716873e+15   3.184500e+01   0.000000e+00    251s
+  108620    1.3716873e+15   1.194595e+02   0.000000e+00    258s
+  108800    1.3716873e+15   9.694735e+01   0.000000e+00    262s
+  109160    1.3716873e+15   9.627565e+02   0.000000e+00    268s
+  109380    1.3716873e+15   1.183924e+02   0.000000e+00    272s
+  109560    1.3716873e+15   8.731117e+01   0.000000e+00    275s
+  109910    1.3716873e+15   6.889087e+01   0.000000e+00    280s
+  110190    1.3716873e+15   1.759929e+02   0.000000e+00    285s
+  110540    1.3716873e+15   3.166702e+02   0.000000e+00    292s
+  110750    1.3716873e+15   9.710461e+01   0.000000e+00    296s
+  111110    1.3716873e+15   2.246887e+02   0.000000e+00    303s
+  111290    1.3716873e+15   5.633994e+02   0.000000e+00    306s
+  111620    1.3716873e+15   6.768028e+01   0.000000e+00    311s
+  112010    1.3716873e+15   2.687925e+02   0.000000e+00    317s
+  112360    1.3716873e+15   1.313296e+02   0.000000e+00    320s
+  112376    9.6059601e+01   0.000000e+00   0.000000e+00    321s
+  112376    9.6059601e+01   0.000000e+00   0.000000e+00    321s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+      29 DPushes remaining with DInf 0.0000000e+00               322s
+       0 DPushes remaining with DInf 0.0000000e+00               322s
+
+   18808 PPushes remaining with PInf 0.0000000e+00               322s
+       0 PPushes remaining with PInf 0.0000000e+00               323s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.3732379e-15    323s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  131216    9.6059601e+01   0.000000e+00   0.000000e+00    324s
+  131216    9.6059601e+01   0.000000e+00   0.000000e+00    324s
+  134306    9.6059601e+01   6.958614e+02   0.000000e+00    327s
+  134510    9.6059601e+01   0.000000e+00   0.000000e+00    328s
+Extra simplex iterations from dual to original model: 3294
+
+Root relaxation: objective 9.605960e+01, 134510 iterations, 294.85 seconds (714.39 work units)
+Total elapsed time = 463.85s
+Total elapsed time = 465.34s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   96.05960    0 10274          -   96.05960      -     -  469s
+H    0     0                      92.2518877   96.05960  4.13%     -  484s
+     0     0   96.05960    0 10272   92.25189   96.05960  4.13%     -  549s
+     0     0   96.05960    0 20550   92.25189   96.05960  4.13%     -  993s
+H    0     0                      93.0051262   96.05960  3.28%     -  996s
+     0     0   96.05960    0 20548   93.00513   96.05960  3.28%     - 1011s
+     0     0   96.05960    0 20549   93.00513   96.05960  3.28%     - 1200s
+
+Cutting planes:
+  Implied bound: 10
+  MIR: 15
+  Flow cover: 44
+  RLT: 2
+  Relax-and-lift: 12
+
+Explored 1 nodes (222410 simplex iterations) in 1200.09 seconds (4714.82 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 2: 93.0051 92.2519 
+
+Time limit reached
+Best objective 9.300512622135e+01, best bound 9.605960100000e+01, gap 3.2842%
+Tree policy:
+if draw4 <= 1.0:
+    if b4 <= 4.0:
+        if r <= 0.0:
+            return 'process1_cmd_0'
+        else:
+            return 'process4_cmd_18'
+    else:
+        if b4 <= 4.0:
+            return 'process4_cmd_18'
+        else:
+            return 'process1_cmd_0'
+else:
+    if draw4 <= 1.0:
+        return 'process4_cmd_16'
+    else:
+        return 'process1_cmd_0'
+Optimal decision tree (depth=3) value: 93.00512622134539
+Writing result files...
