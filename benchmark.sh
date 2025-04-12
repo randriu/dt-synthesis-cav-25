@@ -38,7 +38,7 @@ then
         rm logs/omdt-smoke-test/results.csv
     fi
     cd /opt/OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 30
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 30 --maxmem 32
     cd -
 
     if [ ! -f ./logs/dtcontrol-smoke-test.csv ]; then
@@ -85,8 +85,12 @@ fi
 
 if [ "$generate_only" = true ]; 
 then
+    echo "merging csv files"
+    python3 merge-csv-files.py
+
     echo "Generating the results"
     python3 generate-tables-and-figures.py
+    echo "Generated results to 'generated-results'"
     exit 0
 fi
 
