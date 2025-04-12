@@ -62,7 +62,11 @@ def collect_tasks(models_dir):
 @click.option('--models-dir', type=str, default="/opt/cav25-experiments/benchmarks", show_default=True, help='Path to the models folder.')
 @click.option('--generate-csv', is_flag=True, default=False, show_default=True, help='Generate CSV file with results.')
 @click.option('--smoke-test', is_flag=True, default=False, show_default=True, help='Turn on smoke test setting.')
-def main(models_dir, generate_csv, smoke_test):
+@click.option('--output-dir', type=str, default="./logs/dtcontrol-final-cav/", show_default=True, help='Path to the output folder.')
+def main(models_dir, generate_csv, smoke_test, output_dir):
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     tasks = collect_tasks(models_dir)
 
@@ -72,7 +76,16 @@ def main(models_dir, generate_csv, smoke_test):
         model_name, sketch_dir, command, cleanup, models_str = task
         print(f"{models_str} started")
         
-        subprocess.run(command, cwd=sketch_dir)
+        result = subprocess.run(command, cwd=sketch_dir, capture_output=True)
+
+        log_file = os.path.join(output_dir, f"{model_name}.log")
+        with open(log_file, 'w') as f:
+            f.write(result.stdout.decode())
+            f.write(result.stderr.decode())
+
+            if result.returncode != 0:
+                print(f"Error running model {model_name} see {log_file} for details")
+        
         result_json = json.load(open(os.path.join(sketch_dir, "benchmark.json")))
 
         results.append(f"{model_name};{result_json['scheduler-final']['classifiers']['default']['stats']['inner nodes']};{result_json['scheduler-final']['classifiers']['default']['time']}")

@@ -40,12 +40,35 @@ then
 
     if [ ! -f ./logs/dtcontrol-smoke-test.csv ]; then
         echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv --smoke-test
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-smoke-test --generate-csv --smoke-test
     fi
 
     echo "creating csv file with results for OMDT"
     python3 best-time-omdt-parser.py --log-dir ./logs/omdt-smoke-test --smoke-test
+
+    echo ""
+    echo "testing smoke test results"
+    echo ""
+
+    line_count=$(wc -l < ./logs/paynt-smoke-test.csv)
+    if [ "$line_count" -ne 22 ]; then
+        echo "Error: ./logs/paynt-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 22 (1 header, 21 models) lines."
+        exit 1
+    fi
+
+    line_count=$(wc -l < ./logs/omdt-smoke-test.csv)
+    if [ "$line_count" -ne 22 ]; then
+        echo "Error: ./logs/omdt-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 22 (1 header, 21 models) lines."
+        exit 1
+    fi
+
+    line_count=$(wc -l < ./logs/dtcontrol-smoke-test.csv)
+    if [ "$line_count" -ne 22 ]; then
+        echo "Error: ./logs/dtcontrol-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 22 (1 header, 21 models) lines."
+        exit 1
+    fi
     
+    echo "Smoke test passed!"
     exit 0
 fi
 
@@ -77,7 +100,7 @@ then
     cd -
 
     echo "generating dtControl results"
-    python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv
+    python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-cav-final --generate-csv
 else
     echo "generating dtPAYNT log files"
     python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count
@@ -89,7 +112,7 @@ else
 
     if [ ! -f ./logs/dtcontrol-final.csv ]; then
         echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-cav-final --generate-csv
     fi
 fi
 
