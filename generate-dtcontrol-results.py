@@ -88,19 +88,19 @@ def main(models_dir, generate_csv, smoke_test, output_dir):
         
         result_json = json.load(open(os.path.join(sketch_dir, "benchmark.json")))
 
-        results.append(f"{model_name};{result_json['scheduler-final']['classifiers']['default']['stats']['inner nodes']};{result_json['scheduler-final']['classifiers']['default']['time']}")
+        results.append(f"{model_name},{result_json['scheduler-final']['classifiers']['default']['stats']['inner nodes']},{result_json['scheduler-final']['classifiers']['default']['time']}")
 
         subprocess.run(cleanup, cwd=sketch_dir)
 
     if generate_csv:
         file = "./logs/dtcontrol-smoke-test.csv" if smoke_test else "./logs/dtcontrol-final.csv"
         with open(file, "w") as f:
-            f.write("model;dtcontrol nodes;dtcontrol time\n")
+            f.write("model,dtcontrol nodes,dtcontrol time\n")
             for result in results:
                 f.write(result + "\n")
         print("CSV file generated: dtcontrol-final.csv")
     else:
-        print("model;dtcontrol nodes;dtcontrol time")
+        print("model,dtcontrol nodes,dtcontrol time")
 
         for result in results:
             print(result)
