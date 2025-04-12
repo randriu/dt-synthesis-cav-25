@@ -5,6 +5,9 @@ set -e
 overwrite=false
 provided_logs=false
 generate_only=false
+smoke_test=false
+
+# CHANGE THIS ACCORDING TO YOUR SYSTEM
 thread_count=2 # Ideally you should have 16GB of RAM per thread
 
 while getopts opg flag
@@ -19,8 +22,29 @@ do
         g)
             generate_only=true
             ;;
+        t)
+            smoke_test=true
+            ;;
     esac
 done
+
+if [ "$smoke_test" = true ]; 
+then
+    echo "generating dtPAYNT log files"
+    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-smoke-test --workers $thread_count --depth-max 1
+
+    echo "generating OMDT log files"
+    cd /opt/OMDT
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1
+    cd -
+
+    if [ -f ./logs/dtcontrol-final.csv ]; then
+        echo "generating dtControl results"
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks
+    fi
+    
+    exit 0
+fi
 
 if [ "$provided_logs" = true ]; 
 then
@@ -60,7 +84,7 @@ else
     python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count
     cd -
 
-    if [ -f ./dtcontrol-final.csv ]; then
+    if [ -f ./logs/dtcontrol-final.csv ]; then
         echo "generating dtControl results"
         python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv
     fi
