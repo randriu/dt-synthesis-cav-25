@@ -10,7 +10,7 @@ smoke_test=false
 # CHANGE THIS ACCORDING TO YOUR SYSTEM
 thread_count=2 # Ideally you should have 16GB of RAM per thread
 
-while getopts opg flag
+while getopts opgt flag
 do
     case "${flag}" in
         o)
