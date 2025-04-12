@@ -43,6 +43,7 @@ def collect_tasks(models_dir):
     sketches = [sketch for sketch in sketches if not any([k in str(sketch) for k in skip])]
 
     tasks = []
+    model_count = 1
     for sketch in sketches:
         model_name = os.path.basename(sketch)
         model_group_name = os.path.basename(os.path.dirname(sketch))
@@ -51,7 +52,9 @@ def collect_tasks(models_dir):
             continue
         command = "dtcontrol --input scheduler-final.storm.json -r --use-preset default".split(' ')
         cleanup = "rm -rf .benchmark_suite decision_trees benchmark.html benchmark.json".split(' ')
-        tasks.append((model_name, sketch, command, cleanup))
+        model_str = f"{model_count}/{len(sketches)} - {model_name} -"
+        tasks.append((model_name, sketch, command, cleanup, model_str))
+        model_count += 1
     return tasks
 
 
@@ -66,8 +69,8 @@ def main(models_dir, generate_csv, smoke_test):
     results = []
 
     for task in tasks:
-        model_name, sketch_dir, command, cleanup = task
-        print(f"Processing {model_name}")
+        model_name, sketch_dir, command, cleanup, models_str = task
+        print(f"{models_str} started")
         
         subprocess.run(command, cwd=sketch_dir)
         result_json = json.load(open(os.path.join(sketch_dir, "benchmark.json")))
