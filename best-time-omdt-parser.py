@@ -35,7 +35,7 @@ def parse(log_file_path):
 
     return best_time
 
-def add_best_runtime_column(working_directory):
+def add_best_runtime_column(working_directory, smoke_test):
     results_file_path = os.path.join(working_directory, 'results.csv')
     results_df = pd.read_csv(results_file_path)
 
@@ -49,16 +49,17 @@ def add_best_runtime_column(working_directory):
         best_runtimes.append(best_runtime)
 
     results_df['omdt time (best)'] = best_runtimes
-    new_results_file_path = os.path.join('./logs/omdt-final.csv')
+    new_results_file_path = './logs/omdt-smoke-test.csv' if smoke_test else './logs/omdt-final.csv'
     results_df.to_csv(new_results_file_path, index=False)
 
 @click.command()
 @click.option('--log-dir', type=str, default="./OMDT/logs/cav-final", show_default=True, help='Path to the omdt log folder.')
-def main(log_dir):
+@click.option('--smoke-test', is_flag=True, default=False, show_default=True, help='Turn on smoke test setting.')
+def main(log_dir, smoke_test):
     result_dirs = [log_dir]
     for x in result_dirs:
         working_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), x)
-        add_best_runtime_column(working_directory)
+        add_best_runtime_column(working_directory, smoke_test)
 
 
 if __name__ == '__main__':

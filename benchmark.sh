@@ -31,17 +31,20 @@ done
 if [ "$smoke_test" = true ]; 
 then
     echo "generating dtPAYNT log files"
-    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-smoke-test --workers $thread_count --depth-max 1
+    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-smoke-test --workers $thread_count --depth-max 1 --generate-csv --smoke-test
 
     echo "generating OMDT log files"
     cd /opt/OMDT
     python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1
     cd -
 
-    if [ -f ./logs/dtcontrol-final.csv ]; then
+    if [ -f ./logs/dtcontrol-smoke-test.csv ]; then
         echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv --smoke-test
     fi
+
+    echo "creating csv file with results for OMDT"
+    python3 best-time-omdt-parser.py --log-dir ./logs/omdt-smoke-test --smoke-test
     
     exit 0
 fi
