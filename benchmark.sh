@@ -9,7 +9,7 @@ smoke_test=false
 skip_omdt=false
 
 # CHANGE THIS ACCORDING TO YOUR SYSTEM
-thread_count=2 # Ideally you should have 16GB of RAM per thread
+thread_count=2 # Ideally you should have 16GB of RAM per thread (sometimes OMDT needs more)
 
 while getopts opgts flag
 do
