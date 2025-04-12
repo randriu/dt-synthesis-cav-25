@@ -56,7 +56,7 @@ def collect_tasks(models_dir):
 
 
 @click.command()
-@click.option('--models-dir', type=str, default="/home/may/synthesis/models/cav", show_default=True, help='Path to the models folder.')
+@click.option('--models-dir', type=str, default="/opt/cav25-experiments/benchmarks", show_default=True, help='Path to the models folder.')
 @click.option('--generate-csv', is_flag=True, default=False, show_default=True, help='Generate CSV file with results.')
 def main(models_dir, generate_csv):
 
@@ -76,7 +76,7 @@ def main(models_dir, generate_csv):
         subprocess.run(cleanup, cwd=sketch_dir)
 
     if generate_csv:
-        with open("dtcontrol-final.csv", "w") as f:
+        with open("./logs/dtcontrol-final.csv", "w") as f:
             f.write("model;dtcontrol nodes;dtcontrol time\n")
             for result in results:
                 f.write(result + "\n")

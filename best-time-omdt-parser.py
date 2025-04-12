@@ -49,7 +49,7 @@ def add_best_runtime_column(working_directory):
         best_runtimes.append(best_runtime)
 
     results_df['omdt time (best)'] = best_runtimes
-    new_results_file_path = os.path.join('omdt-final.csv')
+    new_results_file_path = os.path.join('./logs/omdt-final.csv')
     results_df.to_csv(new_results_file_path, index=False)
 
 @click.command()

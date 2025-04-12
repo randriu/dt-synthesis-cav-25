@@ -786,7 +786,7 @@ def generate_model_info_table(file_path):
             f.write(r"\end{tabular}" + "\n")
 
 @click.command()
-@click.option('--file-path', type=str, default='final-merge.csv', help='Path to the CSV file.')
+@click.option('--file-path', type=str, default='./logs/final-merge.csv', help='Path to the CSV file.')
 @click.option('--generate-pgf', is_flag=True, default=False, help='Generate PGF output.')
 @click.option('--add-dtcontrol-depths', is_flag=True, default=False, help='Adds dtcontrol depths to figures 3 and 5. Can only be used with original log files.')
 def main(file_path, generate_pgf, add_dtcontrol_depths):

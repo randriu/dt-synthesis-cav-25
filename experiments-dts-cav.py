@@ -55,7 +55,7 @@ def set_memory_limit(maxmem_mb):
     soft, hard = resource.getrlimit(resource.RLIMIT_AS)
     resource.setrlimit(resource.RLIMIT_AS, (maxmem_mb*1024*1024, hard))
 
-def run_paynt(paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name, output_dir, restart:bool):
+def run_paynt(paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name, output_dir, restart:bool, q3:bool):
     if os.path.isdir(output_dir) and not restart:
         print(f"{task_name} skipped, {output_dir} already exists")
         return
@@ -83,9 +83,14 @@ def run_paynt(paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name,
             #     other_flags += " --sketch model-random-enabled.drn"
             #     other_flags += " --props discounted.props"
             # else:
-            other_flags += " --sketch model.prism"
-            other_flags += " --props model.props"
-            other_flags += " --add-dont-care-action"
+            if q3:
+                other_flags += " --sketch model.prism"
+                other_flags += " --props model.props"
+                other_flags += " --add-dont-care-action"
+            else:
+                other_flags += " --sketch model.prism"
+                other_flags += " --props discounted.props"
+                other_flags += " --add-dont-care-action"
         # if not paynt_one and "qcomp" not in model:
         #     other_flags += " --add-dont-care-action"
 
@@ -162,16 +167,16 @@ def collect_tasks(models_dir, experiment_name, output_dir, restart:bool):
     return tasks
 
 
-def evaluate_benchmarks(experiment_name, num_workers, paynt_dir, timeout_seconds, maxmem_mb, options, restart, output_dir, models_dir):
+def evaluate_benchmarks(experiment_name, num_workers, paynt_dir, timeout_seconds, maxmem_mb, options, restart, output_dir, models_dir, q3):
     # models_dir = "/home/imacak/disk2/synthesis/models/dts-big-subset"
     tasks = collect_tasks(models_dir, experiment_name, output_dir, restart)
     if num_workers == 1:
         for sketch,task_name,task_output_dir in tasks:
-            run_paynt(paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name, task_output_dir, restart)
+            run_paynt(paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name, task_output_dir, restart, q3)
     else:
         with concurrent.futures.ProcessPoolExecutor(max_workers=num_workers) as executor:
             for (sketch,task_name,task_output_dir) in tasks:
-                executor.submit(run_paynt, paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name, task_output_dir, restart)
+                executor.submit(run_paynt, paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name, task_output_dir, restart, q3)
 
 
 ##### log parsing #####
@@ -410,7 +415,7 @@ def show_experiment_group(group, output_dir, spreadsheet=False, generate_csv=Fal
             rows.append(create_table_row(model, f"{group_path}/{experiment}"))
 
     if generate_csv:
-        csv_path = f"./paynt-final.csv"
+        csv_path = f"./logs/paynt-final.csv"
         with open(csv_path, "w") as f:
             f.write(TableRow.header().to_string(spreadsheet=spreadsheet))
             f.write("\n")
@@ -459,7 +464,8 @@ def show_experiment_one(name, output_dir, spreadsheet=False):
 @click.option('--show-only', is_flag=True, default=False, show_default=True, help='Show results only.')
 @click.option('--generate-csv', is_flag=True, default=False, show_default=True, help='Generate CSV file with results.')
 @click.option('--restart', is_flag=True, help='Re-run all benchmarks.')
-def main(paynt_dir, models_dir, workers, timeout, maxmem, output, experiment_name, depth_min, depth_max, show_only, generate_csv, restart):
+@click.option('--q3', is_flag=True, help='Use Q3 settings.')
+def main(paynt_dir, models_dir, workers, timeout, maxmem, output, experiment_name, depth_min, depth_max, show_only, generate_csv, restart, q3):
 
 
     profiling = ""
@@ -482,7 +488,7 @@ def main(paynt_dir, models_dir, workers, timeout, maxmem, output, experiment_nam
             name,options,timeout_sec = experiment
             maxmem_mb = maxmem*1024
             print(f"----- experiment {index+1}/{len(experiments)}: {name} -----")
-            evaluate_benchmarks(name, workers, paynt_dir, timeout_sec, maxmem_mb, options, restart, output, models_dir)
+            evaluate_benchmarks(name, workers, paynt_dir, timeout_sec, maxmem_mb, options, restart, output, models_dir, q3)
 
     #exit()
     if not paynt_one:

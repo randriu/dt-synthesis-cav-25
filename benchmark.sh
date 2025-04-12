@@ -40,27 +40,33 @@ then
     echo "Overwriting existing log files..."
 
     echo "generating dtPAYNT log files"
-    python3 experiments-dts-cav.py --paynt-dir ./ --models-dir ./models --experiment-name cav-final --generate-csv --workers $thread_count --restart
+    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count --restart
 
     echo "generating OMDT log files"
-    cd OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name cav-final --workers $thread_count --restart
-else
-    echo "generating dtPAYNT log files"
-    python3 experiments-dts-cav.py --paynt-dir ./ --models-dir ./models --experiment-name cav-final --generate-csv --workers $thread_count
-
-    echo "generating OMDT log files"
-    cd OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name cav-final --workers $thread_count
+    cd /opt/OMDT
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --restart
     cd -
 
     echo "generating dtControl results"
-    python3 generate-dtcontrol-results.py --models-dir ./models --generate-csv
+    python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv
+else
+    echo "generating dtPAYNT log files"
+    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count
+
+    echo "generating OMDT log files"
+    cd /opt/OMDT
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count
+    cd -
+
+    if [ -f ./dtcontrol-final.csv ]; then
+        echo "generating dtControl results"
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --generate-csv
+    fi
 fi
 
 
 echo "creating csv file with results for OMDT"
-python3 best-time-omdt-parser.py --log-dir ./OMDT/logs/cav-final
+python3 best-time-omdt-parser.py --log-dir ./logs/omdt-cav-final
 
 echo "merging csv files"
 python3 merge-csv-files.py
