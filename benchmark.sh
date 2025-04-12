@@ -6,11 +6,12 @@ overwrite=false
 provided_logs=false
 generate_only=false
 smoke_test=false
+skip_omdt=false
 
 # CHANGE THIS ACCORDING TO YOUR SYSTEM
 thread_count=2 # Ideally you should have 16GB of RAM per thread
 
-while getopts opgt flag
+while getopts opgts flag
 do
     case "${flag}" in
         o)
@@ -24,6 +25,9 @@ do
             ;;
         t)
             smoke_test=true
+            ;;
+        s)
+            skip_omdt=true
             ;;
     esac
 done
@@ -101,13 +105,18 @@ then
     echo "generating dtPAYNT log files"
     python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count --restart
 
-    echo "generating OMDT log files"
-    if [ -f logs/omdt-cav-final/results.csv ]; then
-        rm logs/omdt-cav-final/results.csv
+    if [ "$skip_omdt" = false ]; then
+    
+        echo "generating OMDT log files"
+        if [ -f logs/omdt-cav-final/results.csv ]; then
+            rm logs/omdt-cav-final/results.csv
+        fi
+        cd /opt/OMDT
+        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --restart --maxmem 32
+        cd -
+    else
+        echo "skipping OMDT"
     fi
-    cd /opt/OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --restart
-    cd -
 
     echo "generating dtControl results"
     python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-cav-final --generate-csv
@@ -115,10 +124,14 @@ else
     echo "generating dtPAYNT log files"
     python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count
 
-    echo "generating OMDT log files"
-    cd /opt/OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count
-    cd -
+    if [ "$skip_omdt" = false ]; then
+        echo "generating OMDT log files"
+        cd /opt/OMDT
+        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --maxmem 32
+        cd -
+    else
+        echo "skipping OMDT"
+    fi
 
     if [ ! -f ./logs/dtcontrol-final.csv ]; then
         echo "generating dtControl results"
