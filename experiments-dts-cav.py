@@ -88,9 +88,9 @@ def run_paynt(paynt_dir, sketch, options, timeout_seconds, maxmem_mb, task_name,
                 other_flags += " --props model.props"
                 other_flags += " --add-dont-care-action"
             else:
-                other_flags += " --sketch model.prism"
+                other_flags += " --sketch model-random-enabled.drn"
                 other_flags += " --props discounted.props"
-                other_flags += " --add-dont-care-action"
+                # other_flags += " --add-dont-care-action"
         # if not paynt_one and "qcomp" not in model:
         #     other_flags += " --add-dont-care-action"
 

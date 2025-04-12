@@ -38,7 +38,7 @@ then
         rm logs/omdt-smoke-test/results.csv
     fi
     cd /opt/OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 60
     cd -
 
     if [ ! -f ./logs/dtcontrol-smoke-test.csv ]; then
