@@ -42,7 +42,7 @@ then
         rm logs/omdt-smoke-test/results.csv
     fi
     cd /opt/OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 30 --maxmem 32
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 30 --maxmem 32 --generate-csv
     cd -
 
     if [ ! -f ./logs/dtcontrol-smoke-test.csv ]; then
@@ -112,7 +112,7 @@ then
             rm logs/omdt-cav-final/results.csv
         fi
         cd /opt/OMDT
-        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --restart --maxmem 32
+        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --restart --maxmem 32 --generate-csv
         cd -
     else
         echo "skipping OMDT"
@@ -127,7 +127,7 @@ else
     if [ "$skip_omdt" = false ]; then
         echo "generating OMDT log files"
         cd /opt/OMDT
-        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --maxmem 32
+        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --maxmem 32 --generate-csv
         cd -
     else
         echo "skipping OMDT"
