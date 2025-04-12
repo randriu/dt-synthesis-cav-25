@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 overwrite=false
 provided_logs=false
 generate_only=false
