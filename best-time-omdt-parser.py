@@ -36,7 +36,7 @@ def parse(log_file_path):
     return best_time
 
 def add_best_runtime_column(working_directory, smoke_test):
-    results_file_path = os.path.join(working_directory, 'results.csv')
+    results_file_path = os.path.join(working_directory, 'results-generated.csv')
     results_df = pd.read_csv(results_file_path)
 
     best_runtimes = []

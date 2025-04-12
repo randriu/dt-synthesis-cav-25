@@ -16,4 +16,4 @@ merged_df['model'] = merged_df['model'].str.replace('^omdt-|^qcomp-', '', regex=
 merged_df = pd.merge(merged_df, omdt_df, on=['model', 'max_depth'], how='inner')
 
 # Save the merged dataframe to a new CSV file
-merged_df.to_csv('final-merge.csv', index=False)
+merged_df.to_csv('./logs/final-merge.csv', index=False)
