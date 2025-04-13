@@ -46,7 +46,7 @@ fi
 
 if [ "$smoke_test" = true ]; 
 then
-    if [ "model_subset" = true ]; 
+    if [ "$model_subset" = true ]; 
     then
         echo "generating dtPAYNT log files"
         python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks-subset --experiment-name paynt-smoke-test --workers $thread_count --depth-max 1 --generate-csv --smoke-test --restart --timeout 30
