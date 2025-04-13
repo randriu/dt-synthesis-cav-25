@@ -48,7 +48,7 @@ If you get message "Smoke test passed!" you are all set. If you get the followin
 
 You can exit the container via `exit` or `^D`. Upon finishing your review, you can remove the image from the Docker environment using:
 ```
-docker rmi randriu/paynt
+docker rmi randriu/dts-cav25
 ```
 
 The Dockerfile used to create the image can be found in TODO
