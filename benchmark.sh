@@ -12,7 +12,7 @@ model_subset=false
 # CHANGE THIS ACCORDING TO YOUR SYSTEM
 thread_count=2 # Ideally you should have 16GB of RAM per thread (sometimes OMDT needs more)
 
-while getoptsm opgts flag
+while getopts opgtsm flag
 do
     case "${flag}" in
         o)
