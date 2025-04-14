@@ -390,7 +390,7 @@ def show_experiment(name, output_dir, spreadsheet=False):
             print(row.to_string_depth(spreadsheet=spreadsheet,depth=depth))
 
 
-def show_experiment_group(group, output_dir, spreadsheet=False, generate_csv=False, smoke_test=False):
+def show_experiment_group(group, output_dir, spreadsheet=False, generate_csv=False, smoke_test=False, q3=False):
 
     group_path = f"{output_dir}/{group}"
     experiments = [os.path.basename(f.path) for f in os.scandir(group_path) if f.is_dir()]
@@ -415,7 +415,7 @@ def show_experiment_group(group, output_dir, spreadsheet=False, generate_csv=Fal
             rows.append(create_table_row(model, f"{group_path}/{experiment}"))
 
     if generate_csv:
-        csv_path = f"./results/logs/paynt-smoke-test.csv" if smoke_test else f"./results/logs/paynt-final.csv"
+        csv_path = f"./results/logs/paynt-smoke-test.csv" if smoke_test else f"./results/logs/paynt{f"-q3" if q3 else ""}-final.csv"
         with open(csv_path, "w") as f:
             f.write(TableRow.header().to_string(spreadsheet=spreadsheet))
             f.write("\n")
@@ -465,7 +465,7 @@ def show_experiment_one(name, output_dir, spreadsheet=False):
 @click.option('--generate-csv', is_flag=True, default=False, show_default=True, help='Generate CSV file with results.')
 @click.option('--smoke-test', is_flag=True, default=False, show_default=True, help='Smoke test setting.')
 @click.option('--restart', is_flag=True, help='Re-run all benchmarks.')
-@click.option('--q3', is_flag=True, help='Use Q3 settings.')
+@click.option('--q3', is_flag=True, default=False, help='Use Q3 settings.')
 def main(paynt_dir, models_dir, workers, timeout, maxmem, output, experiment_name, depth_min, depth_max, show_only, generate_csv, smoke_test, restart, q3):
 
 
@@ -493,7 +493,7 @@ def main(paynt_dir, models_dir, workers, timeout, maxmem, output, experiment_nam
 
     #exit()
     if not paynt_one:
-        show_experiment_group(experiment_group_name, output, spreadsheet=True, generate_csv=generate_csv, smoke_test=smoke_test)
+        show_experiment_group(experiment_group_name, output, spreadsheet=True, generate_csv=generate_csv, smoke_test=smoke_test, q3=q3)
     else:
         for experiment_name,_,_ in experiments:
             show_experiment_one(experiment_name, output, spreadsheet=True)
