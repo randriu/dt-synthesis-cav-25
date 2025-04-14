@@ -12,27 +12,15 @@ model_subset=false
 # CHANGE THIS ACCORDING TO YOUR SYSTEM
 thread_count=2 # Ideally you should have 16GB of RAM per thread (sometimes OMDT needs more)
 
-while getopts opgtsm flag
-do
-    case "${flag}" in
-        o)
-            overwrite=true
-            ;;
-        p)
-            provided_logs=true
-            ;;
-        g)
-            generate_only=true
-            ;;
-        t)
-            smoke_test=true
-            ;;
-        s)
-            skip_omdt=true
-            ;;
-        m)
-            model_subset=true
-            ;;
+while [[ "$#" -gt 0 ]]; do
+    case "$1" in
+        -o | --overwrite ) overwrite=true; shift ;;
+        -p | --provided-logs ) provided_logs=true; shift ;;
+        -g | --generate-only ) generate_only=true; shift ;;
+        -t | --smoke-test ) smoke_test=true; shift ;;
+        -s | --skip-omdt ) skip_omdt=true; shift ;;
+        -m | --model-subset) model_subset=true; shift ;;
+        *) echo "Unknown parameter: $1"; exit 1 ;;
     esac
 done
 
