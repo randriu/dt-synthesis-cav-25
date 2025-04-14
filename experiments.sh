@@ -77,25 +77,31 @@ if [ "$smoke_test" = true ];
 then
     run_dtpaynt --experiment-name paynt-smoke-test --depth-max 1 --smoke-test --restart --timeout 30
 
-    if [ -f ${log_dir}/omdt-smoke-test/results.csv ]; then
-        rm ${log_dir}/omdt-smoke-test/results.csv
+    if [ "$skip_omdt" = false ]; then
+        if [ -f ${log_dir}/omdt-smoke-test/results.csv ]; then
+            rm ${log_dir}/omdt-smoke-test/results.csv
+        fi
+        run_omdt --experiment-name omdt-smoke-test --depth-max 1 --restart --timeout 30
     fi
-    run_omdt --experiment-name omdt-smoke-test --depth-max 1 --restart --timeout 30
 
     if [ -f ${log_dir}/dtcontrol-smoke-test.csv ]; then
         rm ${log_dir}/dtcontrol-smoke-test.csv
     fi
     run_dtcontrol --output-dir ${log_dir}/dtcontrol-smoke-test --smoke-test
 
-    echo "creating csv file with results for OMDT"
-    python3 best-time-omdt-parser.py --log-dir ${log_dir}/omdt-smoke-test --smoke-test
+    if [ "$skip_omdt" = false ]; then
+        echo "creating csv file with results for OMDT"
+        python3 best-time-omdt-parser.py --log-dir ${log_dir}/omdt-smoke-test --smoke-test
+    fi
 
     echo ""
     echo "testing smoke test results"
     echo ""
 
     test_line_count "${log_dir}/paynt-smoke-test.csv" 7
-    test_line_count "${log_dir}/omdt-smoke-test.csv" 7
+    if [ "$skip_omdt" = false ]; then
+        test_line_count "${log_dir}/omdt-smoke-test.csv" 7
+    fi
     test_line_count "${log_dir}/dtcontrol-smoke-test.csv" 7
 
     echo "Smoke test passed!"
