@@ -49,7 +49,7 @@ then
 
         if [ ! -f ./results/logs/dtcontrol-smoke-test.csv ]; then
             echo "generating dtControl results"
-            python3 generate-dtcontrol-results.py --models-dir ./benchmarks-subset --output-dir results/logs/dtcontrol-smoke-test --generate-csv --smoke-test
+            python3 generate-dtcontrol-results.py --models-dir ./benchmarks-subset --output-dir ./results/logs/dtcontrol-smoke-test --generate-csv --smoke-test
         fi
 
         echo "creating csv file with results for OMDT"
@@ -95,7 +95,7 @@ then
 
     if [ ! -f ./results/logs/dtcontrol-smoke-test.csv ]; then
         echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-smoke-test --generate-csv --smoke-test
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir ./results/logs/dtcontrol-smoke-test --generate-csv --smoke-test
     fi
 
     echo "creating csv file with results for OMDT"
@@ -145,7 +145,7 @@ then
 
     if [ ! -f ./results/logs/dtcontrol-final.csv ]; then
         echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-cav-final --generate-csv
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir ./results/logs/dtcontrol-cav-final --generate-csv
     fi
 
     echo "creating csv file with results for OMDT"
