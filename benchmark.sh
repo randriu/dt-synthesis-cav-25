@@ -10,7 +10,7 @@ skip_omdt=false
 model_subset=false
 
 # CHANGE THIS ACCORDING TO YOUR SYSTEM
-thread_count=2 # Ideally you should have 16GB of RAM per thread (sometimes OMDT needs more)
+no_threads=2 # Ideally, you should have 16GB of RAM per thread (sometimes OMDT needs more)
 
 while [[ "$#" -gt 0 ]]; do
     case "$1" in
@@ -20,82 +20,69 @@ while [[ "$#" -gt 0 ]]; do
         -t | --smoke-test ) smoke_test=true; shift ;;
         -s | --skip-omdt ) skip_omdt=true; shift ;;
         -m | --model-subset) model_subset=true; shift ;;
+        --no-threads) no_threads="$2"; shift 2 ;;
         *) echo "Unknown parameter: $1"; exit 1 ;;
     esac
 done
 
-benchmarks_dir="./benchmarks"
-models_dir="./models"
-if [ "$model_subset" = true ]; 
+benchmarks_dir="./benchmarks/all"
+models_dir="./models/all"
+if [ "$model_subset" = true ];
 then
-    benchmarks_dir="./benchmarks-subset"
-    models_dir="./models-subset"
+    benchmarks_dir="./benchmarks/subset"
+    models_dir="./models/subset"
+fi
+if [ "$smoke_test" = true ];
+then
+    benchmarks_dir="./benchmarks/smoketest"
+    models_dir="./models/smoketest"
 fi
 
-if [ "$smoke_test" = true ]; 
-then
-    if [ "$model_subset" = true ]; 
-    then
-        echo "generating dtPAYNT log files"
-        python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks-subset --experiment-name paynt-smoke-test --workers $thread_count --depth-max 1 --generate-csv --smoke-test --restart --timeout 30
 
-        echo "generating OMDT log files"
-        if [ -f results/logs/omdt-smoke-test/results.csv ]; then
-            rm results/logs/omdt-smoke-test/results.csv
-        fi
-        cd /opt/OMDT
-        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models-subset --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 30 --maxmem 32 --generate-csv
-        cd -
+function run_dtcontrol {
+    echo "generating dtControl log files..."
+    python3 generate-dtcontrol-results.py --models-dir $benchmarks_dir --generate-csv "$@"
+}
 
-        if [ ! -f ./results/logs/dtcontrol-smoke-test.csv ]; then
-            echo "generating dtControl results"
-            python3 generate-dtcontrol-results.py --models-dir ./benchmarks-subset --output-dir ./results/logs/dtcontrol-smoke-test --generate-csv --smoke-test
-        fi
+function run_dtpaynt {
+    echo "generating dtPAYNT log files..."
+    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir $benchmarks_dir --experiment-name paynt-cav-final --generate-csv --workers $no_threads "$@"
+}
 
-        echo "creating csv file with results for OMDT"
-        python3 best-time-omdt-parser.py --log-dir ./results/logs/omdt-smoke-test --smoke-test
+function run_omdt {
+    echo "generating OMDT log files..."
+    cd /opt/OMDT
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir $models_dir --workers $no_threads --generate-csv --maxmem 32 "$@"
+    cd -
+}
 
-        echo ""
-        echo "testing smoke test results"
-        echo ""
-
-        line_count=$(wc -l < ./results/logs/paynt-smoke-test.csv)
-        if [ "$line_count" -ne 14 ]; then
-            echo "Error: ./results/logs/paynt-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 14 (1 header, 13 models) lines."
-            exit 1
-        fi
-
-        line_count=$(wc -l < ./results/logs/omdt-smoke-test.csv)
-        if [ "$line_count" -ne 14 ]; then
-            echo "Error: ./results/logs/omdt-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 14 (1 header, 13 models) lines."
-            exit 1
-        fi
-
-        line_count=$(wc -l < ./results/logs/dtcontrol-smoke-test.csv)
-        if [ "$line_count" -ne 14 ]; then
-            echo "Error: ./results/logs/dtcontrol-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 14 (1 header, 13 models) lines."
-            exit 1
-        fi
-        
-        echo "Smoke test passed!"
-        exit 0
+function test_line_count {
+    line_count=$(wc -l < "$1")
+    if [ "$line_count" -ne $2 ]; then
+        echo "Error: $1 does not contain a row for each model in the smoke test. Expected $line_count lines (including header)"
+        exit 1
     fi
+}
 
+if [ "$provided_logs" = true ];
+then
+    echo "using provided log files..."
+    python3 generate-tables-and-figures.py --file-path original-logs/final-merge.csv --add-dtcontrol-depths
+    echo "Generated results using the original log files to 'results/generated-results'"
+    exit 0
+fi
 
-    echo "generating dtPAYNT log files"
-    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-smoke-test --workers $thread_count --depth-max 1 --generate-csv --smoke-test --restart --timeout 30
+if [ "$smoke_test" = true ];
+then
+    run_dtpaynt --experiment-name paynt-smoke-test --depth-max 1 --smoke-test --restart --timeout 30
 
-    echo "generating OMDT log files"
     if [ -f results/logs/omdt-smoke-test/results.csv ]; then
         rm results/logs/omdt-smoke-test/results.csv
     fi
-    cd /opt/OMDT
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-smoke-test --workers $thread_count --depth-max 1 --restart --timeout 30 --maxmem 32 --generate-csv
-    cd -
+    run_omdt --experiment-name omdt-smoke-test --depth-max 1 --restart --timeout 30
 
     if [ ! -f ./results/logs/dtcontrol-smoke-test.csv ]; then
-        echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir ./results/logs/dtcontrol-smoke-test --generate-csv --smoke-test
+        run_dtcontrol --output-dir ./results/logs/dtcontrol-smoke-test --smoke-test
     fi
 
     echo "creating csv file with results for OMDT"
@@ -105,47 +92,24 @@ then
     echo "testing smoke test results"
     echo ""
 
-    line_count=$(wc -l < ./results/logs/paynt-smoke-test.csv)
-    if [ "$line_count" -ne 22 ]; then
-        echo "Error: ./results/logs/paynt-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 22 (1 header, 21 models) lines."
-        exit 1
-    fi
+    test_line_count "./results/logs/paynt-smoke-test.csv" 12
+    test_line_count "./results/logs/omdt-smoke-test.csv" 12
+    test_line_count "./results/logs/dtcontrol-smoke-test.csv" 12
 
-    line_count=$(wc -l < ./results/logs/omdt-smoke-test.csv)
-    if [ "$line_count" -ne 22 ]; then
-        echo "Error: ./results/logs/omdt-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 22 (1 header, 21 models) lines."
-        exit 1
-    fi
-
-    line_count=$(wc -l < ./results/logs/dtcontrol-smoke-test.csv)
-    if [ "$line_count" -ne 22 ]; then
-        echo "Error: ./results/logs/dtcontrol-smoke-test.csv does not contain a row for each model in the smoke test. It contains $line_count lines and it should contain 22 (1 header, 21 models) lines."
-        exit 1
-    fi
-    
     echo "Smoke test passed!"
     exit 0
 fi
 
-if [ "$provided_logs" = true ]; 
-then
-    echo "Using provided log files..."
-    python3 generate-tables-and-figures.py --file-path original-logs/final-merge.csv --add-dtcontrol-depths
-    echo "Generated results using the original log files to 'results/generated-results'"
-    exit 0
-fi
 
 if [ "$generate_only" = true ]; 
 then
-    echo "generating dtPAYNT csv"
-    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count --show-only
+    run_dtpaynt --experiment-name paynt-cav-final --show-only
 
     echo "generating OMDT csv"
-    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --maxmem 32 --generate-csv --show-only
+    run_omdt --experiment-name omdt-cav-final --show-only
 
     if [ ! -f ./results/logs/dtcontrol-final.csv ]; then
-        echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir ./results/logs/dtcontrol-cav-final --generate-csv
+        run_dtcontrol --output-dir ./results/logs/dtcontrol-cav-final
     fi
 
     echo "creating csv file with results for OMDT"
@@ -164,40 +128,31 @@ if [ "$overwrite" = true ];
 then
     echo "Overwriting existing log files..."
 
-    echo "generating dtPAYNT log files"
-    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir $benchmarks_dir --experiment-name paynt-cav-final --generate-csv --workers $thread_count --restart
+    run_dtpaynt --experiment-name paynt-cav-final --restart
 
     if [ "$skip_omdt" = false ]; then
-    
         echo "generating OMDT log files"
         if [ -f results/logs/omdt-cav-final/results.csv ]; then
             rm results/logs/omdt-cav-final/results.csv
         fi
-        cd /opt/OMDT
-        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir $models_dir --experiment-name omdt-cav-final --workers $thread_count --restart --maxmem 32 --generate-csv
-        cd -
+        run_omdt --experiment-name omdt-cav-final --restart
     else
         echo "skipping OMDT"
     fi
 
-    echo "generating dtControl results"
-    python3 generate-dtcontrol-results.py --models-dir $benchmarks_dir --output-dir ./results/logs/dtcontrol-cav-final --generate-csv
+    run_dtcontrol --output-dir ./results/logs/dtcontrol-cav-final
 else
-    echo "generating dtPAYNT log files"
-    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir $benchmarks_dir --experiment-name paynt-cav-final --generate-csv --workers $thread_count
+    run_dtpaynt --experiment-name paynt-cav-final
 
     if [ "$skip_omdt" = false ]; then
         echo "generating OMDT log files"
-        cd /opt/OMDT
-        python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir $models_dir --experiment-name omdt-cav-final --workers $thread_count --maxmem 32 --generate-csv
-        cd -
+        run_omdt --experiment-name omdt-cav-final
     else
         echo "skipping OMDT"
     fi
 
     if [ ! -f ./results/logs/dtcontrol-final.csv ]; then
-        echo "generating dtControl results"
-        python3 generate-dtcontrol-results.py --models-dir $benchmarks_dir --output-dir ./results/logs/dtcontrol-cav-final --generate-csv
+        run_dtcontrol --output-dir ./results/logs/dtcontrol-cav-final
     fi
 fi
 
@@ -210,5 +165,4 @@ python3 merge-csv-files.py
 
 echo "generating tables and figures"
 python3 generate-tables-and-figures.py
-
 echo "Generated results to 'results/generated-results'"
