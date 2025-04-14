@@ -415,7 +415,7 @@ def show_experiment_group(group, output_dir, spreadsheet=False, generate_csv=Fal
             rows.append(create_table_row(model, f"{group_path}/{experiment}"))
 
     if generate_csv:
-        csv_path = f"./logs/paynt-smoke-test.csv" if smoke_test else f"./logs/paynt-final.csv"
+        csv_path = f"./results/logs/paynt-smoke-test.csv" if smoke_test else f"./results/logs/paynt-final.csv"
         with open(csv_path, "w") as f:
             f.write(TableRow.header().to_string(spreadsheet=spreadsheet))
             f.write("\n")
@@ -457,7 +457,7 @@ def show_experiment_one(name, output_dir, spreadsheet=False):
 @click.option('--workers', type=int, default=4, show_default=True, help='Number of parallel tests.')
 @click.option('--timeout', type=int, default=1200, show_default=True, help='Time limit for abstraction refinement (per model), seconds.')
 @click.option('--maxmem', type=int, default=16, show_default=True, help='Memory limit, GB.')
-@click.option('--output', type=str, default="logs", show_default=True, help='Name for the output logs folder.')
+@click.option('--output', type=str, default="results/logs", show_default=True, help='Name for the output logs folder.')
 @click.option('--experiment-name', type=str, default=None, show_default=True, help='Name of the experiments.')
 @click.option('--depth-min', type=int, default=1, show_default=True, help='Minimal depth for the exeperiments.')
 @click.option('--depth-max', type=int, default=8, show_default=True, help='Maximal depth for the exeperiments.')
