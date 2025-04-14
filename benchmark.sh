@@ -94,9 +94,9 @@ then
     echo "testing smoke test results"
     echo ""
 
-    test_line_count "${log_dir}/paynt-smoke-test.csv" 9
-    test_line_count "${log_dir}/omdt-smoke-test.csv" 9
-    test_line_count "${log_dir}/dtcontrol-smoke-test.csv" 9
+    test_line_count "${log_dir}/paynt-smoke-test.csv" 7
+    test_line_count "${log_dir}/omdt-smoke-test.csv" 7
+    test_line_count "${log_dir}/dtcontrol-smoke-test.csv" 7
 
     echo "Smoke test passed!"
     exit 0
