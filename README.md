@@ -64,7 +64,8 @@ Running the benchmark script `./benchmark.sh` will generate all of the log files
 To help with this potentially very long runtime we introduce the following options:
 
 - `-m` - run only subset of models (13 models), this removes some problematic models where OMDT requires a lot of memory. Using this option should nearly halve the overall runtime while still somewhat capturing the nature of the experiments.
-- `s` - will skip OMDT evaluation, you can copy the OMDT logs from `original-logs` folder using `cp -r ./original-logs/omdt-cav-final ./logs/`. If you use this option please mind the possible discrepency in the values and runtimes since the comparison will be on runs from different machines
+- `-s` - will skip OMDT evaluation, you can copy the OMDT logs from `original-logs` folder using `cp -r ./original-logs/omdt-cav-final ./logs/`. If you use this option please mind the possible discrepency in the values and runtimes since the comparison will be on runs from different machines
+- `-g` - will use the current log files from `logs` folder to try and generate the results without running any experiment (besides dtControl ones if the dtControl csv file with results is missing).
 
 When executing the script repeatedly, it detects whether the log files already exist, so you can *can abort without loss of progress*. To re-run the experiments completely, simply delete the corresponding log files or use option `-o` to force the overwrite.
 
