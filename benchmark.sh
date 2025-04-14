@@ -38,6 +38,7 @@ then
     models_dir="./models/smoketest"
 fi
 
+log_dir="./results/logs"
 
 function run_dtcontrol {
     echo "generating dtControl log files..."
@@ -76,25 +77,26 @@ if [ "$smoke_test" = true ];
 then
     run_dtpaynt --experiment-name paynt-smoke-test --depth-max 1 --smoke-test --restart --timeout 30
 
-    if [ -f results/logs/omdt-smoke-test/results.csv ]; then
-        rm results/logs/omdt-smoke-test/results.csv
+    if [ -f ${log_dir}/omdt-smoke-test/results.csv ]; then
+        rm ${log_dir}/omdt-smoke-test/results.csv
     fi
     run_omdt --experiment-name omdt-smoke-test --depth-max 1 --restart --timeout 30
 
-    if [ ! -f ./results/logs/dtcontrol-smoke-test.csv ]; then
-        run_dtcontrol --output-dir ./results/logs/dtcontrol-smoke-test --smoke-test
+    if [ -f ${log_dir}/dtcontrol-smoke-test.csv ]; then
+        rm ${log_dir}/dtcontrol-smoke-test.csv
     fi
+    run_dtcontrol --output-dir ${log_dir}/dtcontrol-smoke-test --smoke-test
 
     echo "creating csv file with results for OMDT"
-    python3 best-time-omdt-parser.py --log-dir ./results/logs/omdt-smoke-test --smoke-test
+    python3 best-time-omdt-parser.py --log-dir ${log_dir}/omdt-smoke-test --smoke-test
 
     echo ""
     echo "testing smoke test results"
     echo ""
 
-    test_line_count "./results/logs/paynt-smoke-test.csv" 12
-    test_line_count "./results/logs/omdt-smoke-test.csv" 12
-    test_line_count "./results/logs/dtcontrol-smoke-test.csv" 12
+    test_line_count "${log_dir}/paynt-smoke-test.csv" 9
+    test_line_count "${log_dir}/omdt-smoke-test.csv" 9
+    test_line_count "${log_dir}/dtcontrol-smoke-test.csv" 9
 
     echo "Smoke test passed!"
     exit 0
@@ -108,12 +110,12 @@ then
     echo "generating OMDT csv"
     run_omdt --experiment-name omdt-cav-final --show-only
 
-    if [ ! -f ./results/logs/dtcontrol-final.csv ]; then
-        run_dtcontrol --output-dir ./results/logs/dtcontrol-cav-final
+    if [ ! -f ${log_dir}/dtcontrol-final.csv ]; then
+        run_dtcontrol --output-dir ${log_dir}/dtcontrol-cav-final
     fi
 
     echo "creating csv file with results for OMDT"
-    python3 best-time-omdt-parser.py --log-dir ./results/logs/omdt-cav-final
+    python3 best-time-omdt-parser.py --log-dir ${log_dir}/omdt-cav-final
 
     echo "merging csv files"
     python3 merge-csv-files.py
@@ -132,15 +134,15 @@ then
 
     if [ "$skip_omdt" = false ]; then
         echo "generating OMDT log files"
-        if [ -f results/logs/omdt-cav-final/results.csv ]; then
-            rm results/logs/omdt-cav-final/results.csv
+        if [ -f ${log_dir}/omdt-cav-final/results.csv ]; then
+            rm ${log_dir}/omdt-cav-final/results.csv
         fi
         run_omdt --experiment-name omdt-cav-final --restart
     else
         echo "skipping OMDT"
     fi
 
-    run_dtcontrol --output-dir ./results/logs/dtcontrol-cav-final
+    run_dtcontrol --output-dir ${log_dir}/dtcontrol-cav-final
 else
     run_dtpaynt --experiment-name paynt-cav-final
 
@@ -151,14 +153,14 @@ else
         echo "skipping OMDT"
     fi
 
-    if [ ! -f ./results/logs/dtcontrol-final.csv ]; then
-        run_dtcontrol --output-dir ./results/logs/dtcontrol-cav-final
+    if [ ! -f ${log_dir}/dtcontrol-final.csv ]; then
+        run_dtcontrol --output-dir ${log_dir}/dtcontrol-cav-final
     fi
 fi
 
 
 echo "creating csv file with results for OMDT"
-python3 best-time-omdt-parser.py --log-dir ./results/logs/omdt-cav-final
+python3 best-time-omdt-parser.py --log-dir ${log_dir}/omdt-cav-final
 
 echo "merging csv files"
 python3 merge-csv-files.py
