@@ -149,10 +149,24 @@ fi
 
 if [ "$generate_only" = true ]; 
 then
+    echo "generating dtPAYNT csv"
+    python3 experiments-dts-cav.py --paynt-dir /opt/paynt --models-dir ./benchmarks --experiment-name paynt-cav-final --generate-csv --workers $thread_count --show-only
+
+    echo "generating OMDT csv"
+    python3 experiments-dts-cav-omdt.py --omdt-dir ./ --models-dir ./models --experiment-name omdt-cav-final --workers $thread_count --maxmem 32 --generate-csv --show-only
+
+    if [ ! -f ./logs/dtcontrol-final.csv ]; then
+        echo "generating dtControl results"
+        python3 generate-dtcontrol-results.py --models-dir ./benchmarks --output-dir dtcontrol-cav-final --generate-csv
+    fi
+
+    echo "creating csv file with results for OMDT"
+    python3 best-time-omdt-parser.py --log-dir ./logs/omdt-cav-final
+
     echo "merging csv files"
     python3 merge-csv-files.py
 
-    echo "Generating the results"
+    echo "generating tables and figures"
     python3 generate-tables-and-figures.py
     echo "Generated results to 'generated-results'"
     exit 0
