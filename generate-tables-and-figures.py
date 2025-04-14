@@ -238,9 +238,9 @@ def plot_figure_3(file_path, generate_pgf, add_dtcontrol_depths):
     # plt.tight_layout()
     # plt.show()
     if generate_pgf:
-        plt.savefig('generated-results/figure-3.pgf')
+        plt.savefig('results/generated-results/figure-3.pgf')
     else:
-        fig.savefig('generated-results/figure-3.pdf', bbox_inches='tight')
+        fig.savefig('results/generated-results/figure-3.pdf', bbox_inches='tight')
 
 
 
@@ -476,9 +476,9 @@ def plot_figure_5(file_path, generate_pgf, add_dtcontrol_depths):
     # plt.tight_layout()
     # plt.show()
     if generate_pgf:
-        plt.savefig('generated-results/figure-5.pgf')
+        plt.savefig('results/generated-results/figure-5.pgf')
     else:
-        fig.savefig('generated-results/figure-5.pdf', bbox_inches='tight')
+        fig.savefig('results/generated-results/figure-5.pdf', bbox_inches='tight')
 
 def plot_figure_2(file_path, generate_pgf):
     # Read the CSV file into a DataFrame
@@ -609,10 +609,10 @@ def plot_figure_2(file_path, generate_pgf):
     # plt.show()
 
     if generate_pgf:
-        plt.savefig('generated-results/figure-2.pgf')
+        plt.savefig('results/generated-results/figure-2.pgf')
     else:
-        fig1.savefig('generated-results/figure-2-smaller.pdf', bbox_inches='tight')
-        fig2.savefig('generated-results/figure-2-larger.pdf', bbox_inches='tight')
+        fig1.savefig('results/generated-results/figure-2-smaller.pdf', bbox_inches='tight')
+        fig2.savefig('results/generated-results/figure-2-larger.pdf', bbox_inches='tight')
 
 def plot_figure_4(file_path, generate_pgf):
     # Read the CSV file into a DataFrame
@@ -706,9 +706,9 @@ def plot_figure_4(file_path, generate_pgf):
     # plt.show()
 
     if generate_pgf:
-        plt.savefig('generated-results/figure-4.pgf')
+        plt.savefig('results/generated-results/figure-4.pgf')
     else:
-        fig.savefig('generated-results/figure-4.pdf', bbox_inches='tight')
+        fig.savefig('results/generated-results/figure-4.pdf', bbox_inches='tight')
 
 def generate_model_info_table(file_path):
     with open(file_path, mode='r') as file:
@@ -755,7 +755,7 @@ def generate_model_info_table(file_path):
 
 
         # Open the file in write mode
-        with open("generated-results/model-info-table.tex", "w") as f:
+        with open("results/generated-results/model-info-table.tex", "w") as f:
             # Start LaTeX table
             f.write(r"\begin{tabular}{l rrrr@{\hskip 32pt}l rrrr}" + "\n")
             f.write(r"\toprule" + "\n")
@@ -786,7 +786,7 @@ def generate_model_info_table(file_path):
             f.write(r"\end{tabular}" + "\n")
 
 @click.command()
-@click.option('--file-path', type=str, default='./logs/final-merge.csv', help='Path to the CSV file.')
+@click.option('--file-path', type=str, default='./results/logs/final-merge.csv', help='Path to the CSV file.')
 @click.option('--generate-pgf', is_flag=True, default=False, help='Generate PGF output.')
 @click.option('--add-dtcontrol-depths', is_flag=True, default=False, help='Adds dtcontrol depths to figures 3 and 5. Can only be used with original log files.')
 def main(file_path, generate_pgf, add_dtcontrol_depths):

@@ -62,7 +62,7 @@ def collect_tasks(models_dir):
 @click.option('--models-dir', type=str, default="/opt/cav25-experiments/benchmarks", show_default=True, help='Path to the models folder.')
 @click.option('--generate-csv', is_flag=True, default=False, show_default=True, help='Generate CSV file with results.')
 @click.option('--smoke-test', is_flag=True, default=False, show_default=True, help='Turn on smoke test setting.')
-@click.option('--output-dir', type=str, default="./logs/dtcontrol-final-cav/", show_default=True, help='Path to the output folder.')
+@click.option('--output-dir', type=str, default="./results/logs/dtcontrol-final-cav/", show_default=True, help='Path to the output folder.')
 def main(models_dir, generate_csv, smoke_test, output_dir):
 
     if not os.path.exists(output_dir):
@@ -93,7 +93,7 @@ def main(models_dir, generate_csv, smoke_test, output_dir):
         subprocess.run(cleanup, cwd=sketch_dir)
 
     if generate_csv:
-        file = "./logs/dtcontrol-smoke-test.csv" if smoke_test else "./logs/dtcontrol-final.csv"
+        file = "./results/logs/dtcontrol-smoke-test.csv" if smoke_test else "./results/logs/dtcontrol-final.csv"
         with open(file, "w") as f:
             f.write("model,dtcontrol nodes,dtcontrol time\n")
             for result in results:

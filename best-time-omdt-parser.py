@@ -49,7 +49,7 @@ def add_best_runtime_column(working_directory, smoke_test):
         best_runtimes.append(best_runtime)
 
     results_df['omdt time (best)'] = best_runtimes
-    new_results_file_path = './logs/omdt-smoke-test.csv' if smoke_test else './logs/omdt-final.csv'
+    new_results_file_path = './results/logs/omdt-smoke-test.csv' if smoke_test else './results/logs/omdt-final.csv'
     if os.path.exists(new_results_file_path):
         os.remove(new_results_file_path)
     results_df.to_csv(new_results_file_path, index=False)

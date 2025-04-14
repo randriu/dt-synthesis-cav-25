@@ -1,9 +1,9 @@
 import pandas as pd
 
 # Load the CSV files
-paynt_df = pd.read_csv('./logs/paynt-final.csv')
-dtcontrol_df = pd.read_csv('./logs/dtcontrol-final.csv')
-omdt_df = pd.read_csv('./logs/omdt-final.csv')
+paynt_df = pd.read_csv('./results/logs/paynt-final.csv')
+dtcontrol_df = pd.read_csv('./results/logs/dtcontrol-final.csv')
+omdt_df = pd.read_csv('./results/logs/omdt-final.csv')
 
 # Merge the dataframes based on the "model" column
 merged_df = pd.merge(paynt_df, dtcontrol_df, on='model', how='inner')
@@ -16,4 +16,4 @@ merged_df['model'] = merged_df['model'].str.replace('^omdt-|^qcomp-', '', regex=
 merged_df = pd.merge(merged_df, omdt_df, on=['model', 'max_depth'], how='inner')
 
 # Save the merged dataframe to a new CSV file
-merged_df.to_csv('./logs/final-merge.csv', index=False)
+merged_df.to_csv('./results/logs/final-merge.csv', index=False)
