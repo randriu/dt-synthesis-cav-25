@@ -39,6 +39,8 @@ then
 fi
 
 log_dir="./results/logs"
+generated_dir="./results/generated-results"
+mkdir -p ${log_dir} ${generated_dir}
 
 function run_dtcontrol {
     echo "generating dtControl log files..."
@@ -69,7 +71,7 @@ if [ "$provided_logs" = true ];
 then
     echo "using provided log files..."
     python3 generate-tables-and-figures.py --file-path original-logs/final-merge.csv --add-dtcontrol-depths
-    echo "Generated results using the original log files to 'results/generated-results'"
+    echo "Generated results using the original log files to ${generated_dir}"
     exit 0
 fi
 
@@ -128,7 +130,7 @@ then
 
     echo "generating tables and figures"
     python3 generate-tables-and-figures.py
-    echo "Generated results to 'results/generated-results'"
+    echo "Generated results to ${generated_dir}"
     exit 0
 fi
 
@@ -173,4 +175,4 @@ python3 merge-csv-files.py
 
 echo "generating tables and figures"
 python3 generate-tables-and-figures.py
-echo "Generated results to 'results/generated-results'"
+echo "Generated results to ${generated_dir}"
